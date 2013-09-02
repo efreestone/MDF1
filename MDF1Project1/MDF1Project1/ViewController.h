@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MDF1 1309
+// Project 1
+// September 2nd, 2013
+
 //
 //  ViewController.h
 //  MDF1Project1
