@@ -14,5 +14,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    //Declare band array
+    NSMutableArray *bandArray;
+    //Declare album array
+    NSMutableArray *albumArray;
+}
 
 @end
