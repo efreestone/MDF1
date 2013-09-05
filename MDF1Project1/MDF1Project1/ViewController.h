@@ -19,6 +19,9 @@
     NSMutableArray *bandArray;
     //Declare album array
     NSMutableArray *albumArray;
+    
+    //Declare IBOutlet for table view
+    IBOutlet UITableView *tableView;
 }
 
 @end
