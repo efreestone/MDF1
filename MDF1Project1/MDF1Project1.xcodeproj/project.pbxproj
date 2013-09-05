@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8179D3617D908C100959EA5 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B8179D3217D908C100959EA5 /* Icon-72.png */; };
+		B8179D3717D908C100959EA5 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8179D3317D908C100959EA5 /* Icon-72@2x.png */; };
+		B8179D3817D908C100959EA5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8179D3417D908C100959EA5 /* Icon.png */; };
+		B8179D3917D908C100959EA5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8179D3517D908C100959EA5 /* Icon@2x.png */; };
 		B8877E3F17D5514D004EFE6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8877E3E17D5514D004EFE6B /* UIKit.framework */; };
 		B8877E4117D5514D004EFE6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8877E4017D5514D004EFE6B /* Foundation.framework */; };
 		B8877E4317D5514D004EFE6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8877E4217D5514D004EFE6B /* CoreGraphics.framework */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8179D3217D908C100959EA5 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		B8179D3317D908C100959EA5 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		B8179D3417D908C100959EA5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		B8179D3517D908C100959EA5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B8877E3B17D5514D004EFE6B /* MDF1Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8877E3E17D5514D004EFE6B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B8877E4017D5514D004EFE6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +69,10 @@
 				B8877E4417D5514D004EFE6B /* MDF1Project1 */,
 				B8877E3D17D5514D004EFE6B /* Frameworks */,
 				B8877E3C17D5514D004EFE6B /* Products */,
+				B8179D3217D908C100959EA5 /* Icon-72.png */,
+				B8179D3317D908C100959EA5 /* Icon-72@2x.png */,
+				B8179D3417D908C100959EA5 /* Icon.png */,
+				B8179D3517D908C100959EA5 /* Icon@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +179,10 @@
 				B8877E5517D5514D004EFE6B /* Default-568h@2x.png in Resources */,
 				B8877E5B17D5514D004EFE6B /* ViewController_iPhone.xib in Resources */,
 				B8877E5E17D5514D004EFE6B /* ViewController_iPad.xib in Resources */,
+				B8179D3617D908C100959EA5 /* Icon-72.png in Resources */,
+				B8179D3717D908C100959EA5 /* Icon-72@2x.png in Resources */,
+				B8179D3817D908C100959EA5 /* Icon.png in Resources */,
+				B8179D3917D908C100959EA5 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +326,7 @@
 				B8877E6317D5514D004EFE6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
