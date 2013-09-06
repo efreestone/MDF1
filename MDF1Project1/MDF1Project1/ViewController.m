@@ -82,6 +82,12 @@
     //Check if in delete mode
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSLog(@"We want to delete row = %d", indexPath.row);
+        
+        //Remove object from array
+        [albumArray removeObjectAtIndex:indexPath.row];
+        
+        //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something. Isn't this an Accessor method?
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
     }
 }
 
