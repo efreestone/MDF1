@@ -10,6 +10,9 @@
 
 @implementation CustomTableViewCell
 
+@synthesize bandLabel;
+@synthesize albumLabel;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

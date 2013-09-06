@@ -9,5 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomTableViewCell : UITableViewCell
+{
+    //Declare label for band name
+    IBOutlet UILabel *bandLabel;
+    //Declare label for album name
+    IBOutlet UILabel *albumLabel;
+}
+
+@property (strong) IBOutlet UILabel *bandLabel;
+
+@property (strong) IBOutlet UILabel *albumLabel;
 
 @end

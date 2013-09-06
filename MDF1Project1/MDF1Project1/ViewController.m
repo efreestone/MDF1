@@ -85,7 +85,9 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSLog(@"We want to delete row = %d", indexPath.row);
         
-        //Remove object from array
+        //Remove object from band array
+        [bandArray removeObjectAtIndex:indexPath.row];
+        //Remove object from album array
         [albumArray removeObjectAtIndex:indexPath.row];
         
         //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something. Isn't this an Accessor method?
@@ -112,6 +114,11 @@
         for (UIView *view in views) {
             if ([view isKindOfClass:[CustomTableViewCell class]]) {
                 cell = (CustomTableViewCell *)view;
+                
+                //Apply band names to top label of custom cell
+                cell.bandLabel.text = [bandArray objectAtIndex:indexPath.row];
+                //Apply album name to bottom label of custom cell
+                cell.albumLabel.text = [albumArray objectAtIndex:indexPath.row];
             }
         }
         
@@ -125,7 +132,7 @@
 
 //Built in function to grab row selected in table view
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Row = %d Album = %@", indexPath.row, [bandArray objectAtIndex:indexPath.row]);
+    NSLog(@"Row = %d Album = %@", indexPath.row, [albumArray objectAtIndex:indexPath.row]);
 }
 
 @end
