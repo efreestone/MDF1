@@ -47,8 +47,17 @@
         if (buttonClicked.tag == 0) {
             //Set edit mode to true
             [tableView setEditing:true];
-            
-            
+            //Set button title to "Done"
+            [editButton setTitle:@"Done" forState:0];
+            //Change tag number to 1 to hit else statement and return to non-edit mode. This may need changed when more buttons are added
+            editButton.tag = 1;
+        } else {
+            //Turn editing mode off
+            [tableView setEditing:false];
+            //Set title back to "Edit"
+            [editButton setTitle:@"Edit" forState:0];
+            //Reset tag number to 0
+            editButton.tag = 0;
         }
     }
 }
