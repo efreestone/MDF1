@@ -16,8 +16,9 @@
     IBOutlet UILabel *albumLabel;
 }
 
+//Set property for band label to allow @synthesize
 @property (strong) IBOutlet UILabel *bandLabel;
-
+//Set property for album label to allow @synthesize
 @property (strong) IBOutlet UILabel *albumLabel;
 
 @end

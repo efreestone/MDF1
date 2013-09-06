@@ -19,6 +19,10 @@
     NSMutableArray *bandArray;
     //Declare album array
     NSMutableArray *albumArray;
+    //Declare release date array
+    NSMutableArray *releaseDateArray;
+    //Declare country of origin array
+    NSMutableArray *countryArray;
     
     //Declare IBOutlet for table view
     IBOutlet UITableView *tableView;

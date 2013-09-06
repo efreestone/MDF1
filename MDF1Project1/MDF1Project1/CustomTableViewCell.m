@@ -10,6 +10,7 @@
 
 @implementation CustomTableViewCell
 
+//Synthesize band and album labels for getter/setter to get access from ViewController.m
 @synthesize bandLabel;
 @synthesize albumLabel;
 
