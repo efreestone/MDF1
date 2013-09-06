@@ -12,6 +12,8 @@
 //
 
 #import "ViewController.h"
+//Import custom table view cell
+#import "CustomTableViewCell.h"
 
 @interface ViewController ()
 
@@ -98,14 +100,25 @@
     static NSString *CellIdentifier = @"Cell";
     
     //Reuse cells to avoid unneeded allocs
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         //Initialize table view with default style
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        //cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
+        //Load nib for custom view cell
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"IphoneCustomViewCell" owner:nil options:nil];
+        
+        //Loop through views to make sure CustomTableViewCell is a
+        for (UIView *view in views) {
+            if ([view isKindOfClass:[CustomTableViewCell class]]) {
+                cell = (CustomTableViewCell *)view;
+            }
+        }
+        
     }
     
     //Set cell text from albumArray
-    cell.textLabel.text = (NSMutableString *)[albumArray objectAtIndex:indexPath.row];
+    //cell.textLabel.text = (NSMutableString *)[albumArray objectAtIndex:indexPath.row];
     
     return cell;
 }
