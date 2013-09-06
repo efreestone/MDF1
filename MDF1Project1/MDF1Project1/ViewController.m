@@ -90,7 +90,7 @@
         //Remove object from album array
         [albumArray removeObjectAtIndex:indexPath.row];
         
-        //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something. Isn't this an Accessor method?
+        //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something here but Isn't this an Accessor method?
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
     }
 }
