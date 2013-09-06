@@ -39,20 +39,11 @@
 
 //Built in function to set number of sections
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 5;
-    } else if (section == 1) {
-        return 5;
-    } else if (section == 2) {
-        return 5;
-    } else if (section == 3) {
-        return 5;
-    }
-    return 0;
+    return [albumArray count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 1;
 }
 
 //Built in function to allocate and reuse table view cells
@@ -65,18 +56,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    NSInteger actualRow = 0;
-    
-    actualRow = (indexPath.section * 5) + indexPath.row;
-    
-    //if (indexPath.section == 0) {
-        cell.textLabel.text = (NSMutableString *)[albumArray objectAtIndex:actualRow];
-    //} else if (indexPath.section == 1) {
-        //cell.textLabel.text = (NSMutableString *)[albumArray objectAtIndex:indexPath.row];
-    //}
-    
+    cell.textLabel.text = (NSMutableString *)[albumArray objectAtIndex:indexPath.row];
     
     return cell;
+}
+
+//Built in function to grab row selected in table view
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Row = %d Album = %@", indexPath.row, [bandArray objectAtIndex:indexPath.row]);
 }
 
 @end
