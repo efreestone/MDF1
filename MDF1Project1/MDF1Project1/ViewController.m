@@ -88,13 +88,17 @@
 //Built in function to allocate and reuse table view cells
 - (UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    //Set cell identifier to static NSString
     static NSString *CellIdentifier = @"Cell";
     
+    //Reuse cells to avoid unneeded allocs
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
+        //Initialize table view with default style
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    //Set cell text from albumArray
     cell.textLabel.text = (NSMutableString *)[albumArray objectAtIndex:indexPath.row];
     
     return cell;
