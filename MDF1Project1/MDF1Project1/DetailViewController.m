@@ -1,18 +1,29 @@
+// Elijah Freestone
+// MDF1 1309
+// Project 1
+// September 2nd, 2013
+
 //
-//  DetailViewViewController.m
+//  DetailViewController.m
 //  MDF1Project1
 //
 //  Created by Elijah Freestone on 9/6/13.
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
-#import "DetailViewViewController.h"
+#import "DetailViewController.h"
 
-@interface DetailViewViewController ()
+@interface DetailViewController ()
 
 @end
 
-@implementation DetailViewViewController
+@implementation DetailViewController
+
+//Synthesize all 4 labels for getter/setter to get access from ViewController.m
+@synthesize bandLabel;
+@synthesize albumLabel;
+@synthesize releaseDateLabel;
+@synthesize countryLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +44,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)onHome:(id)sender {
+    [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
 @end

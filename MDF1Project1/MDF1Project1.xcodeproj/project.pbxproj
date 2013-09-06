@@ -25,6 +25,8 @@
 		B8877E5817D5514D004EFE6B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8877E5717D5514D004EFE6B /* ViewController.m */; };
 		B8877E5B17D5514D004EFE6B /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8877E5917D5514D004EFE6B /* ViewController_iPhone.xib */; };
 		B8877E5E17D5514D004EFE6B /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8877E5C17D5514D004EFE6B /* ViewController_iPad.xib */; };
+		B89BF60017DA940000443272 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B89BF5FE17DA940000443272 /* DetailViewController.m */; };
+		B89BF60317DA96EF00443272 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89BF60217DA96EF00443272 /* DetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,9 @@
 		B8877E5717D5514D004EFE6B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B8877E5A17D5514D004EFE6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		B8877E5D17D5514D004EFE6B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		B89BF5FD17DA940000443272 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B89BF5FE17DA940000443272 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B89BF60217DA96EF00443272 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,9 @@
 				B83D389D17DA4D5700BFDE2D /* IphoneCustomViewCell.xib */,
 				B83D389F17DA520F00BFDE2D /* CustomTableViewCell.h */,
 				B83D38A017DA520F00BFDE2D /* CustomTableViewCell.m */,
+				B89BF5FD17DA940000443272 /* DetailViewController.h */,
+				B89BF5FE17DA940000443272 /* DetailViewController.m */,
+				B89BF60217DA96EF00443272 /* DetailView.xib */,
 			);
 			path = MDF1Project1;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 				B8179D3817D908C100959EA5 /* Icon.png in Resources */,
 				B8179D3917D908C100959EA5 /* Icon@2x.png in Resources */,
 				B83D389E17DA4D5700BFDE2D /* IphoneCustomViewCell.xib in Resources */,
+				B89BF60317DA96EF00443272 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +215,7 @@
 				B8877E4F17D5514D004EFE6B /* AppDelegate.m in Sources */,
 				B8877E5817D5514D004EFE6B /* ViewController.m in Sources */,
 				B83D38A117DA520F00BFDE2D /* CustomTableViewCell.m in Sources */,
+				B89BF60017DA940000443272 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

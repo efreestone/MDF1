@@ -14,6 +14,8 @@
 #import "ViewController.h"
 //Import custom table view cell
 #import "CustomTableViewCell.h"
+//Import detail view controller
+#import "DetailViewController.h"
 
 @interface ViewController ()
 
@@ -143,6 +145,27 @@
 //Built in function to grab row selected in table view
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Row = %d Album = %@", indexPath.row, [albumArray objectAtIndex:indexPath.row]);
+    
+    //Allocate detail view controller
+    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil];
+    if (detailViewController != nil) {
+        [self presentViewController:detailViewController animated:TRUE completion:nil];
+        //Add band name to first label on detail view
+        detailViewController.bandLabel.text = (NSString *)[bandArray objectAtIndex:indexPath.row];
+        //Add album name to second label on detail view
+        detailViewController.albumLabel.text = (NSString *)[albumArray objectAtIndex:indexPath.row];
+        //Add release date to third label on detail view
+        detailViewController.releaseDateLabel.text = (NSString *)[releaseDateArray objectAtIndex:indexPath.row];
+        //Add country of origin to fourth label on detail view
+        detailViewController.countryLabel.text = (NSString *)[countryArray objectAtIndex:indexPath.row];
+    }
+    
+    /*itemClicked.itemLabel2.text = (NSString*)[tableItems objectAtIndex:indexPath.row];
+     // Display info for item clicked
+     itemClicked.info2.text = (NSString*)[itemInfo objectAtIndex:indexPath.row];
+     itemClicked.stringLabel2.text = (NSString*)[moreInfo objectAtIndex:indexPath.row];
+     // Display larger image for item clicked
+     itemClicked.itemImage.image = [UIImage imageNamed:[images objectAtIndex:indexPath.row]];*/
 }
 
 @end
