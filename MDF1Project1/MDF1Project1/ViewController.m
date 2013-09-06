@@ -37,12 +37,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-//
+//Built in function to set number of sections
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    if (section == 0) {
+        return 5;
+    } else if (section == 1) {
+        return 5;
+    } else if (section == 2) {
+        return 5;
+    } else if (section == 3) {
+        return 5;
+    }
+    return 0;
 }
 
-//
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 4;
+}
+
+//Built in function to allocate and reuse table view cells
 - (UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
@@ -52,10 +65,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    static int count = 0;
-    cell.textLabel.text = [NSString stringWithFormat:@"Count is %d", count];
+    NSInteger actualRow = 0;
     
-    count++;
+    actualRow = (indexPath.section * 5) + indexPath.row;
+    
+    //if (indexPath.section == 0) {
+        cell.textLabel.text = (NSMutableString *)[albumArray objectAtIndex:actualRow];
+    //} else if (indexPath.section == 1) {
+        //cell.textLabel.text = (NSMutableString *)[albumArray objectAtIndex:indexPath.row];
+    //}
+    
     
     return cell;
 }
