@@ -43,7 +43,7 @@
     UIButton *buttonClicked = (UIButton *)sender;
     
     if (buttonClicked != nil) {
-        //Save button
+        //Edit button
         if (buttonClicked.tag == 0) {
             //Set edit mode to true
             [tableView setEditing:true];
@@ -62,11 +62,12 @@
     }
 }
 
-//Built in function to set number of sections
+//Built in function to set number of rows in table view section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [albumArray count];
 }
 
+//Built in function to set number of sections in table view
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
