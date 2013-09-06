@@ -22,6 +22,12 @@
     
     //Declare IBOutlet for table view
     IBOutlet UITableView *tableView;
+    //Declare IBOutlet for edit mode button
+    IBOutlet UIButton *editButton;
+    
 }
+
+//Declare IBAction for onClick
+-(IBAction)onClick:(id)sender;
 
 @end

@@ -37,6 +37,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+//onClick function to grab button clicks, currently only used for edit button
+-(IBAction)onClick:(id)sender {
+    //Cast clear and save into a UIButton
+    UIButton *buttonClicked = (UIButton *)sender;
+    
+    if (buttonClicked != nil) {
+        //Save button
+        if (buttonClicked.tag == 0) {
+            //Set edit mode to true
+            [tableView setEditing:true];
+            
+            
+        }
+    }
+}
+
 //Built in function to set number of sections
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [albumArray count];
@@ -44,6 +60,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+//Built in function to add delete to cells in table view
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+//Built in function to check editing style (-=delete, +=add)
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Check if in delete mode
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"We want to delete row = %d", indexPath.row);
+    }
 }
 
 //Built in function to allocate and reuse table view cells
