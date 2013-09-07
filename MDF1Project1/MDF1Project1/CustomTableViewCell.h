@@ -15,6 +15,7 @@
 
 @interface CustomTableViewCell : UITableViewCell
 {
+    //These declarations are redundant because of the property declarations bellow. Keeping them for clarity
     //Declare label for band name
     IBOutlet UILabel *bandLabel;
     //Declare label for album name

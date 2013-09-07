@@ -15,6 +15,7 @@
 
 @interface DetailViewController : UIViewController
 {
+    //These declarations are redundant because of the property declarations bellow. Keeping them for clarity
     //Declare title label
     IBOutlet UILabel *titleLabel;
     //Declare label for band name
