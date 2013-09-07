@@ -19,7 +19,8 @@
 
 @implementation DetailViewController
 
-//Synthesize all 4 labels for getter/setter to get access from ViewController.m
+//Synthesize all 5 labels for getter/setter to get access from ViewController.m
+@synthesize titleLabel;
 @synthesize bandLabel;
 @synthesize albumLabel;
 @synthesize releaseDateLabel;

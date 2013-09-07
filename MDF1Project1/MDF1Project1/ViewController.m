@@ -143,14 +143,17 @@
     DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil];
     if (detailViewController != nil) {
         [self presentViewController:detailViewController animated:TRUE completion:nil];
+        
+        //Change title label of detail view to band name
+        detailViewController.titleLabel.text = (NSString *)[bandArray objectAtIndex:indexPath.row];
         //Add band name to first label on detail view
-        detailViewController.bandLabel.text = (NSString *)[bandArray objectAtIndex:indexPath.row];
+        detailViewController.bandLabel.text = [NSString stringWithFormat:@"Band Name: %@", [bandArray objectAtIndex:indexPath.row]];
         //Add album name to second label on detail view
-        detailViewController.albumLabel.text = (NSString *)[albumArray objectAtIndex:indexPath.row];
+        detailViewController.albumLabel.text = [NSString stringWithFormat:@"Album Name: %@", [albumArray objectAtIndex:indexPath.row]];
         //Add release date to third label on detail view
-        detailViewController.releaseDateLabel.text = (NSString *)[releaseDateArray objectAtIndex:indexPath.row];
+        detailViewController.releaseDateLabel.text = [NSString stringWithFormat:@"Year Released: %@", [releaseDateArray objectAtIndex:indexPath.row]];
         //Add country of origin to fourth label on detail view
-        detailViewController.countryLabel.text = (NSString *)[countryArray objectAtIndex:indexPath.row];
+        detailViewController.countryLabel.text = [NSString stringWithFormat:@"Country of Origin: %@", [countryArray objectAtIndex:indexPath.row]];
     }
 }
 

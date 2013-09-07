@@ -15,6 +15,8 @@
 
 @interface DetailViewController : UIViewController
 {
+    //Declare title label
+    IBOutlet UILabel *titleLabel;
     //Declare label for band name
     IBOutlet UILabel *bandLabel;
     //Declare label for album name
@@ -27,6 +29,8 @@
     IBOutlet UIButton *homeButton;
 }
 
+//Set property for title label to allow @synthesiz
+@property (strong) IBOutlet UILabel *titleLabel;
 //Set property for band label to allow @synthesize
 @property (strong) IBOutlet UILabel *bandLabel;
 //Set property for album label to allow @synthesize
