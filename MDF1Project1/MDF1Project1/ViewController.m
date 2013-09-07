@@ -116,9 +116,6 @@
     //Reuse cells to avoid unneeded allocs
     CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        //Initialize table view with default style
-        //cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        
         //Load nib for custom view cell
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"IphoneCustomViewCell" owner:nil options:nil];
         
@@ -135,10 +132,6 @@
         }
         
     }
-    
-    //Set cell text from albumArray
-    //cell.textLabel.text = (NSMutableString *)[albumArray objectAtIndex:indexPath.row];
-    
     return cell;
 }
 
@@ -159,13 +152,6 @@
         //Add country of origin to fourth label on detail view
         detailViewController.countryLabel.text = (NSString *)[countryArray objectAtIndex:indexPath.row];
     }
-    
-    /*itemClicked.itemLabel2.text = (NSString*)[tableItems objectAtIndex:indexPath.row];
-     // Display info for item clicked
-     itemClicked.info2.text = (NSString*)[itemInfo objectAtIndex:indexPath.row];
-     itemClicked.stringLabel2.text = (NSString*)[moreInfo objectAtIndex:indexPath.row];
-     // Display larger image for item clicked
-     itemClicked.itemImage.image = [UIImage imageNamed:[images objectAtIndex:indexPath.row]];*/
 }
 
 @end
