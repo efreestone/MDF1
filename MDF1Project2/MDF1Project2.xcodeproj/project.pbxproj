@@ -22,10 +22,8 @@
 		B896B6C017DEBB25005B2CDC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B896B6BF17DEBB25005B2CDC /* SecondViewController.m */; };
 		B896B6C217DEBB25005B2CDC /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = B896B6C117DEBB25005B2CDC /* second.png */; };
 		B896B6C417DEBB25005B2CDC /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B896B6C317DEBB25005B2CDC /* second@2x.png */; };
-		B896B6C717DEBB25005B2CDC /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B896B6C517DEBB25005B2CDC /* FirstViewController_iPhone.xib */; };
-		B896B6CA17DEBB25005B2CDC /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B896B6C817DEBB25005B2CDC /* FirstViewController_iPad.xib */; };
-		B896B6CD17DEBB25005B2CDC /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B896B6CB17DEBB25005B2CDC /* SecondViewController_iPhone.xib */; };
-		B896B6D017DEBB25005B2CDC /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B896B6CE17DEBB25005B2CDC /* SecondViewController_iPad.xib */; };
+		B896B6C717DEBB25005B2CDC /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B896B6C517DEBB25005B2CDC /* FirstViewController.xib */; };
+		B896B6CD17DEBB25005B2CDC /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B896B6CB17DEBB25005B2CDC /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +48,8 @@
 		B896B6BF17DEBB25005B2CDC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B896B6C117DEBB25005B2CDC /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		B896B6C317DEBB25005B2CDC /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		B896B6C617DEBB25005B2CDC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
-		B896B6C917DEBB25005B2CDC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
-		B896B6CC17DEBB25005B2CDC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
-		B896B6CF17DEBB25005B2CDC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
+		B896B6C617DEBB25005B2CDC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
+		B896B6CC17DEBB25005B2CDC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,10 +106,8 @@
 				B896B6BF17DEBB25005B2CDC /* SecondViewController.m */,
 				B896B6C117DEBB25005B2CDC /* second.png */,
 				B896B6C317DEBB25005B2CDC /* second@2x.png */,
-				B896B6C517DEBB25005B2CDC /* FirstViewController_iPhone.xib */,
-				B896B6C817DEBB25005B2CDC /* FirstViewController_iPad.xib */,
-				B896B6CB17DEBB25005B2CDC /* SecondViewController_iPhone.xib */,
-				B896B6CE17DEBB25005B2CDC /* SecondViewController_iPad.xib */,
+				B896B6C517DEBB25005B2CDC /* FirstViewController.xib */,
+				B896B6CB17DEBB25005B2CDC /* SecondViewController.xib */,
 				B896B6A617DEBB25005B2CDC /* Supporting Files */,
 			);
 			path = MDF1Project2;
@@ -192,10 +186,8 @@
 				B896B6BD17DEBB25005B2CDC /* first@2x.png in Resources */,
 				B896B6C217DEBB25005B2CDC /* second.png in Resources */,
 				B896B6C417DEBB25005B2CDC /* second@2x.png in Resources */,
-				B896B6C717DEBB25005B2CDC /* FirstViewController_iPhone.xib in Resources */,
-				B896B6CA17DEBB25005B2CDC /* FirstViewController_iPad.xib in Resources */,
-				B896B6CD17DEBB25005B2CDC /* SecondViewController_iPhone.xib in Resources */,
-				B896B6D017DEBB25005B2CDC /* SecondViewController_iPad.xib in Resources */,
+				B896B6C717DEBB25005B2CDC /* FirstViewController.xib in Resources */,
+				B896B6CD17DEBB25005B2CDC /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,36 +216,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		B896B6C517DEBB25005B2CDC /* FirstViewController_iPhone.xib */ = {
+		B896B6C517DEBB25005B2CDC /* FirstViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B896B6C617DEBB25005B2CDC /* en */,
 			);
-			name = FirstViewController_iPhone.xib;
+			name = FirstViewController.xib;
 			sourceTree = "<group>";
 		};
-		B896B6C817DEBB25005B2CDC /* FirstViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B896B6C917DEBB25005B2CDC /* en */,
-			);
-			name = FirstViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		B896B6CB17DEBB25005B2CDC /* SecondViewController_iPhone.xib */ = {
+		B896B6CB17DEBB25005B2CDC /* SecondViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B896B6CC17DEBB25005B2CDC /* en */,
 			);
-			name = SecondViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		B896B6CE17DEBB25005B2CDC /* SecondViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B896B6CF17DEBB25005B2CDC /* en */,
-			);
-			name = SecondViewController_iPad.xib;
+			name = SecondViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

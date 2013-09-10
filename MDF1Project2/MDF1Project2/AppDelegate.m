@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MDF1 1309
+// Project 2
+// September 9th, 2013
+
 //
 //  AppDelegate.m
 //  MDF1Project2
@@ -19,19 +24,29 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
-        viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil];
-    } else {
-        viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil];
-        viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil];
-    }
+    
+    viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
+    
+    //Create first nav controller and set viewController1 as a child
+    UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
+    
+    viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    
+    //Create second nav controller and set viewController1 as a child
+    UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
+    
+    //Set first nav tint color
+    navController1.navigationBar.tintColor = [UIColor darkGrayColor];
+    //Set second nav tint color
+    navController2.navigationBar.tintColor = [UIColor darkGrayColor];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.viewControllers = @[navController1, navController2];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
