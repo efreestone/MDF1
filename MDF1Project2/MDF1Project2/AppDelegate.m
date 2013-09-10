@@ -16,14 +16,17 @@
 #import "FirstViewController.h"
 
 #import "SecondViewController.h"
+//Import third view controller
+#import "ThirdViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Built app as universal but removed all iPad specific stuff for simplicity and time sake. Will add back in if time allows but the app runs on both
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1, *viewController2;
+    UIViewController *viewController1, *viewController2, *viewController3;
     
     viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
     
@@ -35,13 +38,16 @@
     //Create second nav controller and set viewController1 as a child
     UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
     
+    //Add third tab
+    viewController3 = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
+    
     //Set first nav tint color
     navController1.navigationBar.tintColor = [UIColor darkGrayColor];
     //Set second nav tint color
     navController2.navigationBar.tintColor = [UIColor darkGrayColor];
     
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[navController1, navController2];
+    self.tabBarController.viewControllers = @[navController1, navController2, viewController3];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

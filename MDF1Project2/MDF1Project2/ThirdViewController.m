@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MDF1 1309
+// Project 2
+// September 9th, 2013
+
 //
 //  ThirdViewController.m
 //  MDF1Project2
@@ -18,7 +23,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = NSLocalizedString(@"Third", @"Third");
+        self.tabBarItem.image = [UIImage imageNamed:@"third"];
     }
     return self;
 }
