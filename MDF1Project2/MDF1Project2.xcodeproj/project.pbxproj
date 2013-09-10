@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B83E2E1A17DED3AB00292251 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B83E2E1917DED3AB00292251 /* Default-Portrait@2x~ipad.png */; };
+		B83E2E1C17DED3E500292251 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B83E2E1B17DED3E500292251 /* Default-Portrait~ipad.png */; };
 		B8879FCE17DEBF7200AE393D /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8879FCC17DEBF7100AE393D /* ThirdViewController.m */; };
 		B8879FCF17DEBF7200AE393D /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8879FCD17DEBF7100AE393D /* ThirdViewController.xib */; };
 		B8879FD117DEC0D800AE393D /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD017DEC0D800AE393D /* third@2x.png */; };
 		B8879FD517DEC1CD00AE393D /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD417DEC1CD00AE393D /* third.png */; };
+		B8879FDA17DEC5AA00AE393D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD617DEC5AA00AE393D /* Icon-72.png */; };
+		B8879FDB17DEC5AA00AE393D /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD717DEC5AA00AE393D /* Icon-72@2x.png */; };
+		B8879FDC17DEC5AA00AE393D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD817DEC5AA00AE393D /* Icon.png */; };
+		B8879FDD17DEC5AA00AE393D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD917DEC5AA00AE393D /* Icon@2x.png */; };
 		B896B6A017DEBB25005B2CDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B896B69F17DEBB25005B2CDC /* UIKit.framework */; };
 		B896B6A217DEBB25005B2CDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B896B6A117DEBB25005B2CDC /* Foundation.framework */; };
 		B896B6A417DEBB25005B2CDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B896B6A317DEBB25005B2CDC /* CoreGraphics.framework */; };
@@ -31,11 +37,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B83E2E1917DED3AB00292251 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		B83E2E1B17DED3E500292251 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		B8879FCB17DEBF7100AE393D /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		B8879FCC17DEBF7100AE393D /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		B8879FCD17DEBF7100AE393D /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 		B8879FD017DEC0D800AE393D /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
 		B8879FD417DEC1CD00AE393D /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
+		B8879FD617DEC5AA00AE393D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = SOURCE_ROOT; };
+		B8879FD717DEC5AA00AE393D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
+		B8879FD817DEC5AA00AE393D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
+		B8879FD917DEC5AA00AE393D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		B896B69C17DEBB25005B2CDC /* MDF1Project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1Project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B896B69F17DEBB25005B2CDC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B896B6A117DEBB25005B2CDC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,6 +93,10 @@
 				B896B6A517DEBB25005B2CDC /* MDF1Project2 */,
 				B896B69E17DEBB25005B2CDC /* Frameworks */,
 				B896B69D17DEBB25005B2CDC /* Products */,
+				B8879FD617DEC5AA00AE393D /* Icon-72.png */,
+				B8879FD717DEC5AA00AE393D /* Icon-72@2x.png */,
+				B8879FD817DEC5AA00AE393D /* Icon.png */,
+				B8879FD917DEC5AA00AE393D /* Icon@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +146,8 @@
 		B896B6A617DEBB25005B2CDC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B83E2E1B17DED3E500292251 /* Default-Portrait~ipad.png */,
+				B83E2E1917DED3AB00292251 /* Default-Portrait@2x~ipad.png */,
 				B896B6A717DEBB25005B2CDC /* MDF1Project2-Info.plist */,
 				B896B6A817DEBB25005B2CDC /* InfoPlist.strings */,
 				B896B6AB17DEBB25005B2CDC /* main.m */,
@@ -205,6 +223,12 @@
 				B8879FCF17DEBF7200AE393D /* ThirdViewController.xib in Resources */,
 				B8879FD117DEC0D800AE393D /* third@2x.png in Resources */,
 				B8879FD517DEC1CD00AE393D /* third.png in Resources */,
+				B8879FDA17DEC5AA00AE393D /* Icon-72.png in Resources */,
+				B8879FDB17DEC5AA00AE393D /* Icon-72@2x.png in Resources */,
+				B8879FDC17DEC5AA00AE393D /* Icon.png in Resources */,
+				B8879FDD17DEC5AA00AE393D /* Icon@2x.png in Resources */,
+				B83E2E1A17DED3AB00292251 /* Default-Portrait@2x~ipad.png in Resources */,
+				B83E2E1C17DED3E500292251 /* Default-Portrait~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
