@@ -51,8 +51,9 @@
     //Allocate detail view controller
     AlbumsViewController *albumsViewController = [[AlbumsViewController alloc] initWithNibName:@"AlbumsView" bundle:nil];
     if (albumsViewController != nil) {
-        //Present Albums view
-        [self presentViewController:albumsViewController animated:TRUE completion:nil];
+        //Push Albums view
+        [self.navigationController pushViewController:albumsViewController animated:true];
+        //[self presentViewController:albumsViewController animated:TRUE completion:nil];
     }
 }
 
