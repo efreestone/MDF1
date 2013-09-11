@@ -23,7 +23,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Add Album", @"Add Album");
+        self.title = NSLocalizedString(@"Add", @"Add");
+        //Set icon to plus sign
         self.tabBarItem.image = [UIImage imageNamed:@"add"];
     }
     return self;

@@ -24,6 +24,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Home", @"Home");
+        //Set icon to house
         self.tabBarItem.image = [UIImage imageNamed:@"home"];
     }
     return self;
@@ -41,7 +42,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-//IBAction to grab tap of home screen image.
+//IBAction to grab tap of home screen image. Whole image (all blue) is active
 -(IBAction)onTap:(id)sender {
     NSLog(@"Picture clicked!!");
 }

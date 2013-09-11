@@ -11,8 +11,6 @@
 		B83E2E1C17DED3E500292251 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B83E2E1B17DED3E500292251 /* Default-Portrait~ipad.png */; };
 		B8879FCE17DEBF7200AE393D /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8879FCC17DEBF7100AE393D /* ThirdViewController.m */; };
 		B8879FCF17DEBF7200AE393D /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8879FCD17DEBF7100AE393D /* ThirdViewController.xib */; };
-		B8879FD117DEC0D800AE393D /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD017DEC0D800AE393D /* third@2x.png */; };
-		B8879FD517DEC1CD00AE393D /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD417DEC1CD00AE393D /* third.png */; };
 		B8879FDA17DEC5AA00AE393D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD617DEC5AA00AE393D /* Icon-72.png */; };
 		B8879FDB17DEC5AA00AE393D /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD717DEC5AA00AE393D /* Icon-72@2x.png */; };
 		B8879FDC17DEC5AA00AE393D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD817DEC5AA00AE393D /* Icon.png */; };
@@ -35,6 +33,8 @@
 		B8E0F9EF17DFF91500FE2941 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9EE17DFF91500FE2941 /* home@2x.png */; };
 		B8E0F9F217DFFAAE00FE2941 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F017DFFAAE00FE2941 /* add.png */; };
 		B8E0F9F317DFFAAE00FE2941 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F117DFFAAE00FE2941 /* add@2x.png */; };
+		B8E0F9F517E0027700FE2941 /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F417E0027700FE2941 /* other.png */; };
+		B8E0F9F717E0029400FE2941 /* other@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F617E0029400FE2941 /* other@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +43,6 @@
 		B8879FCB17DEBF7100AE393D /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		B8879FCC17DEBF7100AE393D /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		B8879FCD17DEBF7100AE393D /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
-		B8879FD017DEC0D800AE393D /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
-		B8879FD417DEC1CD00AE393D /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		B8879FD617DEC5AA00AE393D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = SOURCE_ROOT; };
 		B8879FD717DEC5AA00AE393D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
 		B8879FD817DEC5AA00AE393D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
@@ -73,6 +71,8 @@
 		B8E0F9EE17DFF91500FE2941 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		B8E0F9F017DFFAAE00FE2941 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		B8E0F9F117DFFAAE00FE2941 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
+		B8E0F9F417E0027700FE2941 /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
+		B8E0F9F617E0029400FE2941 /* other@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "other@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +138,8 @@
 				B8879FCB17DEBF7100AE393D /* ThirdViewController.h */,
 				B8879FCC17DEBF7100AE393D /* ThirdViewController.m */,
 				B8879FCD17DEBF7100AE393D /* ThirdViewController.xib */,
-				B8879FD417DEC1CD00AE393D /* third.png */,
-				B8879FD017DEC0D800AE393D /* third@2x.png */,
+				B8E0F9F417E0027700FE2941 /* other.png */,
+				B8E0F9F617E0029400FE2941 /* other@2x.png */,
 				B896B6A617DEBB25005B2CDC /* Supporting Files */,
 			);
 			path = MDF1Project2;
@@ -220,8 +220,6 @@
 				B896B6C717DEBB25005B2CDC /* FirstViewController.xib in Resources */,
 				B896B6CD17DEBB25005B2CDC /* SecondViewController.xib in Resources */,
 				B8879FCF17DEBF7200AE393D /* ThirdViewController.xib in Resources */,
-				B8879FD117DEC0D800AE393D /* third@2x.png in Resources */,
-				B8879FD517DEC1CD00AE393D /* third.png in Resources */,
 				B8879FDA17DEC5AA00AE393D /* Icon-72.png in Resources */,
 				B8879FDB17DEC5AA00AE393D /* Icon-72@2x.png in Resources */,
 				B8879FDC17DEC5AA00AE393D /* Icon.png in Resources */,
@@ -233,6 +231,8 @@
 				B8E0F9EF17DFF91500FE2941 /* home@2x.png in Resources */,
 				B8E0F9F217DFFAAE00FE2941 /* add.png in Resources */,
 				B8E0F9F317DFFAAE00FE2941 /* add@2x.png in Resources */,
+				B8E0F9F517E0027700FE2941 /* other.png in Resources */,
+				B8E0F9F717E0029400FE2941 /* other@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

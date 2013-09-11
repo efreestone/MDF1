@@ -23,8 +23,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Third", @"Third");
-        self.tabBarItem.image = [UIImage imageNamed:@"third"];
+        self.title = NSLocalizedString(@"Other", @"Other");
+        //Set icon to star. Not sure what else to use for "Other"
+        self.tabBarItem.image = [UIImage imageNamed:@"other"];
     }
     return self;
 }
