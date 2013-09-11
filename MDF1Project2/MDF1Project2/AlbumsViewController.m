@@ -9,12 +9,17 @@
 #import "AlbumsViewController.h"
 //Import Detail View
 #import "DetailViewController.h"
+//Import custom table view cell
+#import "CustomTableViewCell.h"
 
 @interface AlbumsViewController ()
 
 @end
 
 @implementation AlbumsViewController
+
+//Synthesize edit button
+@synthesize editButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +44,8 @@
     
     //Create editable array with 20 countries of origin
     countryArray = [[NSMutableArray alloc] initWithObjects:@"Sweden/Denmark", @"Sweden/Denmark", @"United States", @"United States", @"United States", @"United States", @"Italy/Sweden", @"Italy/Sweden", @"United States", @"United States", @"United States", @"United States", @"Sweden", @"Sweden", @"Sweden", @"Sweden", @"United States", @"United States", @"United States", @"United States", nil];
+    
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
@@ -118,7 +125,7 @@
 
 //From Project 1
 //Built in function to allocate and reuse table view cells
-/*- (UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //Set cell identifier to static NSString
     static NSString *CellIdentifier = @"Cell";
@@ -143,7 +150,7 @@
         
     }
     return cell;
-}*/
+}
 
 //From Project 1
 //Built in function to grab row selected in table view

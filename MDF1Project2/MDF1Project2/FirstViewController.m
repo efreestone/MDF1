@@ -14,6 +14,8 @@
 #import "FirstViewController.h"
 //Import Albums view
 #import "AlbumsViewController.h"
+//Import custom table view cell
+#import "CustomTableViewCell.h"
 
 @interface FirstViewController ()
 
@@ -53,6 +55,8 @@
     if (albumsViewController != nil) {
         //Push Albums view
         [self.navigationController pushViewController:albumsViewController animated:true];
+        //[self.navigationController.rightBarButtonItem = [albumsViewController.editButton]];
+        //myViewController.navigationItem.rightBarButtonItem = [myViewController editButtonItem];
         //[self presentViewController:albumsViewController animated:TRUE completion:nil];
     }
 }

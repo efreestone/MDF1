@@ -14,6 +14,10 @@
 
 @implementation CustomTableViewCell
 
+//Synthesize band and album labels for getter/setter to get access from ViewController.m
+@synthesize bandLabel;
+@synthesize albumLabel;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

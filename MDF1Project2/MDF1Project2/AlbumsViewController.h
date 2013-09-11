@@ -26,6 +26,9 @@
     IBOutlet UIButton *editButton;
 }
 
+//Set property for edit button to allow @synthesize
+@property (strong) IBOutlet UIButton *editButton;
+
 //Declare IBAction for onClick
 -(IBAction)onClick:(id)sender;
 
