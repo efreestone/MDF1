@@ -41,4 +41,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+//IBAction to grab tap of home screen image.
+-(IBAction)onTap:(id)sender {
+    NSLog(@"Picture clicked!!");
+}
+
+
+
 @end
