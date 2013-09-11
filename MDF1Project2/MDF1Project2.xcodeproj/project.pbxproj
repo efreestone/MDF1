@@ -40,7 +40,7 @@
 		B8E0F9FE17E00F8200FE2941 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9FD17E00F8100FE2941 /* DetailView.xib */; };
 		B8E0FA0117E00F9F00FE2941 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0FA0017E00F9F00FE2941 /* DetailViewController.m */; };
 		B8E0FA0317E01D2600FE2941 /* IphoneCustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E0FA0217E01D2500FE2941 /* IphoneCustomViewCell.xib */; };
-		B8E0FA0617E01D7700FE2941 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0FA0517E01D7600FE2941 /* CustomTableViewCell.m */; };
+		B8EDE2B917E118D6006BC6C6 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EDE2B817E118D6006BC6C6 /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,8 +86,8 @@
 		B8E0F9FF17E00F9F00FE2941 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B8E0FA0017E00F9F00FE2941 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B8E0FA0217E01D2500FE2941 /* IphoneCustomViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IphoneCustomViewCell.xib; sourceTree = "<group>"; };
-		B8E0FA0417E01D7600FE2941 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
-		B8E0FA0517E01D7600FE2941 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		B8EDE2B717E118D6006BC6C6 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		B8EDE2B817E118D6006BC6C6 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,9 +145,9 @@
 				B896B6C517DEBB25005B2CDC /* FirstViewController.xib */,
 				B8E0F9EC17DFF7C300FE2941 /* home.png */,
 				B8E0F9EE17DFF91500FE2941 /* home@2x.png */,
-				B8E0FA0417E01D7600FE2941 /* CustomTableViewCell.h */,
-				B8E0FA0517E01D7600FE2941 /* CustomTableViewCell.m */,
 				B8E0FA0217E01D2500FE2941 /* IphoneCustomViewCell.xib */,
+				B8EDE2B717E118D6006BC6C6 /* CustomTableViewCell.h */,
+				B8EDE2B817E118D6006BC6C6 /* CustomTableViewCell.m */,
 				B8E0F9FA17E0091700FE2941 /* AlbumsViewController.h */,
 				B8E0F9FB17E0091700FE2941 /* AlbumsViewController.m */,
 				B8E0F9F817E007DD00FE2941 /* AlbumsView.xib */,
@@ -277,7 +277,7 @@
 				B8879FCE17DEBF7200AE393D /* ThirdViewController.m in Sources */,
 				B8E0F9FC17E0091700FE2941 /* AlbumsViewController.m in Sources */,
 				B8E0FA0117E00F9F00FE2941 /* DetailViewController.m in Sources */,
-				B8E0FA0617E01D7700FE2941 /* CustomTableViewCell.m in Sources */,
+				B8EDE2B917E118D6006BC6C6 /* CustomTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

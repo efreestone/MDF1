@@ -17,6 +17,8 @@
 //Import custom table view cell
 #import "CustomTableViewCell.h"
 
+#import "FirstViewController.h"
+
 @interface AlbumsViewController ()
 
 @end
@@ -50,6 +52,7 @@
     //Create editable array with 20 countries of origin
     countryArray = [[NSMutableArray alloc] initWithObjects:@"Sweden/Denmark", @"Sweden/Denmark", @"United States", @"United States", @"United States", @"United States", @"Italy/Sweden", @"Italy/Sweden", @"United States", @"United States", @"United States", @"United States", @"Sweden", @"Sweden", @"Sweden", @"Sweden", @"United States", @"United States", @"United States", @"United States", nil];
     
+    //Add edit button to nav bar in Albums View
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [super viewDidLoad];
@@ -88,22 +91,25 @@
     }
 }
 
-
+//From Project 1
 //Built in function to set number of rows in table view section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [albumArray count];
 }
 
+//From Project 1
 //Built in function to set number of sections in table view
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
+//From Project 1
 //Built in function to add delete to cells in table view
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleDelete;
 }
 
+//From Project 1
 //Built in function to check editing style (-=delete, +=add)
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     //Check if in delete mode
@@ -119,11 +125,12 @@
         //Remove object from country array
         [countryArray removeObjectAtIndex:indexPath.row];
         
-        //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something here but Isn't this an Accessor method?
+        //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something here but isn't this an Accessor method?
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
     }
 }
 
+//From Project 1
 //Built in function to allocate and reuse table view cells
 - (UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -152,6 +159,7 @@
     return cell;
 }
 
+//From Project 1 (modified)
 //Built in function to grab row selected in table view
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"Row = %d Album = %@", indexPath.row, [albumArray objectAtIndex:indexPath.row]);

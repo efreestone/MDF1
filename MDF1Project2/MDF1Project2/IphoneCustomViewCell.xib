@@ -97,6 +97,7 @@
 								<string key="NSFrame">{{58, 20}, {267, 21}}</string>
 								<reference key="NSSuperview" ref="853563149"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -122,6 +123,7 @@
 						<string key="NSFrameSize">{320, 43}</string>
 						<reference key="NSSuperview" ref="955690009"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="34812518"/>
 						<string key="NSReuseIdentifierKey">_NS:11</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -147,27 +149,19 @@
 			<array class="NSMutableArray" key="connectionRecords">
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">view</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="955690009"/>
-					</object>
-					<int key="connectionID">64</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">albumLabel</string>
-						<reference key="source" ref="372490531"/>
+						<reference key="source" ref="955690009"/>
 						<reference key="destination" ref="1072226829"/>
 					</object>
-					<int key="connectionID">65</int>
+					<int key="connectionID">67</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">bandLabel</string>
-						<reference key="source" ref="372490531"/>
+						<reference key="source" ref="955690009"/>
 						<reference key="destination" ref="275410609"/>
 					</object>
-					<int key="connectionID">66</int>
+					<int key="connectionID">68</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -306,8 +300,8 @@
 								<int key="contentType">3</int>
 							</object>
 							<reference ref="275410609"/>
-							<reference ref="1072226829"/>
 							<reference ref="34812518"/>
+							<reference ref="1072226829"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -475,10 +469,10 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">CustomTableViewCell</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="39.CustomClassName">CustomTableViewCell</string>
 				<string key="39.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<array class="NSMutableArray" key="39.IBViewMetadataConstraints">
 					<reference ref="540144340"/>
@@ -523,13 +517,13 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">66</int>
+			<int key="maxID">68</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">CustomTableViewCell</string>
-					<string key="superclassName">UIViewController</string>
+					<string key="superclassName">UITableViewCell</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="albumLabel">UILabel</string>
 						<string key="bandLabel">UILabel</string>
