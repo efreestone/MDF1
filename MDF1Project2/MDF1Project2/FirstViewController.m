@@ -12,6 +12,10 @@
 //
 
 #import "FirstViewController.h"
+//Import Albums view
+#import "AlbumsViewController.h"
+//Import custom table view cell
+#import "CustomTableViewCell.h"
 
 @interface FirstViewController ()
 
@@ -23,8 +27,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.title = NSLocalizedString(@"Home", @"Home");
+        //Set icon to house
+        self.tabBarItem.image = [UIImage imageNamed:@"home"];
     }
     return self;
 }
@@ -40,5 +45,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//IBAction to grab tap of home screen image and pop on Album View. Whole image (all blue) is active
+-(IBAction)onTap:(id)sender {
+    NSLog(@"Picture clicked!!");
+    
+    //Allocate detail view controller
+    AlbumsViewController *albumsViewController = [[AlbumsViewController alloc] initWithNibName:@"AlbumsView" bundle:nil];
+    if (albumsViewController != nil) {
+        //Push Albums view
+        [self.navigationController pushViewController:albumsViewController animated:true];
+        //[self.navigationController.rightBarButtonItem = [albumsViewController.editButton]];
+        //myViewController.navigationItem.rightBarButtonItem = [myViewController editButtonItem];
+        //[self presentViewController:albumsViewController animated:TRUE completion:nil];
+    }
+}
+
+
 
 @end
