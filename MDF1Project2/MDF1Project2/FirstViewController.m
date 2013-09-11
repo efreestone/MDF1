@@ -12,6 +12,8 @@
 //
 
 #import "FirstViewController.h"
+//Import Albums view
+#import "AlbumsViewController.h"
 
 @interface FirstViewController ()
 
@@ -42,9 +44,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-//IBAction to grab tap of home screen image. Whole image (all blue) is active
+//IBAction to grab tap of home screen image and pop on Album View. Whole image (all blue) is active
 -(IBAction)onTap:(id)sender {
     NSLog(@"Picture clicked!!");
+    
+    //Allocate detail view controller
+    AlbumsViewController *albumsViewController = [[AlbumsViewController alloc] initWithNibName:@"AlbumsView" bundle:nil];
+    if (albumsViewController != nil) {
+        //Present Albums view
+        [self presentViewController:albumsViewController animated:TRUE completion:nil];
+    }
 }
 
 

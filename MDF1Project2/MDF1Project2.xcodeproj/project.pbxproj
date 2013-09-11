@@ -35,6 +35,8 @@
 		B8E0F9F317DFFAAE00FE2941 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F117DFFAAE00FE2941 /* add@2x.png */; };
 		B8E0F9F517E0027700FE2941 /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F417E0027700FE2941 /* other.png */; };
 		B8E0F9F717E0029400FE2941 /* other@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F617E0029400FE2941 /* other@2x.png */; };
+		B8E0F9F917E007DD00FE2941 /* AlbumsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F817E007DD00FE2941 /* AlbumsView.xib */; };
+		B8E0F9FC17E0091700FE2941 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0F9FB17E0091700FE2941 /* AlbumsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,9 @@
 		B8E0F9F117DFFAAE00FE2941 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
 		B8E0F9F417E0027700FE2941 /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = other.png; sourceTree = "<group>"; };
 		B8E0F9F617E0029400FE2941 /* other@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "other@2x.png"; sourceTree = "<group>"; };
+		B8E0F9F817E007DD00FE2941 /* AlbumsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumsView.xib; sourceTree = "<group>"; };
+		B8E0F9FA17E0091700FE2941 /* AlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumsViewController.h; sourceTree = "<group>"; };
+		B8E0F9FB17E0091700FE2941 /* AlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +135,9 @@
 				B896B6C517DEBB25005B2CDC /* FirstViewController.xib */,
 				B8E0F9EC17DFF7C300FE2941 /* home.png */,
 				B8E0F9EE17DFF91500FE2941 /* home@2x.png */,
+				B8E0F9FA17E0091700FE2941 /* AlbumsViewController.h */,
+				B8E0F9FB17E0091700FE2941 /* AlbumsViewController.m */,
+				B8E0F9F817E007DD00FE2941 /* AlbumsView.xib */,
 				B896B6BE17DEBB25005B2CDC /* SecondViewController.h */,
 				B896B6BF17DEBB25005B2CDC /* SecondViewController.m */,
 				B896B6CB17DEBB25005B2CDC /* SecondViewController.xib */,
@@ -233,6 +241,7 @@
 				B8E0F9F317DFFAAE00FE2941 /* add@2x.png in Resources */,
 				B8E0F9F517E0027700FE2941 /* other.png in Resources */,
 				B8E0F9F717E0029400FE2941 /* other@2x.png in Resources */,
+				B8E0F9F917E007DD00FE2941 /* AlbumsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +257,7 @@
 				B896B6B917DEBB25005B2CDC /* FirstViewController.m in Sources */,
 				B896B6C017DEBB25005B2CDC /* SecondViewController.m in Sources */,
 				B8879FCE17DEBF7200AE393D /* ThirdViewController.m in Sources */,
+				B8E0F9FC17E0091700FE2941 /* AlbumsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

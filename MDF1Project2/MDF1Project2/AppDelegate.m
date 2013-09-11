@@ -37,7 +37,7 @@
     
     viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     
-    //Allocate second nav controller and set viewController1 as a child
+    //Allocate second nav controller and set viewController2 as a child
     navController2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
     
     //Add third tab
