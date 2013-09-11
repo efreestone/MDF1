@@ -28,7 +28,7 @@
 		B896B6C017DEBB25005B2CDC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B896B6BF17DEBB25005B2CDC /* SecondViewController.m */; };
 		B896B6C717DEBB25005B2CDC /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B896B6C517DEBB25005B2CDC /* FirstViewController.xib */; };
 		B896B6CD17DEBB25005B2CDC /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B896B6CB17DEBB25005B2CDC /* SecondViewController.xib */; };
-		B8E0F9EB17DFF55200FE2941 /* 320x450-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9EA17DFF55200FE2941 /* 320x450-Icon.png */; };
+		B8E0F9EB17DFF55200FE2941 /* 320x450-button-image.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9EA17DFF55200FE2941 /* 320x450-button-image.png */; };
 		B8E0F9ED17DFF7C300FE2941 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9EC17DFF7C300FE2941 /* home.png */; };
 		B8E0F9EF17DFF91500FE2941 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9EE17DFF91500FE2941 /* home@2x.png */; };
 		B8E0F9F217DFFAAE00FE2941 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F017DFFAAE00FE2941 /* add.png */; };
@@ -66,7 +66,7 @@
 		B896B6BF17DEBB25005B2CDC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B896B6C617DEBB25005B2CDC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
 		B896B6CC17DEBB25005B2CDC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
-		B8E0F9EA17DFF55200FE2941 /* 320x450-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "320x450-Icon.png"; sourceTree = "<group>"; };
+		B8E0F9EA17DFF55200FE2941 /* 320x450-button-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "320x450-button-image.png"; sourceTree = "<group>"; };
 		B8E0F9EC17DFF7C300FE2941 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		B8E0F9EE17DFF91500FE2941 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		B8E0F9F017DFFAAE00FE2941 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		B896B6A617DEBB25005B2CDC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B8E0F9EA17DFF55200FE2941 /* 320x450-Icon.png */,
+				B8E0F9EA17DFF55200FE2941 /* 320x450-button-image.png */,
 				B83E2E1B17DED3E500292251 /* Default-Portrait~ipad.png */,
 				B83E2E1917DED3AB00292251 /* Default-Portrait@2x~ipad.png */,
 				B896B6A717DEBB25005B2CDC /* MDF1Project2-Info.plist */,
@@ -226,7 +226,7 @@
 				B8879FDD17DEC5AA00AE393D /* Icon@2x.png in Resources */,
 				B83E2E1A17DED3AB00292251 /* Default-Portrait@2x~ipad.png in Resources */,
 				B83E2E1C17DED3E500292251 /* Default-Portrait~ipad.png in Resources */,
-				B8E0F9EB17DFF55200FE2941 /* 320x450-Icon.png in Resources */,
+				B8E0F9EB17DFF55200FE2941 /* 320x450-button-image.png in Resources */,
 				B8E0F9ED17DFF7C300FE2941 /* home.png in Resources */,
 				B8E0F9EF17DFF91500FE2941 /* home@2x.png in Resources */,
 				B8E0F9F217DFFAAE00FE2941 /* add.png in Resources */,
