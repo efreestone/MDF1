@@ -9,5 +9,35 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
+{
+    //All from project 1
+    //These declarations are redundant because of the property declarations bellow. Keeping them for clarity
+    //Declare title label
+    IBOutlet UILabel *titleLabel;
+    //Declare label for band name
+    IBOutlet UILabel *bandLabel;
+    //Declare label for album name
+    IBOutlet UILabel *albumLabel;
+    //Declare label for release date
+    IBOutlet UILabel *releaseDateLabel;
+    //Declare label for country of origin
+    IBOutlet UILabel *countryLabel;
+    //Declare home button
+    IBOutlet UIButton *homeButton;
+}
+
+//Set property for title label to allow @synthesiz
+@property (strong) IBOutlet UILabel *titleLabel;
+//Set property for band label to allow @synthesize
+@property (strong) IBOutlet UILabel *bandLabel;
+//Set property for album label to allow @synthesize
+@property (strong) IBOutlet UILabel *albumLabel;
+//Set property for date label to allow @synthesize
+@property (strong) IBOutlet UILabel *releaseDateLabel;
+//Set property for country label to allow @synthesize
+@property (strong) IBOutlet UILabel *countryLabel;
+
+//Declare IBAction for home button clicked
+//-(IBAction)onHome:(id)sender;
 
 @end

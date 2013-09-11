@@ -37,6 +37,8 @@
 		B8E0F9F717E0029400FE2941 /* other@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F617E0029400FE2941 /* other@2x.png */; };
 		B8E0F9F917E007DD00FE2941 /* AlbumsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9F817E007DD00FE2941 /* AlbumsView.xib */; };
 		B8E0F9FC17E0091700FE2941 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0F9FB17E0091700FE2941 /* AlbumsViewController.m */; };
+		B8E0F9FE17E00F8200FE2941 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9FD17E00F8100FE2941 /* DetailView.xib */; };
+		B8E0FA0117E00F9F00FE2941 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0FA0017E00F9F00FE2941 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,9 @@
 		B8E0F9F817E007DD00FE2941 /* AlbumsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumsView.xib; sourceTree = "<group>"; };
 		B8E0F9FA17E0091700FE2941 /* AlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumsViewController.h; sourceTree = "<group>"; };
 		B8E0F9FB17E0091700FE2941 /* AlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumsViewController.m; sourceTree = "<group>"; };
+		B8E0F9FD17E00F8100FE2941 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		B8E0F9FF17E00F9F00FE2941 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B8E0FA0017E00F9F00FE2941 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +143,9 @@
 				B8E0F9FA17E0091700FE2941 /* AlbumsViewController.h */,
 				B8E0F9FB17E0091700FE2941 /* AlbumsViewController.m */,
 				B8E0F9F817E007DD00FE2941 /* AlbumsView.xib */,
+				B8E0F9FF17E00F9F00FE2941 /* DetailViewController.h */,
+				B8E0FA0017E00F9F00FE2941 /* DetailViewController.m */,
+				B8E0F9FD17E00F8100FE2941 /* DetailView.xib */,
 				B896B6BE17DEBB25005B2CDC /* SecondViewController.h */,
 				B896B6BF17DEBB25005B2CDC /* SecondViewController.m */,
 				B896B6CB17DEBB25005B2CDC /* SecondViewController.xib */,
@@ -242,6 +250,7 @@
 				B8E0F9F517E0027700FE2941 /* other.png in Resources */,
 				B8E0F9F717E0029400FE2941 /* other@2x.png in Resources */,
 				B8E0F9F917E007DD00FE2941 /* AlbumsView.xib in Resources */,
+				B8E0F9FE17E00F8200FE2941 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +267,7 @@
 				B896B6C017DEBB25005B2CDC /* SecondViewController.m in Sources */,
 				B8879FCE17DEBF7200AE393D /* ThirdViewController.m in Sources */,
 				B8E0F9FC17E0091700FE2941 /* AlbumsViewController.m in Sources */,
+				B8E0FA0117E00F9F00FE2941 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
