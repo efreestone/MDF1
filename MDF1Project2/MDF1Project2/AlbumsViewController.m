@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MDF1 1309
+// Project 2
+// September 9th, 2013
+
 //
 //  AlbumsViewController.m
 //  MDF1Project2
@@ -84,25 +89,21 @@
 }
 
 
-//From Project 1
 //Built in function to set number of rows in table view section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [albumArray count];
 }
 
-//From Project 1
 //Built in function to set number of sections in table view
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-//From Project 1
 //Built in function to add delete to cells in table view
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewCellEditingStyleDelete;
 }
 
-//From Project 1
 //Built in function to check editing style (-=delete, +=add)
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     //Check if in delete mode
@@ -123,7 +124,6 @@
     }
 }
 
-//From Project 1
 //Built in function to allocate and reuse table view cells
 - (UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -152,7 +152,6 @@
     return cell;
 }
 
-//From Project 1
 //Built in function to grab row selected in table view
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"Row = %d Album = %@", indexPath.row, [albumArray objectAtIndex:indexPath.row]);
@@ -160,10 +159,11 @@
     //Allocate detail view controller
     DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil];
     if (detailViewController != nil) {
-        [self presentViewController:detailViewController animated:TRUE completion:nil];
+        //[self presentViewController:detailViewController animated:TRUE completion:nil];
+        [self.navigationController pushViewController:detailViewController animated:true];
         
         //Change title label of detail view to band name
-        //detailViewController.titleLabel.text = (NSString *)[bandArray objectAtIndex:indexPath.row];
+        detailViewController.titleLabel.text = (NSString *)[bandArray objectAtIndex:indexPath.row];
         //Add band name to first label on detail view
         detailViewController.bandLabel.text = [NSString stringWithFormat:@"Band Name: %@", [bandArray objectAtIndex:indexPath.row]];
         //Add album name to second label on detail view
@@ -175,5 +175,5 @@
     }
 }
 
-
 @end
+

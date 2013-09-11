@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MDF1 1309
+// Project 2
+// September 9th, 2013
+
 //
 //  CustomTableViewCell.m
 //  MDF1Project2
@@ -8,35 +13,26 @@
 
 #import "CustomTableViewCell.h"
 
-@interface CustomTableViewCell ()
-
-@end
-
 @implementation CustomTableViewCell
 
 //Synthesize band and album labels for getter/setter to get access from ViewController.m
 @synthesize bandLabel;
 @synthesize albumLabel;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Custom initialization
+        // Initialization code
     }
     return self;
 }
 
-- (void)viewDidLoad
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
 }
 
 @end

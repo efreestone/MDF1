@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MDF1 1309
+// Project 2
+// September 9th, 2013
+
 //
 //  AlbumsViewController.h
 //  MDF1Project2
@@ -8,7 +13,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlbumsViewController : UIViewController
+@interface AlbumsViewController : UIViewController <UITableViewDelegate>
 {
     //All from project 1
     //Declare band array

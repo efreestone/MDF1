@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MDF1 1309
+// Project 2
+// September 9th, 2013
+
 //
 //  CustomTableViewCell.h
 //  MDF1Project2
@@ -8,7 +13,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomTableViewCell : UIViewController
+@interface CustomTableViewCell : UITableViewCell
 {
     //These declarations are redundant because of the property declarations bellow. Keeping them for clarity
     //Declare label for band name
