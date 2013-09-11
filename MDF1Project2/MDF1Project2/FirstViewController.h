@@ -14,5 +14,11 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
+{
+    //IBOutlet UIButton *albumButton;
+    IBOutlet UIImageView *homeImage;
+}
+
+-(IBAction)onTap:(id)sender;
 
 @end
