@@ -43,6 +43,26 @@
 		B8E0FA0117E00F9F00FE2941 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0FA0017E00F9F00FE2941 /* DetailViewController.m */; };
 		B8E0FA0317E01D2600FE2941 /* IphoneCustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E0FA0217E01D2500FE2941 /* IphoneCustomViewCell.xib */; };
 		B8EDE2B917E118D6006BC6C6 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EDE2B817E118D6006BC6C6 /* CustomTableViewCell.m */; };
+		B8F4405D17E24C4B00ABFB5B /* amaranthe.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403517E24C4B00ABFB5B /* amaranthe.png */; };
+		B8F4405F17E24C4B00ABFB5B /* amaryllis.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403717E24C4B00ABFB5B /* amaryllis.png */; };
+		B8F4406117E24C4B00ABFB5B /* as-daylight-dies.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403917E24C4B00ABFB5B /* as-daylight-dies.png */; };
+		B8F4406317E24C4B00ABFB5B /* disarm-the-descent.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403B17E24C4B00ABFB5B /* disarm-the-descent.png */; };
+		B8F4406517E24C4B00ABFB5B /* fragments-of-d-generation.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403D17E24C4B00ABFB5B /* fragments-of-d-generation.png */; };
+		B8F4406717E24C4B00ABFB5B /* fragments-of-form-and-function.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403F17E24C4B00ABFB5B /* fragments-of-form-and-function.png */; };
+		B8F4406917E24C4B00ABFB5B /* internal-revolution.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404117E24C4B00ABFB5B /* internal-revolution.png */; };
+		B8F4406B17E24C4B00ABFB5B /* leave-a-whisper.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404317E24C4B00ABFB5B /* leave-a-whisper.png */; };
+		B8F4406D17E24C4B00ABFB5B /* mind-tricks.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404517E24C4B00ABFB5B /* mind-tricks.png */; };
+		B8F4406F17E24C4B00ABFB5B /* pursuit-of-honor.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404717E24C4B00ABFB5B /* pursuit-of-honor.png */; };
+		B8F4407117E24C4B00ABFB5B /* stabbing-the-drama.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404917E24C4B00ABFB5B /* stabbing-the-drama.png */; };
+		B8F4407317E24C4B00ABFB5B /* sworn-to-a-great-divide.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404B17E24C4B00ABFB5B /* sworn-to-a-great-divide.png */; };
+		B8F4407517E24C4B00ABFB5B /* the-end-of-heartache.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404D17E24C4B00ABFB5B /* the-end-of-heartache.png */; };
+		B8F4407717E24C4B00ABFB5B /* the-fall-of-ideals.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404F17E24C4B00ABFB5B /* the-fall-of-ideals.png */; };
+		B8F4407917E24C4B00ABFB5B /* the-living-infinite.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405117E24C4B00ABFB5B /* the-living-infinite.png */; };
+		B8F4407B17E24C4B00ABFB5B /* the-nexus.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405317E24C4B00ABFB5B /* the-nexus.png */; };
+		B8F4407D17E24C4B00ABFB5B /* the-panic-broadcast.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405517E24C4B00ABFB5B /* the-panic-broadcast.png */; };
+		B8F4407F17E24C4B00ABFB5B /* the-sound-of-madness.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405717E24C4B00ABFB5B /* the-sound-of-madness.png */; };
+		B8F4408117E24C4B00ABFB5B /* us-and-them.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405917E24C4B00ABFB5B /* us-and-them.png */; };
+		B8F4408317E24C4B00ABFB5B /* war-of-will.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405B17E24C4B00ABFB5B /* war-of-will.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +112,26 @@
 		B8E0FA0217E01D2500FE2941 /* IphoneCustomViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IphoneCustomViewCell.xib; sourceTree = "<group>"; };
 		B8EDE2B717E118D6006BC6C6 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		B8EDE2B817E118D6006BC6C6 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		B8F4403517E24C4B00ABFB5B /* amaranthe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amaranthe.png; sourceTree = "<group>"; };
+		B8F4403717E24C4B00ABFB5B /* amaryllis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amaryllis.png; sourceTree = "<group>"; };
+		B8F4403917E24C4B00ABFB5B /* as-daylight-dies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "as-daylight-dies.png"; sourceTree = "<group>"; };
+		B8F4403B17E24C4B00ABFB5B /* disarm-the-descent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "disarm-the-descent.png"; sourceTree = "<group>"; };
+		B8F4403D17E24C4B00ABFB5B /* fragments-of-d-generation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fragments-of-d-generation.png"; sourceTree = "<group>"; };
+		B8F4403F17E24C4B00ABFB5B /* fragments-of-form-and-function.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fragments-of-form-and-function.png"; sourceTree = "<group>"; };
+		B8F4404117E24C4B00ABFB5B /* internal-revolution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "internal-revolution.png"; sourceTree = "<group>"; };
+		B8F4404317E24C4B00ABFB5B /* leave-a-whisper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leave-a-whisper.png"; sourceTree = "<group>"; };
+		B8F4404517E24C4B00ABFB5B /* mind-tricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mind-tricks.png"; sourceTree = "<group>"; };
+		B8F4404717E24C4B00ABFB5B /* pursuit-of-honor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pursuit-of-honor.png"; sourceTree = "<group>"; };
+		B8F4404917E24C4B00ABFB5B /* stabbing-the-drama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stabbing-the-drama.png"; sourceTree = "<group>"; };
+		B8F4404B17E24C4B00ABFB5B /* sworn-to-a-great-divide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sworn-to-a-great-divide.png"; sourceTree = "<group>"; };
+		B8F4404D17E24C4B00ABFB5B /* the-end-of-heartache.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-end-of-heartache.png"; sourceTree = "<group>"; };
+		B8F4404F17E24C4B00ABFB5B /* the-fall-of-ideals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-fall-of-ideals.png"; sourceTree = "<group>"; };
+		B8F4405117E24C4B00ABFB5B /* the-living-infinite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-living-infinite.png"; sourceTree = "<group>"; };
+		B8F4405317E24C4B00ABFB5B /* the-nexus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-nexus.png"; sourceTree = "<group>"; };
+		B8F4405517E24C4B00ABFB5B /* the-panic-broadcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-panic-broadcast.png"; sourceTree = "<group>"; };
+		B8F4405717E24C4B00ABFB5B /* the-sound-of-madness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "the-sound-of-madness.png"; sourceTree = "<group>"; };
+		B8F4405917E24C4B00ABFB5B /* us-and-them.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "us-and-them.png"; sourceTree = "<group>"; };
+		B8F4405B17E24C4B00ABFB5B /* war-of-will.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "war-of-will.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +208,7 @@
 				B8879FCD17DEBF7100AE393D /* ThirdViewController.xib */,
 				B8E0F9F417E0027700FE2941 /* other.png */,
 				B8E0F9F617E0029400FE2941 /* other@2x.png */,
+				B8F4403317E24C4B00ABFB5B /* covers */,
 				B896B6A617DEBB25005B2CDC /* Supporting Files */,
 			);
 			path = MDF1Project2;
@@ -190,6 +231,33 @@
 				B896B6B517DEBB25005B2CDC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8F4403317E24C4B00ABFB5B /* covers */ = {
+			isa = PBXGroup;
+			children = (
+				B8F4403517E24C4B00ABFB5B /* amaranthe.png */,
+				B8F4403717E24C4B00ABFB5B /* amaryllis.png */,
+				B8F4403917E24C4B00ABFB5B /* as-daylight-dies.png */,
+				B8F4403B17E24C4B00ABFB5B /* disarm-the-descent.png */,
+				B8F4403D17E24C4B00ABFB5B /* fragments-of-d-generation.png */,
+				B8F4403F17E24C4B00ABFB5B /* fragments-of-form-and-function.png */,
+				B8F4404117E24C4B00ABFB5B /* internal-revolution.png */,
+				B8F4404317E24C4B00ABFB5B /* leave-a-whisper.png */,
+				B8F4404517E24C4B00ABFB5B /* mind-tricks.png */,
+				B8F4404717E24C4B00ABFB5B /* pursuit-of-honor.png */,
+				B8F4404917E24C4B00ABFB5B /* stabbing-the-drama.png */,
+				B8F4404B17E24C4B00ABFB5B /* sworn-to-a-great-divide.png */,
+				B8F4404D17E24C4B00ABFB5B /* the-end-of-heartache.png */,
+				B8F4404F17E24C4B00ABFB5B /* the-fall-of-ideals.png */,
+				B8F4405117E24C4B00ABFB5B /* the-living-infinite.png */,
+				B8F4405317E24C4B00ABFB5B /* the-nexus.png */,
+				B8F4405517E24C4B00ABFB5B /* the-panic-broadcast.png */,
+				B8F4405717E24C4B00ABFB5B /* the-sound-of-madness.png */,
+				B8F4405917E24C4B00ABFB5B /* us-and-them.png */,
+				B8F4405B17E24C4B00ABFB5B /* war-of-will.png */,
+			);
+			path = covers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +336,26 @@
 				B8E0FA0317E01D2600FE2941 /* IphoneCustomViewCell.xib in Resources */,
 				B88FEB7717E15CC7002B3AD6 /* banner~iphone.png in Resources */,
 				B88FEB7917E160A8002B3AD6 /* add-banner~iphone.png in Resources */,
+				B8F4405D17E24C4B00ABFB5B /* amaranthe.png in Resources */,
+				B8F4405F17E24C4B00ABFB5B /* amaryllis.png in Resources */,
+				B8F4406117E24C4B00ABFB5B /* as-daylight-dies.png in Resources */,
+				B8F4406317E24C4B00ABFB5B /* disarm-the-descent.png in Resources */,
+				B8F4406517E24C4B00ABFB5B /* fragments-of-d-generation.png in Resources */,
+				B8F4406717E24C4B00ABFB5B /* fragments-of-form-and-function.png in Resources */,
+				B8F4406917E24C4B00ABFB5B /* internal-revolution.png in Resources */,
+				B8F4406B17E24C4B00ABFB5B /* leave-a-whisper.png in Resources */,
+				B8F4406D17E24C4B00ABFB5B /* mind-tricks.png in Resources */,
+				B8F4406F17E24C4B00ABFB5B /* pursuit-of-honor.png in Resources */,
+				B8F4407117E24C4B00ABFB5B /* stabbing-the-drama.png in Resources */,
+				B8F4407317E24C4B00ABFB5B /* sworn-to-a-great-divide.png in Resources */,
+				B8F4407517E24C4B00ABFB5B /* the-end-of-heartache.png in Resources */,
+				B8F4407717E24C4B00ABFB5B /* the-fall-of-ideals.png in Resources */,
+				B8F4407917E24C4B00ABFB5B /* the-living-infinite.png in Resources */,
+				B8F4407B17E24C4B00ABFB5B /* the-nexus.png in Resources */,
+				B8F4407D17E24C4B00ABFB5B /* the-panic-broadcast.png in Resources */,
+				B8F4407F17E24C4B00ABFB5B /* the-sound-of-madness.png in Resources */,
+				B8F4408117E24C4B00ABFB5B /* us-and-them.png in Resources */,
+				B8F4408317E24C4B00ABFB5B /* war-of-will.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

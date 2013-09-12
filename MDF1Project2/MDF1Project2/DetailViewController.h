@@ -15,11 +15,11 @@
 
 @interface DetailViewController : UIViewController
 {
-    //All from project 1
+    //From project 1 (modified)
     //These declarations are redundant because of the property declarations bellow. Keeping them for clarity
+    //Decalre cover image
+    IBOutlet UIImageView *coverImage;
     //Declare title label
-    IBOutlet UILabel *titleLabel;
-    //Declare label for band name
     IBOutlet UILabel *bandLabel;
     //Declare label for album name
     IBOutlet UILabel *albumLabel;
@@ -27,13 +27,11 @@
     IBOutlet UILabel *releaseDateLabel;
     //Declare label for country of origin
     IBOutlet UILabel *countryLabel;
-    //Declare home button
-    IBOutlet UIButton *homeButton;
 }
 
+//Set property for cover image to allow @synthesize
+@property (strong) IBOutlet UIImageView *coverImage;
 //Set property for title label to allow @synthesiz
-@property (strong) IBOutlet UILabel *titleLabel;
-//Set property for band label to allow @synthesize
 @property (strong) IBOutlet UILabel *bandLabel;
 //Set property for album label to allow @synthesize
 @property (strong) IBOutlet UILabel *albumLabel;
@@ -41,6 +39,7 @@
 @property (strong) IBOutlet UILabel *releaseDateLabel;
 //Set property for country label to allow @synthesize
 @property (strong) IBOutlet UILabel *countryLabel;
+
 
 //Declare IBAction for home button clicked
 //-(IBAction)onHome:(id)sender;

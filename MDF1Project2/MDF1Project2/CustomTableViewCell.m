@@ -15,7 +15,8 @@
 
 @implementation CustomTableViewCell
 
-//Synthesize band and album labels for getter/setter to get access from ViewController.m
+//Synthesize cover, band and album labels for getter/setter to get access from ViewController.m
+@synthesize coverImage;
 @synthesize bandLabel;
 @synthesize albumLabel;
 

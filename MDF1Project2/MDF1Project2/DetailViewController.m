@@ -20,8 +20,8 @@
 @implementation DetailViewController
 
 //From Project 1
-//Synthesize all 5 labels for getter/setter to get access from ViewController.m
-@synthesize titleLabel;
+//Synthesize image and all 4 labels for getter/setter to get access from ViewController.m
+@synthesize coverImage;
 @synthesize bandLabel;
 @synthesize albumLabel;
 @synthesize releaseDateLabel;
@@ -32,7 +32,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        //self.title = (NSString *)[bandArray objectAtIndex:indexPath.row];
     }
     return self;
 }
