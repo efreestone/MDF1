@@ -172,7 +172,9 @@
                 
                 //tableView.backgroundColor = [UIColor lightGrayColor];
                 
-                //Apply band names to top label of custom cell
+                //Apply cover image to custom cell
+                cell.coverImage = 
+                //Apply band name to top label of custom cell
                 cell.bandLabel.text = [bandArray objectAtIndex:indexPath.row];
                 //Apply album name to bottom label of custom cell
                 cell.albumLabel.text = [albumArray objectAtIndex:indexPath.row];
