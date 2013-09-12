@@ -47,4 +47,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Grab click of Save Album button. Only resigns keyboard for now
+-(IBAction)saveClicked:(id)sender {
+    //Resign keyboard if band name field called it
+    [bandNameField resignFirstResponder];
+    //Resign keyboard if album title field called it
+    [albumTitleField resignFirstResponder];
+    //Resign keyboard if release date field called it
+    [releaseDateField resignFirstResponder];
+    //Resign keyboard if country field called it
+    [countryField resignFirstResponder];
+}
+
 @end
