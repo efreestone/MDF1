@@ -34,6 +34,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = NSLocalizedString(@"Albums", @"Albums");
     }
     return self;
 }
@@ -188,11 +189,11 @@
     //Allocate detail view controller
     DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil];
     if (detailViewController != nil) {
-        //[self presentViewController:detailViewController animated:TRUE completion:nil];
+        //Push detail view on top of albums view (not from project 1)
         [self.navigationController pushViewController:detailViewController animated:true];
         
-        //Change title label of detail view to band name
-        detailViewController.titleLabel.text = (NSString *)[bandArray objectAtIndex:indexPath.row];
+        //Change navbar title of detail view to band name (modified from project 1)
+        detailViewController.title = (NSString *)[bandArray objectAtIndex:indexPath.row];
         //Add band name to first label on detail view
         detailViewController.bandLabel.text = [NSString stringWithFormat:@"Band Name: %@", [bandArray objectAtIndex:indexPath.row]];
         //Add album name to second label on detail view

@@ -32,6 +32,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        //self.title = (NSString *)[bandArray objectAtIndex:indexPath.row];
     }
     return self;
 }
