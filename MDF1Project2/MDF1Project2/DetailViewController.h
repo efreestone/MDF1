@@ -17,7 +17,7 @@
 {
     //From project 1 (modified)
     //These declarations are redundant because of the property declarations bellow. Keeping them for clarity
-    //Decalre cover image
+    //Declare cover image
     IBOutlet UIImageView *coverImage;
     //Declare title label
     IBOutlet UILabel *bandLabel;
@@ -39,9 +39,5 @@
 @property (strong) IBOutlet UILabel *releaseDateLabel;
 //Set property for country label to allow @synthesize
 @property (strong) IBOutlet UILabel *countryLabel;
-
-
-//Declare IBAction for home button clicked
-//-(IBAction)onHome:(id)sender;
 
 @end

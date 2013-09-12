@@ -17,8 +17,6 @@
 //Import custom table view cell
 #import "CustomTableViewCell.h"
 
-#import "FirstViewController.h"
-
 @interface AlbumsViewController ()
 
 @end
@@ -41,8 +39,15 @@
 
 - (void)viewDidLoad
 {
-    //Create editable array with 20 images of album covers
-    coverArray = [[NSMutableArray alloc] initWithObjects:@"Amaranthe.png", @"The-Nexus.png", @"The-Fall-of-Ideals.png", @"The-End-of-Heartache.png", @"As-Daylight-Dies.png", @"Disarm-the-Descent.png", @"Fragments-of-D-Generation.png", @"Mind-Tricks.png", @"Leave-a-Whisper.png", @"Us-and-Them.png", @"The-Sound-of-Madness.png", @"Amarylis.png", @"Stabbing-the-Drama.png", @"Sworn-to-a-Great-Divide.png", @"The-Panic-Broadcast.png", @"The-Living-Infinite.png", @"Pursuit-of-Honor.png", @"War-of-Will.png", @"Fragments-of-Form-and-Function.png", @"Internal-Revolution.png", nil];
+    
+    //Set background color to blue from splash and icons
+    self.view.backgroundColor = [UIColor colorWithRed:0.243 green:0.486 blue:0.969 alpha:1]; /*#3e7cf7*/
+    
+    //Create eidtable array with 20 large cover images
+    coverArrayLarge = [[NSMutableArray alloc] initWithObjects:@"Amaranthe-Large.png", @"The-Nexus-Large.png", @"The-Fall-of-Ideals-Large.png", @"The-End-of-Heartache-Large.png", @"As-Daylight-Dies-Large.png", @"Disarm-the-Descent-Large.png", @"Fragments-of-D-Generation-Large.png", @"Mind-Tricks-Large.png", @"Leave-a-Whisper-Large.png", @"Us-and-Them-Large.png", @"The-Sound-of-Madness-Large.png", @"Amaryllis-Large.png", @"Stabbing-the-Drama-Large.png", @"Sworn-to-a-Great-Divide-Large.png", @"The-Panic-Broadcast-Large.png", @"The-Living-Infinite-Large.png", @"Pursuit-of-Honor-Large.png", @"War-of-Will-Large.png", @"Fragments-of-Form-and-Function-Large.png", @"Internal-Revolution-Large.png", nil];
+    
+    //Create editable array with 20 images of album covers.
+    coverArray = [[NSMutableArray alloc] initWithObjects:@"Amaranthe.png", @"The-Nexus.png", @"The-Fall-of-Ideals.png", @"The-End-of-Heartache.png", @"As-Daylight-Dies.png", @"Disarm-the-Descent.png", @"Fragments-of-D-Generation.png", @"Mind-Tricks.png", @"Leave-a-Whisper.png", @"Us-and-Them.png", @"The-Sound-of-Madness.png", @"Amaryllis.png", @"Stabbing-the-Drama.png", @"Sworn-to-a-Great-Divide.png", @"The-Panic-Broadcast.png", @"The-Living-Infinite.png", @"Pursuit-of-Honor.png", @"War-of-Will.png", @"Fragments-of-Form-and-Function.png", @"Internal-Revolution.png", nil];
     
     //Arrays from project 1
     //Create editable array with 20 band names
@@ -56,15 +61,6 @@
     
     //Create editable array with 20 countries of origin
     countryArray = [[NSMutableArray alloc] initWithObjects:@"Sweden/Denmark", @"Sweden/Denmark", @"United States", @"United States", @"United States", @"United States", @"Italy/Sweden", @"Italy/Sweden", @"United States", @"United States", @"United States", @"United States", @"Sweden", @"Sweden", @"Sweden", @"Sweden", @"United States", @"United States", @"United States", @"United States", nil];
-    
-    //Add edit button to nav bar in Albums View
-    //editButton = self.editButtonItem;
-    
-    //editButton.tag = 0;
-    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    /*self.editButtonItem.target = tableView;
-    self.editButtonItem.action = (void)itemClick:(id)sender;*/
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
@@ -127,7 +123,8 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSLog(@"We want to delete row = %d", indexPath.row);
         
-        //Remove object from 
+        [coverArray removeObjectAtIndex:indexPath.row];
+        [coverArrayLarge removeObjectAtIndex:indexPath.row];
         
         //Remove object from band array
         [bandArray removeObjectAtIndex:indexPath.row];
@@ -161,17 +158,17 @@
             if ([view isKindOfClass:[CustomTableViewCell class]]) {
                 cell = (CustomTableViewCell *)view;
                 
-                //tableView.backgroundColor = [UIColor lightGrayColor];
-                
+                //Using cover arrays to apply images but keeping this for now as it may come in handy when my CRUD is fully operating for adding cover image name to an array
                 //Cast album name into NSString (not from Project 1)
-                NSString *albumSelected = [albumArray objectAtIndex:indexPath.row];
+                //NSString *albumSelected = [albumArray objectAtIndex:indexPath.row];
                 //Replace space with - (not from Project 1)
-                NSString *albumNameNoSpaces = [albumSelected stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+                //NSString *albumNameNoSpaces = [albumSelected stringByReplacingOccurrencesOfString:@" " withString:@"-"];
                 //Add .png to end of modified album name (not from Project 1)
-                NSString *albumNameWithPng = [albumNameNoSpaces stringByAppendingString:@".png"];
+                //NSString *albumNameWithPng = [albumNameNoSpaces stringByAppendingString:@".png"];
                 
                 //Apply cover image to custom cell (not from Project 1)
-                cell.coverImage.image = [UIImage imageNamed:albumNameWithPng];
+                //cell.coverImage.image = [UIImage imageNamed:albumNameWithPng];
+                cell.coverImage.image = [UIImage imageNamed:[coverArray objectAtIndex:indexPath.row]];
                 //Apply band name to top label of custom cell
                 cell.bandLabel.text = [bandArray objectAtIndex:indexPath.row];
                 //Apply album name to bottom label of custom cell
@@ -194,15 +191,17 @@
         //Push detail view on top of albums view (not from project 1)
         [self.navigationController pushViewController:detailViewController animated:true];
         
+        //Using cover arrays to apply images but keeping this for now as it may come in handy when my CRUD is fully operating  for adding cover image name to an array
         //Cast album name into NSString (not from Project 1)
-        NSString *albumSelected2 = [albumArray objectAtIndex:indexPath.row];
+        //NSString *albumSelected2 = [albumArray objectAtIndex:indexPath.row];
         //Replace space with - (not from Project 1)
-        NSString *albumNameNoSpaces2 = [albumSelected2 stringByReplacingOccurrencesOfString:@" " withString:@"-"];
+        //NSString *albumNameNoSpaces2 = [albumSelected2 stringByReplacingOccurrencesOfString:@" " withString:@"-"];
         //Add -Large.png to end of modified album name (not from Project 1)
-        NSString *albumNameWithPng2 = [albumNameNoSpaces2 stringByAppendingString:@"-Large.png"];
+        //NSString *albumNameWithPng2 = [albumNameNoSpaces2 stringByAppendingString:@"-Large.png"];
         
         //Apply cover image to custom cell (not from Project 1)
-        detailViewController.coverImage.image = [UIImage imageNamed:albumNameWithPng2];
+        //detailViewController.coverImage.image = [UIImage imageNamed:albumNameWithPng2];
+        detailViewController.coverImage.image = [UIImage imageNamed:[coverArrayLarge objectAtIndex:indexPath.row]];
         //Change navbar title of detail view to band name (modified from project 1)
         detailViewController.title = (NSString *)[bandArray objectAtIndex:indexPath.row];
         //Add band name to first label on detail view
