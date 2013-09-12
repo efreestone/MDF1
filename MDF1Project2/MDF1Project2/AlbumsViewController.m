@@ -49,7 +49,7 @@
     bandArray = [[NSMutableArray alloc] initWithObjects:@"Amaranthe", @"Amaranthe", @"All That Remains", @"Killswitch Engage", @"Killswitch Engage", @"Killswitch Engage", @"Disarmonia Mundi", @"Disarmonia Mundi", @"Shinedown", @"Shinedown", @"Shinedown", @"Shinedown", @"Soilwork", @"Soilwork", @"Soilwork", @"Soilwork", @"Battlecross", @"Battlecross", @"Allegaeon", @"Diecast", nil];
     
     //Create editable array with 20 Album titles
-    albumArray = [[NSMutableArray alloc] initWithObjects:@"Amaranthe", @"The Nexus", @"The Fall of Ideals", @"The End of Heartache", @"As Daylight Dies", @"Disarm the Descent", @"Fragments of D-Generation", @"Mind Tricks", @"Leave a Whisper", @"Us and Them", @"The Sound of Madness", @"Amarylis", @"Stabbing the Drama", @"Sworn to a Great Divide", @"The Panic Broadcast", @"The Living Infinite", @"Pursuit of Honor", @"War of Will", @"Fragments of Form and Function", @"Internal Revolution", nil];
+    albumArray = [[NSMutableArray alloc] initWithObjects:@"Amaranthe", @"The Nexus", @"The Fall of Ideals", @"The End of Heartache", @"As Daylight Dies", @"Disarm the Descent", @"Fragments of D-Generation", @"Mind Tricks", @"Leave a Whisper", @"Us and Them", @"The Sound of Madness", @"Amaryllis", @"Stabbing the Drama", @"Sworn to a Great Divide", @"The Panic Broadcast", @"The Living Infinite", @"Pursuit of Honor", @"War of Will", @"Fragments of Form and Function", @"Internal Revolution", nil];
     
     //Create editable array with 20 release dates
     releaseDateArray = [[NSMutableArray alloc] initWithObjects:@"2011", @"2013", @"2006", @"2004", @"2006", @"2013", @"2004", @"2006", @"2003", @"2005", @"2008", @"2012", @"2005", @"2007", @"2010", @"2013", @"2011", @"2013", @"2010", @"2006", nil];
@@ -61,7 +61,7 @@
     //editButton = self.editButtonItem;
     
     //editButton.tag = 0;
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     /*self.editButtonItem.target = tableView;
     self.editButtonItem.action = (void)itemClick:(id)sender;*/
@@ -76,20 +76,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-//Button to Turn Editing On & Off for List
-/*- (IBAction)clickEdit:(id)sender
-{
-    //edit items in my table view list
-    if (tableView.editing == NO)
-    {
-        [tableView setEditing:YES];
-    }
-    else
-    {
-        [tableView setEditing:NO];
-    }
-}*/
-
 //From Project 1
 //onClick function to grab button clicks, currently only used for edit button
 -(IBAction)onClick:(id)sender {
@@ -102,14 +88,14 @@
             //Set edit mode to true
             [tableView setEditing:true animated:true];
             //Set button title to "Done"
-            //[editButton setTitle:@"Done" forState:0];
+            [editButton setTitle:@"Done" forState:0];
             //Change tag number to 1 to hit else statement and return to non-edit mode. This may need changed when more buttons are added
             editButton.tag = 1;
         } else {
             //Turn editing mode off
             [tableView setEditing:false];
             //Set title back to "Edit"
-            //[editButton setTitle:@"Edit" forState:0];
+            [editButton setTitle:@"Edit" forState:0];
             //Reset tag number to 0
             editButton.tag = 0;
         }
