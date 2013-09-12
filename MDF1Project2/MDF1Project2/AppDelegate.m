@@ -27,7 +27,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2, *viewController3;
-    //Creating UINav with UIView for clarity
+    //Creating UINav with UIView for clarity and ease when ipad specific code is added back in
     UINavigationController *navController1; //, *navController2;
     
     viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
