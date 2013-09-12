@@ -15,6 +15,8 @@
 
 @interface AlbumsViewController : UIViewController <UITableViewDelegate>
 {
+    //Declare album cover array
+    NSMutableArray *coverArray;
     //All from project 1
     //Declare band array
     NSMutableArray *bandArray;
