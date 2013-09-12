@@ -27,6 +27,7 @@
 
 //Synthesize edit button
 @synthesize editButton;
+@synthesize tableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,7 +54,13 @@
     countryArray = [[NSMutableArray alloc] initWithObjects:@"Sweden/Denmark", @"Sweden/Denmark", @"United States", @"United States", @"United States", @"United States", @"Italy/Sweden", @"Italy/Sweden", @"United States", @"United States", @"United States", @"United States", @"Sweden", @"Sweden", @"Sweden", @"Sweden", @"United States", @"United States", @"United States", @"United States", nil];
     
     //Add edit button to nav bar in Albums View
+    //editButton = self.editButtonItem;
+    
+    //editButton.tag = 0;
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    /*self.editButtonItem.target = tableView;
+    self.editButtonItem.action = (void)itemClick:(id)sender;*/
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
@@ -65,6 +72,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Button to Turn Editing On & Off for List
+/*- (IBAction)clickEdit:(id)sender
+{
+    //edit items in my table view list
+    if (tableView.editing == NO)
+    {
+        [tableView setEditing:YES];
+    }
+    else
+    {
+        [tableView setEditing:NO];
+    }
+}*/
+
 //From Project 1
 //onClick function to grab button clicks, currently only used for edit button
 -(IBAction)onClick:(id)sender {
@@ -75,16 +96,16 @@
         //Edit button
         if (buttonClicked.tag == 0) {
             //Set edit mode to true
-            [tableView setEditing:true];
+            [tableView setEditing:true animated:true];
             //Set button title to "Done"
-            [editButton setTitle:@"Done" forState:0];
+            //[editButton setTitle:@"Done" forState:0];
             //Change tag number to 1 to hit else statement and return to non-edit mode. This may need changed when more buttons are added
             editButton.tag = 1;
         } else {
             //Turn editing mode off
             [tableView setEditing:false];
             //Set title back to "Edit"
-            [editButton setTitle:@"Edit" forState:0];
+            //[editButton setTitle:@"Edit" forState:0];
             //Reset tag number to 0
             editButton.tag = 0;
         }

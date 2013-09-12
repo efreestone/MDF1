@@ -28,11 +28,14 @@
     //Declare IBOutlet for table view
     IBOutlet UITableView *tableView;
     //Declare IBOutlet for edit mode button
-    IBOutlet UIButton *editButton;
+    //IBOutlet UIButton *editButton;
+    IBOutlet UIBarButtonItem *editButton;
 }
 
 //Set property for edit button to allow @synthesize
-@property (strong) IBOutlet UIButton *editButton;
+@property (strong) IBOutlet UIBarButtonItem *editButton;
+
+@property (strong) IBOutlet UITableView *tableView;
 
 //Declare IBAction for onClick
 -(IBAction)onClick:(id)sender;
