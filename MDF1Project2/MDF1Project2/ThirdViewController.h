@@ -14,5 +14,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ThirdViewController : UIViewController
+{
+    //Declare research title array
+    NSArray *researchTitleArray;
+    
+    //Declare table view
+    IBOutlet UITableView *tableView;
+}
 
 @end

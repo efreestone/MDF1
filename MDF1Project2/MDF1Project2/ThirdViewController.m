@@ -35,6 +35,10 @@
     //Set background color to blue from splash and icons
     self.view.backgroundColor = [UIColor colorWithRed:0.243 green:0.486 blue:0.969 alpha:1]; /*#3e7cf7*/
     
+    tableView.backgroundColor = [UIColor colorWithRed:0.243 green:0.486 blue:0.969 alpha:1]; /*#3e7cf7*/
+    
+    researchTitleArray = [[NSArray alloc] initWithObjects:@"Test 1", @"Test 2", @"Test 3", @"Test 4", nil];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
@@ -44,5 +48,45 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//From Project 1
+//Built in function to set number of rows in table view section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //return [researchTitleArray count];
+    if (section == 0) {
+        return 2;
+    } else if (section == 1) {
+        return 1;
+    }
+    return 0;
+}
+
+//From Project 1
+//Built in function to set number of sections in table view
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
+//From Project 1 videos
+//Built in function to allocate and reuse table view cells
+- (UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    NSInteger actualRow = 0;
+    //Check which section index path falls in (*2 because first section has 2 items)
+    actualRow = (indexPath.section * 2) + indexPath.row;
+
+    cell.textLabel.text = (NSString *)[researchTitleArray objectAtIndex:actualRow];
+    
+    return cell;
+}
+
+
+
 
 @end
