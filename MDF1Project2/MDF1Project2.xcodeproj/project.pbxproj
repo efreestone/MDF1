@@ -83,6 +83,9 @@
 		B8F440A917E26B8700ABFB5B /* The-Sound-of-Madness.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409517E26B8600ABFB5B /* The-Sound-of-Madness.png */; };
 		B8F440AA17E26B8700ABFB5B /* Us-and-Them.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409617E26B8600ABFB5B /* Us-and-Them.png */; };
 		B8F440AB17E26B8700ABFB5B /* War-of-Will.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409717E26B8600ABFB5B /* War-of-Will.png */; };
+		B8F440AD17E29B9D00ABFB5B /* ResearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F440AC17E29B9C00ABFB5B /* ResearchView.xib */; };
+		B8F440B017E29BD000ABFB5B /* ResearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F440AF17E29BCF00ABFB5B /* ResearchViewController.m */; };
+		B8F440B217E2A71900ABFB5B /* BioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F440B117E2A71800ABFB5B /* BioView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,6 +175,10 @@
 		B8F4409517E26B8600ABFB5B /* The-Sound-of-Madness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Sound-of-Madness.png"; sourceTree = "<group>"; };
 		B8F4409617E26B8600ABFB5B /* Us-and-Them.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Us-and-Them.png"; sourceTree = "<group>"; };
 		B8F4409717E26B8600ABFB5B /* War-of-Will.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "War-of-Will.png"; sourceTree = "<group>"; };
+		B8F440AC17E29B9C00ABFB5B /* ResearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResearchView.xib; sourceTree = "<group>"; };
+		B8F440AE17E29BCF00ABFB5B /* ResearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResearchViewController.h; sourceTree = "<group>"; };
+		B8F440AF17E29BCF00ABFB5B /* ResearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResearchViewController.m; sourceTree = "<group>"; };
+		B8F440B117E2A71800ABFB5B /* BioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BioView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +255,10 @@
 				B8879FCD17DEBF7100AE393D /* ThirdViewController.xib */,
 				B8E0F9F417E0027700FE2941 /* other.png */,
 				B8E0F9F617E0029400FE2941 /* other@2x.png */,
+				B8F440AE17E29BCF00ABFB5B /* ResearchViewController.h */,
+				B8F440AF17E29BCF00ABFB5B /* ResearchViewController.m */,
+				B8F440AC17E29B9C00ABFB5B /* ResearchView.xib */,
+				B8F440B117E2A71800ABFB5B /* BioView.xib */,
 				B8F4403317E24C4B00ABFB5B /* covers */,
 				B896B6A617DEBB25005B2CDC /* Supporting Files */,
 			);
@@ -436,6 +447,8 @@
 				B8F440A917E26B8700ABFB5B /* The-Sound-of-Madness.png in Resources */,
 				B8F440AA17E26B8700ABFB5B /* Us-and-Them.png in Resources */,
 				B8F440AB17E26B8700ABFB5B /* War-of-Will.png in Resources */,
+				B8F440AD17E29B9D00ABFB5B /* ResearchView.xib in Resources */,
+				B8F440B217E2A71900ABFB5B /* BioView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +467,7 @@
 				B8E0F9FC17E0091700FE2941 /* AlbumsViewController.m in Sources */,
 				B8E0FA0117E00F9F00FE2941 /* DetailViewController.m in Sources */,
 				B8EDE2B917E118D6006BC6C6 /* CustomTableViewCell.m in Sources */,
+				B8F440B017E29BD000ABFB5B /* ResearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

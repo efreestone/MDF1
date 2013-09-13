@@ -14,6 +14,12 @@
 
 @implementation ResearchViewController
 
+//Synthesize all elements for getter/setter
+@synthesize researchTitle;
+@synthesize abstractTextview;
+@synthesize articleSource;
+@synthesize linkLabel;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

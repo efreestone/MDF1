@@ -13,10 +13,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController
+@interface ThirdViewController : UIViewController <UITableViewDelegate>
 {
-    //Declare research title array
+    //Declare array of titles
     NSArray *researchTitleArray;
+    //Declare array of Author names
+    NSArray *authorArray;
+    //Declare array with abstract of research paper
+    NSArray *abstractArray;
+    //Declare array with article sources
+    NSArray *sourceArray;
+    //Declare array of urls to research articles
+    NSArray *linksArray;
     
     //Declare table view
     IBOutlet UITableView *tableView;
