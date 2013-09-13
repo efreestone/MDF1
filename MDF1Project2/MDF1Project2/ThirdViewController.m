@@ -14,6 +14,8 @@
 #import "ThirdViewController.h"
 //Import research view
 #import "ResearchViewController.h"
+//Import bio view
+#import "BioViewController.h"
 
 @interface ThirdViewController ()
 
@@ -108,8 +110,9 @@
 //Built in function to grab row selected in table view
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Section = %d Row = %d", indexPath.section, indexPath.row); //, [researchTitleArray objectAtIndex:indexPath.row]
-    
+    //Allocate views
     ResearchViewController *researchViewController = [[ResearchViewController alloc] initWithNibName:@"ResearchView" bundle:nil];
+    BioViewController *bioViewController = [[BioViewController alloc] initWithNibName:@"BioView" bundle:nil];
     if (indexPath.section == 0) {
         if (researchViewController != nil) {
             //Push research view on top
@@ -125,36 +128,18 @@
             //Set link to link label
             researchViewController.linkLabel.text = [NSString stringWithFormat:@"Link: %@",[linksArray objectAtIndex:indexPath.row]];
         }
+    } else if (indexPath.section == 1) {
+        if (bioViewController != nil) {
+            //Push bio view on top
+            [self.navigationController pushViewController:bioViewController animated:true];
+            //Set title to bio
+            bioViewController.title = @"Bio";
+            //Set name label
+            bioViewController.nameLabel.text = @"Freestone, Elijah";
+        }
     }
     
-    //Allocate detail view controller
-    /*DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailView" bundle:nil];
-    if (detailViewController != nil) {
-        //Push detail view on top of albums view (not from project 1)
-        [self.navigationController pushViewController:detailViewController animated:true];
-        
-        //Using cover arrays to apply images but keeping this for now as it may come in handy when my CRUD is fully operating  for adding cover image name to an array
-        //Cast album name into NSString (not from Project 1)
-        //NSString *albumSelected2 = [albumArray objectAtIndex:indexPath.row];
-        //Replace space with - (not from Project 1)
-        //NSString *albumNameNoSpaces2 = [albumSelected2 stringByReplacingOccurrencesOfString:@" " withString:@"-"];
-        //Add -Large.png to end of modified album name (not from Project 1)
-        //NSString *albumNameWithPng2 = [albumNameNoSpaces2 stringByAppendingString:@"-Large.png"];
-        
-        //Apply cover image to custom cell (not from Project 1)
-        //detailViewController.coverImage.image = [UIImage imageNamed:albumNameWithPng2];
-        detailViewController.coverImage.image = [UIImage imageNamed:[coverArrayLarge objectAtIndex:indexPath.row]];
-        //Change navbar title of detail view to band name (modified from project 1)
-        detailViewController.title = (NSString *)[bandArray objectAtIndex:indexPath.row];
-        //Add band name to first label on detail view
-        detailViewController.bandLabel.text = [NSString stringWithFormat:@"Band Name: %@", [bandArray objectAtIndex:indexPath.row]];
-        //Add album name to second label on detail view
-        detailViewController.albumLabel.text = [NSString stringWithFormat:@"Album Name: %@", [albumArray objectAtIndex:indexPath.row]];
-        //Add release date to third label on detail view
-        detailViewController.releaseDateLabel.text = [NSString stringWithFormat:@"Year Released: %@", [releaseDateArray objectAtIndex:indexPath.row]];
-        //Add country of origin to fourth label on detail view
-        detailViewController.countryLabel.text = [NSString stringWithFormat:@"Country of Origin: %@", [countryArray objectAtIndex:indexPath.row]];
-    }*/
+
 }
 
 

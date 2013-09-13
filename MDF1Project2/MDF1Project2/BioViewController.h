@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface BioViewController : UIViewController
+{
+    IBOutlet UILabel *nameLabel;
+    IBOutlet UITextView *bioTextview;
+}
+
+@property (strong) IBOutlet UILabel *nameLabel;
+@property (strong) IBOutlet UITextView *bioTextview;
 
 @end

@@ -86,6 +86,7 @@
 		B8F440AD17E29B9D00ABFB5B /* ResearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F440AC17E29B9C00ABFB5B /* ResearchView.xib */; };
 		B8F440B017E29BD000ABFB5B /* ResearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F440AF17E29BCF00ABFB5B /* ResearchViewController.m */; };
 		B8F440B217E2A71900ABFB5B /* BioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F440B117E2A71800ABFB5B /* BioView.xib */; };
+		B8F440B517E2A7AA00ABFB5B /* BioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F440B417E2A7A900ABFB5B /* BioViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -179,6 +180,8 @@
 		B8F440AE17E29BCF00ABFB5B /* ResearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResearchViewController.h; sourceTree = "<group>"; };
 		B8F440AF17E29BCF00ABFB5B /* ResearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResearchViewController.m; sourceTree = "<group>"; };
 		B8F440B117E2A71800ABFB5B /* BioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BioView.xib; sourceTree = "<group>"; };
+		B8F440B317E2A7A900ABFB5B /* BioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BioViewController.h; sourceTree = "<group>"; };
+		B8F440B417E2A7A900ABFB5B /* BioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BioViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +261,8 @@
 				B8F440AE17E29BCF00ABFB5B /* ResearchViewController.h */,
 				B8F440AF17E29BCF00ABFB5B /* ResearchViewController.m */,
 				B8F440AC17E29B9C00ABFB5B /* ResearchView.xib */,
+				B8F440B317E2A7A900ABFB5B /* BioViewController.h */,
+				B8F440B417E2A7A900ABFB5B /* BioViewController.m */,
 				B8F440B117E2A71800ABFB5B /* BioView.xib */,
 				B8F4403317E24C4B00ABFB5B /* covers */,
 				B896B6A617DEBB25005B2CDC /* Supporting Files */,
@@ -468,6 +473,7 @@
 				B8E0FA0117E00F9F00FE2941 /* DetailViewController.m in Sources */,
 				B8EDE2B917E118D6006BC6C6 /* CustomTableViewCell.m in Sources */,
 				B8F440B017E29BD000ABFB5B /* ResearchViewController.m in Sources */,
+				B8F440B517E2A7AA00ABFB5B /* BioViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
