@@ -15,6 +15,8 @@
 		B8879FDB17DEC5AA00AE393D /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD717DEC5AA00AE393D /* Icon-72@2x.png */; };
 		B8879FDC17DEC5AA00AE393D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD817DEC5AA00AE393D /* Icon.png */; };
 		B8879FDD17DEC5AA00AE393D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8879FD917DEC5AA00AE393D /* Icon@2x.png */; };
+		B88FEB7717E15CC7002B3AD6 /* banner~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B88FEB7617E15CC7002B3AD6 /* banner~iphone.png */; };
+		B88FEB7917E160A8002B3AD6 /* add-banner~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B88FEB7817E160A8002B3AD6 /* add-banner~iphone.png */; };
 		B896B6A017DEBB25005B2CDC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B896B69F17DEBB25005B2CDC /* UIKit.framework */; };
 		B896B6A217DEBB25005B2CDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B896B6A117DEBB25005B2CDC /* Foundation.framework */; };
 		B896B6A417DEBB25005B2CDC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B896B6A317DEBB25005B2CDC /* CoreGraphics.framework */; };
@@ -40,7 +42,51 @@
 		B8E0F9FE17E00F8200FE2941 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E0F9FD17E00F8100FE2941 /* DetailView.xib */; };
 		B8E0FA0117E00F9F00FE2941 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0FA0017E00F9F00FE2941 /* DetailViewController.m */; };
 		B8E0FA0317E01D2600FE2941 /* IphoneCustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E0FA0217E01D2500FE2941 /* IphoneCustomViewCell.xib */; };
-		B8E0FA0617E01D7700FE2941 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8E0FA0517E01D7600FE2941 /* CustomTableViewCell.m */; };
+		B8EDE2B917E118D6006BC6C6 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EDE2B817E118D6006BC6C6 /* CustomTableViewCell.m */; };
+		B8F4405D17E24C4B00ABFB5B /* Amaranthe-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403517E24C4B00ABFB5B /* Amaranthe-Large.png */; };
+		B8F4405F17E24C4B00ABFB5B /* Amaryllis-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403717E24C4B00ABFB5B /* Amaryllis-Large.png */; };
+		B8F4406117E24C4B00ABFB5B /* As-Daylight-Dies-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403917E24C4B00ABFB5B /* As-Daylight-Dies-Large.png */; };
+		B8F4406317E24C4B00ABFB5B /* Disarm-the-Descent-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403B17E24C4B00ABFB5B /* Disarm-the-Descent-Large.png */; };
+		B8F4406517E24C4B00ABFB5B /* Fragments-of-D-Generation-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403D17E24C4B00ABFB5B /* Fragments-of-D-Generation-Large.png */; };
+		B8F4406717E24C4B00ABFB5B /* Fragments-of-Form-and-Function-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4403F17E24C4B00ABFB5B /* Fragments-of-Form-and-Function-Large.png */; };
+		B8F4406917E24C4B00ABFB5B /* Internal-Revolution-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404117E24C4B00ABFB5B /* Internal-Revolution-Large.png */; };
+		B8F4406B17E24C4B00ABFB5B /* Leave-a-Whisper-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404317E24C4B00ABFB5B /* Leave-a-Whisper-Large.png */; };
+		B8F4406D17E24C4B00ABFB5B /* Mind-Tricks-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404517E24C4B00ABFB5B /* Mind-Tricks-Large.png */; };
+		B8F4406F17E24C4B00ABFB5B /* Pursuit-of-Honor-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404717E24C4B00ABFB5B /* Pursuit-of-Honor-Large.png */; };
+		B8F4407117E24C4B00ABFB5B /* Stabbing-the-Drama-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404917E24C4B00ABFB5B /* Stabbing-the-Drama-Large.png */; };
+		B8F4407317E24C4B00ABFB5B /* Sworn-to-a-Great-Divide-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404B17E24C4B00ABFB5B /* Sworn-to-a-Great-Divide-Large.png */; };
+		B8F4407517E24C4B00ABFB5B /* The-End-of-Heartache-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404D17E24C4B00ABFB5B /* The-End-of-Heartache-Large.png */; };
+		B8F4407717E24C4B00ABFB5B /* The-Fall-of-Ideals-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4404F17E24C4B00ABFB5B /* The-Fall-of-Ideals-Large.png */; };
+		B8F4407917E24C4B00ABFB5B /* The-Living-Infinite-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405117E24C4B00ABFB5B /* The-Living-Infinite-Large.png */; };
+		B8F4407B17E24C4B00ABFB5B /* The-Nexus-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405317E24C4B00ABFB5B /* The-Nexus-Large.png */; };
+		B8F4407D17E24C4B00ABFB5B /* The-Panic-Broadcast-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405517E24C4B00ABFB5B /* The-Panic-Broadcast-Large.png */; };
+		B8F4407F17E24C4B00ABFB5B /* The-Sound-of-Madness-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405717E24C4B00ABFB5B /* The-Sound-of-Madness-Large.png */; };
+		B8F4408117E24C4B00ABFB5B /* Us-and-Them-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405917E24C4B00ABFB5B /* Us-and-Them-Large.png */; };
+		B8F4408317E24C4B00ABFB5B /* War-of-Will-Large.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4405B17E24C4B00ABFB5B /* War-of-Will-Large.png */; };
+		B8F4409817E26B8700ABFB5B /* Amaranthe.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408417E26B8200ABFB5B /* Amaranthe.png */; };
+		B8F4409917E26B8700ABFB5B /* Amaryllis.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408517E26B8200ABFB5B /* Amaryllis.png */; };
+		B8F4409A17E26B8700ABFB5B /* As-Daylight-Dies.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408617E26B8200ABFB5B /* As-Daylight-Dies.png */; };
+		B8F4409B17E26B8700ABFB5B /* Disarm-the-Descent.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408717E26B8300ABFB5B /* Disarm-the-Descent.png */; };
+		B8F4409C17E26B8700ABFB5B /* Fragments-of-D-Generation.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408817E26B8300ABFB5B /* Fragments-of-D-Generation.png */; };
+		B8F4409D17E26B8700ABFB5B /* Fragments-of-Form-and-Function.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408917E26B8300ABFB5B /* Fragments-of-Form-and-Function.png */; };
+		B8F4409E17E26B8700ABFB5B /* Internal-Revolution.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408A17E26B8300ABFB5B /* Internal-Revolution.png */; };
+		B8F4409F17E26B8700ABFB5B /* Leave-a-Whisper.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408B17E26B8400ABFB5B /* Leave-a-Whisper.png */; };
+		B8F440A017E26B8700ABFB5B /* Mind-Tricks.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408C17E26B8400ABFB5B /* Mind-Tricks.png */; };
+		B8F440A117E26B8700ABFB5B /* Pursuit-of-Honor.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408D17E26B8400ABFB5B /* Pursuit-of-Honor.png */; };
+		B8F440A217E26B8700ABFB5B /* Stabbing-the-Drama.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408E17E26B8400ABFB5B /* Stabbing-the-Drama.png */; };
+		B8F440A317E26B8700ABFB5B /* Sworn-to-a-Great-Divide.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4408F17E26B8500ABFB5B /* Sworn-to-a-Great-Divide.png */; };
+		B8F440A417E26B8700ABFB5B /* The-End-of-Heartache.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409017E26B8500ABFB5B /* The-End-of-Heartache.png */; };
+		B8F440A517E26B8700ABFB5B /* The-Fall-of-Ideals.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409117E26B8500ABFB5B /* The-Fall-of-Ideals.png */; };
+		B8F440A617E26B8700ABFB5B /* The-Living-Infinite.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409217E26B8500ABFB5B /* The-Living-Infinite.png */; };
+		B8F440A717E26B8700ABFB5B /* The-Nexus.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409317E26B8500ABFB5B /* The-Nexus.png */; };
+		B8F440A817E26B8700ABFB5B /* The-Panic-Broadcast.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409417E26B8600ABFB5B /* The-Panic-Broadcast.png */; };
+		B8F440A917E26B8700ABFB5B /* The-Sound-of-Madness.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409517E26B8600ABFB5B /* The-Sound-of-Madness.png */; };
+		B8F440AA17E26B8700ABFB5B /* Us-and-Them.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409617E26B8600ABFB5B /* Us-and-Them.png */; };
+		B8F440AB17E26B8700ABFB5B /* War-of-Will.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F4409717E26B8600ABFB5B /* War-of-Will.png */; };
+		B8F440AD17E29B9D00ABFB5B /* ResearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F440AC17E29B9C00ABFB5B /* ResearchView.xib */; };
+		B8F440B017E29BD000ABFB5B /* ResearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F440AF17E29BCF00ABFB5B /* ResearchViewController.m */; };
+		B8F440B217E2A71900ABFB5B /* BioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F440B117E2A71800ABFB5B /* BioView.xib */; };
+		B8F440B517E2A7AA00ABFB5B /* BioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F440B417E2A7A900ABFB5B /* BioViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +99,8 @@
 		B8879FD717DEC5AA00AE393D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
 		B8879FD817DEC5AA00AE393D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
 		B8879FD917DEC5AA00AE393D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		B88FEB7617E15CC7002B3AD6 /* banner~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner~iphone.png"; sourceTree = "<group>"; };
+		B88FEB7817E160A8002B3AD6 /* add-banner~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-banner~iphone.png"; sourceTree = "<group>"; };
 		B896B69C17DEBB25005B2CDC /* MDF1Project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1Project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B896B69F17DEBB25005B2CDC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B896B6A117DEBB25005B2CDC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,8 +134,54 @@
 		B8E0F9FF17E00F9F00FE2941 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		B8E0FA0017E00F9F00FE2941 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B8E0FA0217E01D2500FE2941 /* IphoneCustomViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IphoneCustomViewCell.xib; sourceTree = "<group>"; };
-		B8E0FA0417E01D7600FE2941 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
-		B8E0FA0517E01D7600FE2941 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		B8EDE2B717E118D6006BC6C6 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		B8EDE2B817E118D6006BC6C6 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		B8F4403517E24C4B00ABFB5B /* Amaranthe-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Amaranthe-Large.png"; sourceTree = "<group>"; };
+		B8F4403717E24C4B00ABFB5B /* Amaryllis-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Amaryllis-Large.png"; sourceTree = "<group>"; };
+		B8F4403917E24C4B00ABFB5B /* As-Daylight-Dies-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "As-Daylight-Dies-Large.png"; sourceTree = "<group>"; };
+		B8F4403B17E24C4B00ABFB5B /* Disarm-the-Descent-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Disarm-the-Descent-Large.png"; sourceTree = "<group>"; };
+		B8F4403D17E24C4B00ABFB5B /* Fragments-of-D-Generation-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fragments-of-D-Generation-Large.png"; sourceTree = "<group>"; };
+		B8F4403F17E24C4B00ABFB5B /* Fragments-of-Form-and-Function-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fragments-of-Form-and-Function-Large.png"; sourceTree = "<group>"; };
+		B8F4404117E24C4B00ABFB5B /* Internal-Revolution-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Internal-Revolution-Large.png"; sourceTree = "<group>"; };
+		B8F4404317E24C4B00ABFB5B /* Leave-a-Whisper-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leave-a-Whisper-Large.png"; sourceTree = "<group>"; };
+		B8F4404517E24C4B00ABFB5B /* Mind-Tricks-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mind-Tricks-Large.png"; sourceTree = "<group>"; };
+		B8F4404717E24C4B00ABFB5B /* Pursuit-of-Honor-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pursuit-of-Honor-Large.png"; sourceTree = "<group>"; };
+		B8F4404917E24C4B00ABFB5B /* Stabbing-the-Drama-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stabbing-the-Drama-Large.png"; sourceTree = "<group>"; };
+		B8F4404B17E24C4B00ABFB5B /* Sworn-to-a-Great-Divide-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sworn-to-a-Great-Divide-Large.png"; sourceTree = "<group>"; };
+		B8F4404D17E24C4B00ABFB5B /* The-End-of-Heartache-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-End-of-Heartache-Large.png"; sourceTree = "<group>"; };
+		B8F4404F17E24C4B00ABFB5B /* The-Fall-of-Ideals-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Fall-of-Ideals-Large.png"; sourceTree = "<group>"; };
+		B8F4405117E24C4B00ABFB5B /* The-Living-Infinite-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Living-Infinite-Large.png"; sourceTree = "<group>"; };
+		B8F4405317E24C4B00ABFB5B /* The-Nexus-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Nexus-Large.png"; sourceTree = "<group>"; };
+		B8F4405517E24C4B00ABFB5B /* The-Panic-Broadcast-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Panic-Broadcast-Large.png"; sourceTree = "<group>"; };
+		B8F4405717E24C4B00ABFB5B /* The-Sound-of-Madness-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Sound-of-Madness-Large.png"; sourceTree = "<group>"; };
+		B8F4405917E24C4B00ABFB5B /* Us-and-Them-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Us-and-Them-Large.png"; sourceTree = "<group>"; };
+		B8F4405B17E24C4B00ABFB5B /* War-of-Will-Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "War-of-Will-Large.png"; sourceTree = "<group>"; };
+		B8F4408417E26B8200ABFB5B /* Amaranthe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Amaranthe.png; sourceTree = "<group>"; };
+		B8F4408517E26B8200ABFB5B /* Amaryllis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Amaryllis.png; sourceTree = "<group>"; };
+		B8F4408617E26B8200ABFB5B /* As-Daylight-Dies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "As-Daylight-Dies.png"; sourceTree = "<group>"; };
+		B8F4408717E26B8300ABFB5B /* Disarm-the-Descent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Disarm-the-Descent.png"; sourceTree = "<group>"; };
+		B8F4408817E26B8300ABFB5B /* Fragments-of-D-Generation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fragments-of-D-Generation.png"; sourceTree = "<group>"; };
+		B8F4408917E26B8300ABFB5B /* Fragments-of-Form-and-Function.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fragments-of-Form-and-Function.png"; sourceTree = "<group>"; };
+		B8F4408A17E26B8300ABFB5B /* Internal-Revolution.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Internal-Revolution.png"; sourceTree = "<group>"; };
+		B8F4408B17E26B8400ABFB5B /* Leave-a-Whisper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Leave-a-Whisper.png"; sourceTree = "<group>"; };
+		B8F4408C17E26B8400ABFB5B /* Mind-Tricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mind-Tricks.png"; sourceTree = "<group>"; };
+		B8F4408D17E26B8400ABFB5B /* Pursuit-of-Honor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pursuit-of-Honor.png"; sourceTree = "<group>"; };
+		B8F4408E17E26B8400ABFB5B /* Stabbing-the-Drama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stabbing-the-Drama.png"; sourceTree = "<group>"; };
+		B8F4408F17E26B8500ABFB5B /* Sworn-to-a-Great-Divide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sworn-to-a-Great-Divide.png"; sourceTree = "<group>"; };
+		B8F4409017E26B8500ABFB5B /* The-End-of-Heartache.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-End-of-Heartache.png"; sourceTree = "<group>"; };
+		B8F4409117E26B8500ABFB5B /* The-Fall-of-Ideals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Fall-of-Ideals.png"; sourceTree = "<group>"; };
+		B8F4409217E26B8500ABFB5B /* The-Living-Infinite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Living-Infinite.png"; sourceTree = "<group>"; };
+		B8F4409317E26B8500ABFB5B /* The-Nexus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Nexus.png"; sourceTree = "<group>"; };
+		B8F4409417E26B8600ABFB5B /* The-Panic-Broadcast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Panic-Broadcast.png"; sourceTree = "<group>"; };
+		B8F4409517E26B8600ABFB5B /* The-Sound-of-Madness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The-Sound-of-Madness.png"; sourceTree = "<group>"; };
+		B8F4409617E26B8600ABFB5B /* Us-and-Them.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Us-and-Them.png"; sourceTree = "<group>"; };
+		B8F4409717E26B8600ABFB5B /* War-of-Will.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "War-of-Will.png"; sourceTree = "<group>"; };
+		B8F440AC17E29B9C00ABFB5B /* ResearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResearchView.xib; sourceTree = "<group>"; };
+		B8F440AE17E29BCF00ABFB5B /* ResearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResearchViewController.h; sourceTree = "<group>"; };
+		B8F440AF17E29BCF00ABFB5B /* ResearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResearchViewController.m; sourceTree = "<group>"; };
+		B8F440B117E2A71800ABFB5B /* BioView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BioView.xib; sourceTree = "<group>"; };
+		B8F440B317E2A7A900ABFB5B /* BioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BioViewController.h; sourceTree = "<group>"; };
+		B8F440B417E2A7A900ABFB5B /* BioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BioViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +239,8 @@
 				B896B6C517DEBB25005B2CDC /* FirstViewController.xib */,
 				B8E0F9EC17DFF7C300FE2941 /* home.png */,
 				B8E0F9EE17DFF91500FE2941 /* home@2x.png */,
-				B8E0FA0417E01D7600FE2941 /* CustomTableViewCell.h */,
-				B8E0FA0517E01D7600FE2941 /* CustomTableViewCell.m */,
+				B8EDE2B717E118D6006BC6C6 /* CustomTableViewCell.h */,
+				B8EDE2B817E118D6006BC6C6 /* CustomTableViewCell.m */,
 				B8E0FA0217E01D2500FE2941 /* IphoneCustomViewCell.xib */,
 				B8E0F9FA17E0091700FE2941 /* AlbumsViewController.h */,
 				B8E0F9FB17E0091700FE2941 /* AlbumsViewController.m */,
@@ -164,6 +258,13 @@
 				B8879FCD17DEBF7100AE393D /* ThirdViewController.xib */,
 				B8E0F9F417E0027700FE2941 /* other.png */,
 				B8E0F9F617E0029400FE2941 /* other@2x.png */,
+				B8F440AE17E29BCF00ABFB5B /* ResearchViewController.h */,
+				B8F440AF17E29BCF00ABFB5B /* ResearchViewController.m */,
+				B8F440AC17E29B9C00ABFB5B /* ResearchView.xib */,
+				B8F440B317E2A7A900ABFB5B /* BioViewController.h */,
+				B8F440B417E2A7A900ABFB5B /* BioViewController.m */,
+				B8F440B117E2A71800ABFB5B /* BioView.xib */,
+				B8F4403317E24C4B00ABFB5B /* covers */,
 				B896B6A617DEBB25005B2CDC /* Supporting Files */,
 			);
 			path = MDF1Project2;
@@ -172,6 +273,8 @@
 		B896B6A617DEBB25005B2CDC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B88FEB7817E160A8002B3AD6 /* add-banner~iphone.png */,
+				B88FEB7617E15CC7002B3AD6 /* banner~iphone.png */,
 				B8E0F9EA17DFF55200FE2941 /* home-button-image.png */,
 				B83E2E1B17DED3E500292251 /* Default-Portrait~ipad.png */,
 				B83E2E1917DED3AB00292251 /* Default-Portrait@2x~ipad.png */,
@@ -184,6 +287,53 @@
 				B896B6B517DEBB25005B2CDC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8F4403317E24C4B00ABFB5B /* covers */ = {
+			isa = PBXGroup;
+			children = (
+				B8F4403517E24C4B00ABFB5B /* Amaranthe-Large.png */,
+				B8F4408417E26B8200ABFB5B /* Amaranthe.png */,
+				B8F4403717E24C4B00ABFB5B /* Amaryllis-Large.png */,
+				B8F4408517E26B8200ABFB5B /* Amaryllis.png */,
+				B8F4403917E24C4B00ABFB5B /* As-Daylight-Dies-Large.png */,
+				B8F4408617E26B8200ABFB5B /* As-Daylight-Dies.png */,
+				B8F4403B17E24C4B00ABFB5B /* Disarm-the-Descent-Large.png */,
+				B8F4408717E26B8300ABFB5B /* Disarm-the-Descent.png */,
+				B8F4403D17E24C4B00ABFB5B /* Fragments-of-D-Generation-Large.png */,
+				B8F4408817E26B8300ABFB5B /* Fragments-of-D-Generation.png */,
+				B8F4403F17E24C4B00ABFB5B /* Fragments-of-Form-and-Function-Large.png */,
+				B8F4408917E26B8300ABFB5B /* Fragments-of-Form-and-Function.png */,
+				B8F4404117E24C4B00ABFB5B /* Internal-Revolution-Large.png */,
+				B8F4408A17E26B8300ABFB5B /* Internal-Revolution.png */,
+				B8F4404317E24C4B00ABFB5B /* Leave-a-Whisper-Large.png */,
+				B8F4408B17E26B8400ABFB5B /* Leave-a-Whisper.png */,
+				B8F4404517E24C4B00ABFB5B /* Mind-Tricks-Large.png */,
+				B8F4408C17E26B8400ABFB5B /* Mind-Tricks.png */,
+				B8F4404717E24C4B00ABFB5B /* Pursuit-of-Honor-Large.png */,
+				B8F4408D17E26B8400ABFB5B /* Pursuit-of-Honor.png */,
+				B8F4404917E24C4B00ABFB5B /* Stabbing-the-Drama-Large.png */,
+				B8F4408E17E26B8400ABFB5B /* Stabbing-the-Drama.png */,
+				B8F4404B17E24C4B00ABFB5B /* Sworn-to-a-Great-Divide-Large.png */,
+				B8F4408F17E26B8500ABFB5B /* Sworn-to-a-Great-Divide.png */,
+				B8F4404D17E24C4B00ABFB5B /* The-End-of-Heartache-Large.png */,
+				B8F4409017E26B8500ABFB5B /* The-End-of-Heartache.png */,
+				B8F4404F17E24C4B00ABFB5B /* The-Fall-of-Ideals-Large.png */,
+				B8F4409117E26B8500ABFB5B /* The-Fall-of-Ideals.png */,
+				B8F4405117E24C4B00ABFB5B /* The-Living-Infinite-Large.png */,
+				B8F4409217E26B8500ABFB5B /* The-Living-Infinite.png */,
+				B8F4405317E24C4B00ABFB5B /* The-Nexus-Large.png */,
+				B8F4409317E26B8500ABFB5B /* The-Nexus.png */,
+				B8F4405517E24C4B00ABFB5B /* The-Panic-Broadcast-Large.png */,
+				B8F4409417E26B8600ABFB5B /* The-Panic-Broadcast.png */,
+				B8F4405717E24C4B00ABFB5B /* The-Sound-of-Madness-Large.png */,
+				B8F4409517E26B8600ABFB5B /* The-Sound-of-Madness.png */,
+				B8F4405917E24C4B00ABFB5B /* Us-and-Them-Large.png */,
+				B8F4409617E26B8600ABFB5B /* Us-and-Them.png */,
+				B8F4405B17E24C4B00ABFB5B /* War-of-Will-Large.png */,
+				B8F4409717E26B8600ABFB5B /* War-of-Will.png */,
+			);
+			path = covers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +410,50 @@
 				B8E0F9F917E007DD00FE2941 /* AlbumsView.xib in Resources */,
 				B8E0F9FE17E00F8200FE2941 /* DetailView.xib in Resources */,
 				B8E0FA0317E01D2600FE2941 /* IphoneCustomViewCell.xib in Resources */,
+				B88FEB7717E15CC7002B3AD6 /* banner~iphone.png in Resources */,
+				B88FEB7917E160A8002B3AD6 /* add-banner~iphone.png in Resources */,
+				B8F4405D17E24C4B00ABFB5B /* Amaranthe-Large.png in Resources */,
+				B8F4405F17E24C4B00ABFB5B /* Amaryllis-Large.png in Resources */,
+				B8F4406117E24C4B00ABFB5B /* As-Daylight-Dies-Large.png in Resources */,
+				B8F4406317E24C4B00ABFB5B /* Disarm-the-Descent-Large.png in Resources */,
+				B8F4406517E24C4B00ABFB5B /* Fragments-of-D-Generation-Large.png in Resources */,
+				B8F4406717E24C4B00ABFB5B /* Fragments-of-Form-and-Function-Large.png in Resources */,
+				B8F4406917E24C4B00ABFB5B /* Internal-Revolution-Large.png in Resources */,
+				B8F4406B17E24C4B00ABFB5B /* Leave-a-Whisper-Large.png in Resources */,
+				B8F4406D17E24C4B00ABFB5B /* Mind-Tricks-Large.png in Resources */,
+				B8F4406F17E24C4B00ABFB5B /* Pursuit-of-Honor-Large.png in Resources */,
+				B8F4407117E24C4B00ABFB5B /* Stabbing-the-Drama-Large.png in Resources */,
+				B8F4407317E24C4B00ABFB5B /* Sworn-to-a-Great-Divide-Large.png in Resources */,
+				B8F4407517E24C4B00ABFB5B /* The-End-of-Heartache-Large.png in Resources */,
+				B8F4407717E24C4B00ABFB5B /* The-Fall-of-Ideals-Large.png in Resources */,
+				B8F4407917E24C4B00ABFB5B /* The-Living-Infinite-Large.png in Resources */,
+				B8F4407B17E24C4B00ABFB5B /* The-Nexus-Large.png in Resources */,
+				B8F4407D17E24C4B00ABFB5B /* The-Panic-Broadcast-Large.png in Resources */,
+				B8F4407F17E24C4B00ABFB5B /* The-Sound-of-Madness-Large.png in Resources */,
+				B8F4408117E24C4B00ABFB5B /* Us-and-Them-Large.png in Resources */,
+				B8F4408317E24C4B00ABFB5B /* War-of-Will-Large.png in Resources */,
+				B8F4409817E26B8700ABFB5B /* Amaranthe.png in Resources */,
+				B8F4409917E26B8700ABFB5B /* Amaryllis.png in Resources */,
+				B8F4409A17E26B8700ABFB5B /* As-Daylight-Dies.png in Resources */,
+				B8F4409B17E26B8700ABFB5B /* Disarm-the-Descent.png in Resources */,
+				B8F4409C17E26B8700ABFB5B /* Fragments-of-D-Generation.png in Resources */,
+				B8F4409D17E26B8700ABFB5B /* Fragments-of-Form-and-Function.png in Resources */,
+				B8F4409E17E26B8700ABFB5B /* Internal-Revolution.png in Resources */,
+				B8F4409F17E26B8700ABFB5B /* Leave-a-Whisper.png in Resources */,
+				B8F440A017E26B8700ABFB5B /* Mind-Tricks.png in Resources */,
+				B8F440A117E26B8700ABFB5B /* Pursuit-of-Honor.png in Resources */,
+				B8F440A217E26B8700ABFB5B /* Stabbing-the-Drama.png in Resources */,
+				B8F440A317E26B8700ABFB5B /* Sworn-to-a-Great-Divide.png in Resources */,
+				B8F440A417E26B8700ABFB5B /* The-End-of-Heartache.png in Resources */,
+				B8F440A517E26B8700ABFB5B /* The-Fall-of-Ideals.png in Resources */,
+				B8F440A617E26B8700ABFB5B /* The-Living-Infinite.png in Resources */,
+				B8F440A717E26B8700ABFB5B /* The-Nexus.png in Resources */,
+				B8F440A817E26B8700ABFB5B /* The-Panic-Broadcast.png in Resources */,
+				B8F440A917E26B8700ABFB5B /* The-Sound-of-Madness.png in Resources */,
+				B8F440AA17E26B8700ABFB5B /* Us-and-Them.png in Resources */,
+				B8F440AB17E26B8700ABFB5B /* War-of-Will.png in Resources */,
+				B8F440AD17E29B9D00ABFB5B /* ResearchView.xib in Resources */,
+				B8F440B217E2A71900ABFB5B /* BioView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +471,9 @@
 				B8879FCE17DEBF7200AE393D /* ThirdViewController.m in Sources */,
 				B8E0F9FC17E0091700FE2941 /* AlbumsViewController.m in Sources */,
 				B8E0FA0117E00F9F00FE2941 /* DetailViewController.m in Sources */,
-				B8E0FA0617E01D7700FE2941 /* CustomTableViewCell.m in Sources */,
+				B8EDE2B917E118D6006BC6C6 /* CustomTableViewCell.m in Sources */,
+				B8F440B017E29BD000ABFB5B /* ResearchViewController.m in Sources */,
+				B8F440B517E2A7AA00ABFB5B /* BioViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -55,9 +55,6 @@
     if (albumsViewController != nil) {
         //Push Albums view
         [self.navigationController pushViewController:albumsViewController animated:true];
-        //[self.navigationController.rightBarButtonItem = [albumsViewController.editButton]];
-        //myViewController.navigationItem.rightBarButtonItem = [myViewController editButtonItem];
-        //[self presentViewController:albumsViewController animated:TRUE completion:nil];
     }
 }
 

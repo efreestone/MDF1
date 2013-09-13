@@ -7,7 +7,7 @@
 //  CustomTableViewCell.h
 //  MDF1Project2
 //
-//  Created by Elijah Freestone on 9/10/13.
+//  Created by Elijah Freestone on 9/11/13.
 //  Copyright (c) 2013 Elijah Freestone. All rights reserved.
 //
 
@@ -16,12 +16,16 @@
 @interface CustomTableViewCell : UITableViewCell
 {
     //These declarations are redundant because of the property declarations bellow. Keeping them for clarity
+    //Declare cover image
+    IBOutlet UIImageView *coverImage;
     //Declare label for band name
     IBOutlet UILabel *bandLabel;
     //Declare label for album name
     IBOutlet UILabel *albumLabel;
 }
 
+//Set property for cover image to allow @synthesize
+@property (strong) IBOutlet UIImageView *coverImage;
 //Set property for band label to allow @synthesize
 @property (strong) IBOutlet UILabel *bandLabel;
 //Set property for album label to allow @synthesize

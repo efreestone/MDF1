@@ -15,6 +15,10 @@
 
 @interface AlbumsViewController : UIViewController <UITableViewDelegate>
 {
+    //Declare large album cover array (for detail view)
+    NSMutableArray *coverArrayLarge;
+    //Declare album cover array
+    NSMutableArray *coverArray;
     //All from project 1
     //Declare band array
     NSMutableArray *bandArray;
@@ -33,6 +37,8 @@
 
 //Set property for edit button to allow @synthesize
 @property (strong) IBOutlet UIButton *editButton;
+
+@property (strong) IBOutlet UITableView *tableView;
 
 //Declare IBAction for onClick
 -(IBAction)onClick:(id)sender;

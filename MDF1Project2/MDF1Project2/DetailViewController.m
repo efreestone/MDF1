@@ -20,8 +20,8 @@
 @implementation DetailViewController
 
 //From Project 1
-//Synthesize all 5 labels for getter/setter to get access from ViewController.m
-@synthesize titleLabel;
+//Synthesize image and all 4 labels for getter/setter to get access from ViewController.m
+@synthesize coverImage;
 @synthesize bandLabel;
 @synthesize albumLabel;
 @synthesize releaseDateLabel;
@@ -38,6 +38,9 @@
 
 - (void)viewDidLoad
 {
+    //Set background color to blue from splash and icons
+    self.view.backgroundColor = [UIColor colorWithRed:0.243 green:0.486 blue:0.969 alpha:1]; /*#3e7cf7*/
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

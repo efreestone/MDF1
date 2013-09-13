@@ -32,14 +32,31 @@
 							
 - (void)viewDidLoad
 {
+    //Set background color to blue from splash and icons
+    self.view.backgroundColor = [UIColor colorWithRed:0.243 green:0.486 blue:0.969 alpha:1]; /*#3e7cf7*/
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//Grab click of Save Album button. Only resigns keyboard for now
+-(IBAction)saveClicked:(id)sender {
+    //Resign keyboard if band name field called it
+    [bandNameField resignFirstResponder];
+    //Resign keyboard if album title field called it
+    [albumTitleField resignFirstResponder];
+    //Resign keyboard if release date field called it
+    [releaseDateField resignFirstResponder];
+    //Resign keyboard if country field called it
+    [countryField resignFirstResponder];
 }
 
 @end

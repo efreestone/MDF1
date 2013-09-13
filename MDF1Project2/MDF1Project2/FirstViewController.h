@@ -17,7 +17,6 @@
 {
     //Declare home screen button w/ image. Whole image (all blue) is a button
     IBOutlet UIButton *albumButton;
-    //IBOutlet UIImageView *homeImage;
 }
 
 //Declare IBAction to grab tap of home screen

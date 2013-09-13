@@ -27,7 +27,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2, *viewController3;
-    //Creating UINav with UIView for clarity
+    //Creating UINav with UIView for clarity and ease when ipad specific code is added back in
     UINavigationController *navController1, *navController2;
     
     viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
@@ -37,11 +37,11 @@
     
     viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     
-    //Allocate second nav controller and set viewController2 as a child
-    navController2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
-    
     //Add third tab
     viewController3 = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
+    
+    //Allocate second nav controller and set viewController3 as a child
+    navController2 = [[UINavigationController alloc] initWithRootViewController:viewController3];
     
     //Set first nav tint color
     navController1.navigationBar.tintColor = [UIColor darkGrayColor];
@@ -49,7 +49,7 @@
     navController2.navigationBar.tintColor = [UIColor darkGrayColor];
     
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[navController1, navController2, viewController3];
+    self.tabBarController.viewControllers = @[navController1, viewController2, navController2];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
