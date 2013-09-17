@@ -12,6 +12,8 @@
 //
 
 #import "FirstViewController.h"
+//Import detail view
+#import "DetailViewController.h"
 
 @interface FirstViewController ()
 
@@ -74,6 +76,32 @@
     cell.textLabel.text = (NSString *)[testArray objectAtIndex:indexPath.row];
     
     return cell;
+}
+
+//From Project 1 videos
+//Built in function to grab row selected in table view
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Row = %d Title = %@", indexPath.row, [testArray objectAtIndex:indexPath.row]);
+    
+    //Allocate iPhone Detail View nib
+    DetailViewController *detailViewController_iPhone = [[DetailViewController alloc] initWithNibName:@"DetailView_iPhone" bundle:nil];
+    //Alocate iPad Detail View nib
+    DetailViewController *detailViewController_iPad = [[DetailViewController alloc] initWithNibName:@"DetailView_iPad" bundle:nil];
+    //Check device (Modified from AppDelegate check)
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        if (detailViewController_iPhone != nil) {
+            [self presentViewController:detailViewController_iPhone animated:TRUE completion:nil];
+            
+            detailViewController_iPhone.testLabel.text = [testArray objectAtIndex:indexPath.row];
+        }
+    } else {
+        if (detailViewController_iPad != nil) {
+            [self presentViewController:detailViewController_iPad animated:TRUE completion:nil];
+            
+            detailViewController_iPad.testLabel.text = [testArray objectAtIndex:indexPath.row];
+        }
+    }
+    
 }
 
 
