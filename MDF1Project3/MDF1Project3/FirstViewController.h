@@ -13,8 +13,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UITableViewDelegate>
 {
+    //Test array for table view
+    NSArray *testArray;
+    
     //Declare IBOutlet for table view
     IBOutlet UITableView *tableView;
 }
