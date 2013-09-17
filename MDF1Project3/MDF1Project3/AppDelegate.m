@@ -24,15 +24,24 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1, *viewController2;
+    //Declare Nav Controller outside device check
+    UINavigationController *navController1;
+    
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
+        //Allocate first nav controller and set viewController1 as a child
+        navController1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
+        
         viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil];
     } else {
         viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil];
+        //Allocate first nav controller and set viewController1 as a child
+        navController1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
+        
         viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil];
     }
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.viewControllers = @[navController1, viewController2];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

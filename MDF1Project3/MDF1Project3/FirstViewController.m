@@ -37,12 +37,15 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     //Test array for table view
-    testArray = [[NSArray alloc] initWithObjects:@"Location 1", @"Location 2", @"Location 3", @"Location 4", @"Location 5", @"Location 6", @"Location 7", @"Location 8", @"Location 9", @"Location 10", nil];
+    testArray = [[NSMutableArray alloc] initWithObjects:@"Location 1", @"Location 2", @"Location 3", @"Location 4", @"Location 5", @"Location 6", @"Location 7", @"Location 8", @"Location 9", @"Location 10", nil];
     
-    //Nav bar edit example from SO from last week
-    /*UIBarButtonItem* editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonSystemItemEdit target:self action:@selector(editList)];
-     
-     self.navigationItem.rightBarButtonItem = edit;*/
+    //Nav bar edit example from SO from last week. Didn't work in last weeks project but works now.
+    /*UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleDone target:self action:@selector(editTableview)];
+    
+     self.navigationItem.rightBarButtonItem = editButton;*/
+    
+    //Add factory edit button to nav bar
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,6 +64,26 @@
 //Built in function to set number of sections in table view
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+//From Project 1 videos
+//Built in function to add delete to cells in table view
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
+}
+
+//From Project 1 videos
+//Built in function to check editing style (-=delete, +=add)
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Check if in delete mode
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSLog(@"We want to delete row = %d", indexPath.row);
+        
+        [testArray removeObjectAtIndex:indexPath.row];
+        
+        //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something here but isn't this an Accessor method?
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
+    }
 }
 
 //From Project 1 videos
@@ -90,16 +113,47 @@
     //Check device (Modified from AppDelegate check)
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         if (detailViewController_iPhone != nil) {
-            [self presentViewController:detailViewController_iPhone animated:TRUE completion:nil];
+            //Push detail view on top of albums view (not from project 1)
+            [self.navigationController pushViewController:detailViewController_iPhone animated:true];
             
+            //Change nav bar title
+            detailViewController_iPhone.title = (NSString *) [testArray objectAtIndex:indexPath.row];
+            //Fill in test label
             detailViewController_iPhone.testLabel.text = [testArray objectAtIndex:indexPath.row];
         }
     } else {
         if (detailViewController_iPad != nil) {
-            [self presentViewController:detailViewController_iPad animated:TRUE completion:nil];
+            //Push detail view on top of albums view (not from project 1)
+            [self.navigationController pushViewController:detailViewController_iPad animated:true];
             
+            //Change nav bar title
+            detailViewController_iPad.title = (NSString *) [testArray objectAtIndex:indexPath.row];
+            //Fill in test label
             detailViewController_iPad.testLabel.text = [testArray objectAtIndex:indexPath.row];
         }
+    }
+    
+}
+
+//Override built in function to allow toggle of table view edit mode from button in nav bar. This didn't work in Project 2 for some reason and I'm not sure why.
+-(void)setEditing:(BOOL)editing animated:(BOOL) animated {
+    [super setEditing:editing animated:animated];
+    [tableView setEditing:editing animated:animated];
+}
+
+//Custom method to trigger editing mode from nav bar. I got this last week from Stack Overflow and refactored to make it work with my app. Didn't work in Project 2 for some reason but seems to work fine here. Not sure why.
+-(void)editTableview {
+    if (!tableView.editing) {
+        [super setEditing:YES animated:YES];
+        [tableView setEditing:YES animated:YES];
+
+        [self.navigationItem.rightBarButtonItem setTitle:@"Done"];
+        
+    } else {
+        [super setEditing:NO animated:YES];
+        [tableView setEditing:NO animated:YES];
+
+        [self.navigationItem.rightBarButtonItem setTitle:@"Edit"];
     }
     
 }

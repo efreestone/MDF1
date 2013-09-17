@@ -16,7 +16,7 @@
 @interface FirstViewController : UIViewController <UITableViewDelegate>
 {
     //Test array for table view
-    NSArray *testArray;
+    NSMutableArray *testArray;
     
     //Declare IBOutlet for table view
     IBOutlet UITableView *tableView;
