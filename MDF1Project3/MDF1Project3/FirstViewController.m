@@ -23,8 +23,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.title = NSLocalizedString(@"Home", @"Home");
+        self.tabBarItem.image = [UIImage imageNamed:@"home"];
     }
     return self;
 }
@@ -33,6 +33,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //Nav bar edit example from SO from last week
+    /*UIBarButtonItem* editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonSystemItemEdit target:self action:@selector(editList)];
+     
+     self.navigationItem.rightBarButtonItem = edit;*/
 }
 
 - (void)didReceiveMemoryWarning

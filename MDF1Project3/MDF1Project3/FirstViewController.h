@@ -14,5 +14,9 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
+{
+    //Declare IBOutlet for table view
+    IBOutlet UITableView *tableView;
+}
 
 @end
