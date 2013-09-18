@@ -26,16 +26,16 @@
     UIViewController *viewController1, *viewController2;
     //Declare Nav Controller outside device check
     UINavigationController *navController1;
-    
+    //Check device type
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
-        //Allocate first nav controller and set viewController1 as a child
+        //Allocate iPhone first nav controller and set viewController1 as a child
         navController1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
         
         viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil];
     } else {
         viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil];
-        //Allocate first nav controller and set viewController1 as a child
+        //Allocate iPad first nav controller and set viewController1 as a child
         navController1 = [[UINavigationController alloc] initWithRootViewController:viewController1];
         
         viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil];

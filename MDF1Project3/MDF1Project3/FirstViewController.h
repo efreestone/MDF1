@@ -12,6 +12,8 @@
 //
 
 #import <UIKit/UIKit.h>
+//Import location manager to gain access to singleton and save
+#import "LocationManager.h"
 
 @interface FirstViewController : UIViewController <UITableViewDelegate>
 {
@@ -21,5 +23,8 @@
     //Declare IBOutlet for table view
     IBOutlet UITableView *tableView;
 }
+
+//Create singleton locations holder
+@property (nonatomic, strong) LocationManager *passedLocations;
 
 @end

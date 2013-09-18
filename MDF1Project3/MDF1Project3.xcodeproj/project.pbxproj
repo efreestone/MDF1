@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B813049017E94B9E008896FE /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B813048F17E94B9D008896FE /* LocationManager.m */; };
 		B854BD3917E50D76003962ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B854BD3817E50D76003962ED /* UIKit.framework */; };
 		B854BD3B17E50D76003962ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B854BD3A17E50D76003962ED /* Foundation.framework */; };
 		B854BD3D17E50D76003962ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B854BD3C17E50D76003962ED /* CoreGraphics.framework */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B813048E17E94B9D008896FE /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		B813048F17E94B9D008896FE /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		B854BD3517E50D76003962ED /* MDF1Project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1Project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B854BD3817E50D76003962ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B854BD3A17E50D76003962ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -126,6 +129,8 @@
 				B856E81517E7F0C10082C3F3 /* map.png */,
 				B856E81617E7F0C10082C3F3 /* map@2x.png */,
 				B854BD3F17E50D76003962ED /* Supporting Files */,
+				B813048E17E94B9D008896FE /* LocationManager.h */,
+				B813048F17E94B9D008896FE /* LocationManager.m */,
 			);
 			path = MDF1Project3;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				B854BD5217E50D76003962ED /* FirstViewController.m in Sources */,
 				B854BD5917E50D76003962ED /* SecondViewController.m in Sources */,
 				B856E82117E7FA520082C3F3 /* DetailViewController.m in Sources */,
+				B813049017E94B9E008896FE /* LocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

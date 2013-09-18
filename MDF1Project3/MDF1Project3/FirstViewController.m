@@ -14,6 +14,8 @@
 #import "FirstViewController.h"
 //Import detail view
 #import "DetailViewController.h"
+//Import Location Manager Singleton
+#import "LocationManager.h"
 
 @interface FirstViewController ()
 
@@ -39,10 +41,11 @@
     //Test array for table view
     testArray = [[NSMutableArray alloc] initWithObjects:@"Location 1", @"Location 2", @"Location 3", @"Location 4", @"Location 5", @"Location 6", @"Location 7", @"Location 8", @"Location 9", @"Location 10", nil];
     
-    //Nav bar edit example from SO from last week. Didn't work in last weeks project but works now.
-    /*UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleDone target:self action:@selector(editTableview)];
+    LocationManager *locationManager = [LocationManager GetInstance];
+    [locationManager getLocations];
     
-     self.navigationItem.rightBarButtonItem = editButton;*/
+    /*self.passedLocations = [LocationManager GetInstance];
+    [self.passedLocations getLocations];*/
     
     //Add factory edit button to nav bar
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -96,7 +99,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = (NSString *)[testArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = (NSString *)[self.passedLocations.namesArray objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -104,7 +107,10 @@
 //From Project 1 videos
 //Built in function to grab row selected in table view
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Row = %d Title = %@", indexPath.row, [testArray objectAtIndex:indexPath.row]);
+    NSLog(@"Row = %d Name = %@", indexPath.row, [self.passedLocations.namesArray objectAtIndex:indexPath.row]);
+    
+    LocationManager *locationManager = [LocationManager GetInstance];
+    [locationManager getLocations];
     
     //Allocate iPhone Detail View nib
     DetailViewController *detailViewController_iPhone = [[DetailViewController alloc] initWithNibName:@"DetailView_iPhone" bundle:nil];
@@ -117,9 +123,9 @@
             [self.navigationController pushViewController:detailViewController_iPhone animated:true];
             
             //Change nav bar title
-            detailViewController_iPhone.title = (NSString *) [testArray objectAtIndex:indexPath.row];
+            detailViewController_iPhone.title = (NSString *) [locationManager.namesArray objectAtIndex: indexPath.row];
             //Fill in test label
-            detailViewController_iPhone.testLabel.text = [testArray objectAtIndex:indexPath.row];
+            detailViewController_iPhone.testLabel.text = [locationManager.cityArray objectAtIndex:indexPath.row];
         }
     } else {
         if (detailViewController_iPad != nil) {
@@ -140,24 +146,6 @@
     [super setEditing:editing animated:animated];
     [tableView setEditing:editing animated:animated];
 }
-
-//Custom method to trigger editing mode from nav bar. I got this last week from Stack Overflow and refactored to make it work with my app. Didn't work in Project 2 for some reason but seems to work fine here. Not sure why.
--(void)editTableview {
-    if (!tableView.editing) {
-        [super setEditing:YES animated:YES];
-        [tableView setEditing:YES animated:YES];
-
-        [self.navigationItem.rightBarButtonItem setTitle:@"Done"];
-        
-    } else {
-        [super setEditing:NO animated:YES];
-        [tableView setEditing:NO animated:YES];
-
-        [self.navigationItem.rightBarButtonItem setTitle:@"Edit"];
-    }
-    
-}
-
 
 
 @end
