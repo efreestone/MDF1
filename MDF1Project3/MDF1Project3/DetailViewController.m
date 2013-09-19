@@ -19,7 +19,7 @@
 
 @implementation DetailViewController
 
-@synthesize testLabel;
+@synthesize nameLabel, cityLabel, latLongLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

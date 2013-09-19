@@ -30,7 +30,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Home", @"Home");
+        self.title = NSLocalizedString(@"Locations", @"Locations");
         self.tabBarItem.image = [UIImage imageNamed:@"home"];
     }
     return self;
@@ -163,8 +163,11 @@
             
             //Change nav bar title
             detailViewController_iPhone.title = (NSString *) [[_passedLocations.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Name"];
-            //Fill in test label
-            detailViewController_iPhone.testLabel.text = [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
+            //Fill in location name label
+            detailViewController_iPhone.nameLabel.text = [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+            //Fill in city/state label
+            detailViewController_iPhone.cityLabel.text = [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
+            
         }
     } else {
         if (detailViewController_iPad != nil) {
@@ -172,9 +175,11 @@
             [self.navigationController pushViewController:detailViewController_iPad animated:true];
             
             //Change nav bar title
-            detailViewController_iPad.title = (NSString *) [testArray objectAtIndex:indexPath.row];
-            //Fill in test label
-            detailViewController_iPad.testLabel.text = [testArray objectAtIndex:indexPath.row];
+            detailViewController_iPhone.title = (NSString *) [[_passedLocations.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Name"];
+            //Fill in location name label
+            detailViewController_iPhone.nameLabel.text = [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+            //Fill in city/state label
+            detailViewController_iPhone.cityLabel.text = [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
         }
     }
     

@@ -15,10 +15,17 @@
 
 @interface DetailViewController : UIViewController
 {
-    //Declare test label
-    IBOutlet UILabel *testLabel;
+    //Declare location name label
+    IBOutlet UILabel *nameLabel;
+    //Declare location city/state label
+    IBOutlet UILabel *cityLabel;
+    //Declare lat/long label
+    IBOutlet UILabel *latLongLabel;
 }
 
-@property (strong) IBOutlet UILabel *testLabel;
+//Create property to use synthesize for getter/setter
+@property (strong) IBOutlet UILabel *nameLabel;
+@property (strong) IBOutlet UILabel *cityLabel;
+@property (strong) IBOutlet UILabel *latLongLabel;
 
 @end
