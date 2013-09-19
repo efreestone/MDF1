@@ -49,7 +49,7 @@ static LocationManager *_instance = nil;
     if (self = [super init]) {
         //Create mutable array with 10 NSDictionary objects to use objectForKey method. Although I have read about NSDictionary and dictionary objects a few times, this the first time I have actually tried to use them. Hoepfully I'm doing this correctly
         locationsArray = [[NSMutableArray alloc] initWithObjects:
-                          @{@"Name":@"Freestone Music", @"City":@"Loveland, CO", @"Loc":@[@40.397761, @-105.074980]},
+                          @{@"Name":@"Freestone Music", @"City":@"Loveland, CO", @"Loc":@[@40.3707176, @-105.0697443]},
                           @{@"Name":@"Funky Munky Guitars", @"City":@"Austin, TX", @"Loc":@[@30.267153, @-97.743061]},
                           @{@"Name":@"Jam-It-Up", @"City":@"Tuscan, AZ", @"Loc":@[@32.221743, @-110.926479]},
                           @{@"Name":@"Indy Guitar Works", @"City":@"Indianapolis, IN", @"Loc":@[@39.768403, @-86.158068]},

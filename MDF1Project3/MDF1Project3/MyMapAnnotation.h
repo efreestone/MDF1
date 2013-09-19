@@ -16,5 +16,18 @@
 #import <MapKit/MapKit.h>
 
 @interface MyMapAnnotation : NSObject <MKAnnotation>
+{
+    //Declare title string
+    NSString *title;
+    //Declare cooridate
+    CLLocationCoordinate2D coordinate;
+}
+
+@property (nonatomic, copy) NSString *title;
+//Read only to stop any attempt to set/change coordinate from outside custom init method
+@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+
+//Declare custom init method
+-(id)initWithTitle:(NSString *)text coord:(CLLocationCoordinate2D)coord;
 
 @end
