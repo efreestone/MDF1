@@ -12,7 +12,12 @@
 //
 
 #import <UIKit/UIKit.h>
+//Import map kit
+#import <MapKit/MapKit.h>
 
 @interface SecondViewController : UIViewController
+{
+    IBOutlet MKMapView *mapView;
+}
 
 @end
