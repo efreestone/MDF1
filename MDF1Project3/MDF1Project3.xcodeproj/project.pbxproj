@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B813049017E94B9E008896FE /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B813048F17E94B9D008896FE /* LocationManager.m */; };
+		B813FA3A17EA0F410029E1CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B813FA3917EA0F410029E1CA /* CoreLocation.framework */; };
 		B854BD3917E50D76003962ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B854BD3817E50D76003962ED /* UIKit.framework */; };
 		B854BD3B17E50D76003962ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B854BD3A17E50D76003962ED /* Foundation.framework */; };
 		B854BD3D17E50D76003962ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B854BD3C17E50D76003962ED /* CoreGraphics.framework */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		B813048E17E94B9D008896FE /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		B813048F17E94B9D008896FE /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		B813FA3917EA0F410029E1CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B854BD3517E50D76003962ED /* MDF1Project3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1Project3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B854BD3817E50D76003962ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B854BD3A17E50D76003962ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B813FA3A17EA0F410029E1CA /* CoreLocation.framework in Frameworks */,
 				B854BD3917E50D76003962ED /* UIKit.framework in Frameworks */,
 				B854BD3B17E50D76003962ED /* Foundation.framework in Frameworks */,
 				B854BD3D17E50D76003962ED /* CoreGraphics.framework in Frameworks */,
@@ -100,6 +103,7 @@
 		B854BD3717E50D76003962ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B813FA3917EA0F410029E1CA /* CoreLocation.framework */,
 				B854BD3817E50D76003962ED /* UIKit.framework */,
 				B854BD3A17E50D76003962ED /* Foundation.framework */,
 				B854BD3C17E50D76003962ED /* CoreGraphics.framework */,

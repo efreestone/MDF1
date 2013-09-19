@@ -13,25 +13,37 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface LocationManager : NSObject
 {
     //Declare name array
-    NSMutableArray *namesArray;
+    //NSMutableArray *namesArray;
     //Declare city and state array
-    NSMutableArray *cityArray;
+    //NSMutableArray *cityArray;
     //Declare lat and long array
-    NSMutableArray *latLongArray;
+    //NSMutableArray *latLongArray;
+    
+    //Declare locations array with all info
+    NSMutableArray *locationsArray;
+    //Declare location with lat and long
+    //CLLocationManager *coreLocationManager;
+    
 }
 
 //Set property for array to allow synthesize
-@property (strong) NSMutableArray *namesArray;
-@property (strong) NSMutableArray *cityArray;
-@property (strong) NSMutableArray *latLongArray;
+//@property (nonatomic, strong) NSMutableArray *namesArray;
+//@property (nonatomic, strong) NSMutableArray *cityArray;
+//@property (nonatomic, strong) NSMutableArray *latLongArray;
+
+@property (nonatomic, strong) NSMutableArray *locationsArray;
+
 
 //Declare static method
 +(LocationManager *)GetInstance;
 
 //Declare Instance Method
--(void)getLocations;
+//-(void)getLocations;
+
+
 
 @end
