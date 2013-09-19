@@ -16,34 +16,15 @@
 
 @interface LocationManager : NSObject
 {
-    //Declare name array
-    //NSMutableArray *namesArray;
-    //Declare city and state array
-    //NSMutableArray *cityArray;
-    //Declare lat and long array
-    //NSMutableArray *latLongArray;
-    
     //Declare locations array with all info
     NSMutableArray *locationsArray;
-    //Declare location with lat and long
-    //CLLocationManager *coreLocationManager;
-    
 }
 
 //Set property for array to allow synthesize
-//@property (nonatomic, strong) NSMutableArray *namesArray;
-//@property (nonatomic, strong) NSMutableArray *cityArray;
-//@property (nonatomic, strong) NSMutableArray *latLongArray;
-
 @property (nonatomic, strong) NSMutableArray *locationsArray;
 
 
 //Declare static method
 +(LocationManager *)GetInstance;
-
-//Declare Instance Method
-//-(void)getLocations;
-
-
 
 @end

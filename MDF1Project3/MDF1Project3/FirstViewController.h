@@ -12,25 +12,18 @@
 //
 
 #import <UIKit/UIKit.h>
-//Import Core Location
-#import <CoreLocation/CoreLocation.h>
 //Import location manager to gain access to singleton and save
 #import "LocationManager.h"
+//Import map kit
+#import <MapKit/MapKit.h>
 
-@interface FirstViewController : UIViewController <UITableViewDelegate> //, CLLocationManagerDelegate
+@interface FirstViewController : UIViewController <UITableViewDelegate>
 {
     //Test array for table view
     NSMutableArray *testArray;
     
     //Declare IBOutlet for table view
     IBOutlet UITableView *tableView;
-    
-    //Declare loaction with lat and long
-    CLLocationManager *coreLocationManager;
-    
-    //Declare lat and long labels
-    //IBOutlet UILabel *latLabel;
-    //IBOutlet UILabel *longLabel;
 }
 
 //Create singleton locations holder

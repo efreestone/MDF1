@@ -12,20 +12,31 @@
 //
 
 #import <UIKit/UIKit.h>
+//Import map kit
+#import <MapKit/MapKit.h>
+
+#import "LocationManager.h"
 
 @interface DetailViewController : UIViewController
 {
+    
+    //Declare map view
+    IBOutlet MKMapView *mapView;
     //Declare location name label
     IBOutlet UILabel *nameLabel;
     //Declare location city/state label
     IBOutlet UILabel *cityLabel;
-    //Declare lat/long label
-    IBOutlet UILabel *latLongLabel;
+    //Declare latitude label
+    IBOutlet UILabel *latLabel;
+    //Declare longitude label
+    IBOutlet UILabel *longLabel;
 }
 
 //Create property to use synthesize for getter/setter
+@property (strong) IBOutlet MKMapView *mapView;
 @property (strong) IBOutlet UILabel *nameLabel;
 @property (strong) IBOutlet UILabel *cityLabel;
-@property (strong) IBOutlet UILabel *latLongLabel;
+@property (strong) IBOutlet UILabel *latLabel;
+@property (strong) IBOutlet UILabel *longLabel;
 
 @end
