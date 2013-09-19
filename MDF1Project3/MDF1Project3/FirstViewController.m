@@ -164,10 +164,11 @@
             //Change nav bar title
             detailViewController_iPhone.title = (NSString *) [[_passedLocations.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Name"];
             //Fill in location name label
-            detailViewController_iPhone.nameLabel.text = [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+            detailViewController_iPhone.nameLabel.text = (NSString *) [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
             //Fill in city/state label
-            detailViewController_iPhone.cityLabel.text = [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
-            
+            detailViewController_iPhone.cityLabel.text = (NSString *) [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
+            //Fill in lat/long label
+            //detailViewController_iPhone.latLongLabel.text = [NSString stringWithFormat:@"Lat/Long:%@",[[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Loc"]];
         }
     } else {
         if (detailViewController_iPad != nil) {
@@ -175,11 +176,13 @@
             [self.navigationController pushViewController:detailViewController_iPad animated:true];
             
             //Change nav bar title
-            detailViewController_iPhone.title = (NSString *) [[_passedLocations.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Name"];
+            detailViewController_iPad.title = (NSString *) [[_passedLocations.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Name"];
             //Fill in location name label
-            detailViewController_iPhone.nameLabel.text = [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+            detailViewController_iPad.nameLabel.text = (NSString *) [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
             //Fill in city/state label
-            detailViewController_iPhone.cityLabel.text = [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
+            detailViewController_iPad.cityLabel.text = (NSString *) [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
+            //Fill in lat/long label
+            detailViewController_iPad.latLongLabel.text = [NSString stringWithFormat:@"Lat/Long:%@",[[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Loc"]];
         }
     }
     

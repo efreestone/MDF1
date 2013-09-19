@@ -31,6 +31,20 @@
 							
 - (void)viewDidLoad
 {
+    //Create a default span and zoom level (from project 3 videos)
+    MKCoordinateSpan span;
+    span.latitudeDelta = 20.0f;
+    span.latitudeDelta = 20.0f;
+    
+    CLLocationCoordinate2D location;
+    location.latitude = 28.55f;
+    location.longitude = -81.33f;
+    
+    MKCoordinateRegion region;
+    region.center = location;
+    region.span = span;
+    mapView.region = region;
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

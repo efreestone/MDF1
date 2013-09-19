@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80FAC8317EB78CE0091CADD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80FAC8217EB78CE0091CADD /* MapKit.framework */; };
+		B80FAC8617EB81DC0091CADD /* MyMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B80FAC8517EB81DC0091CADD /* MyMapAnnotation.m */; };
 		B813049017E94B9E008896FE /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B813048F17E94B9D008896FE /* LocationManager.m */; };
 		B813FA3A17EA0F410029E1CA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B813FA3917EA0F410029E1CA /* CoreLocation.framework */; };
 		B854BD3917E50D76003962ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B854BD3817E50D76003962ED /* UIKit.framework */; };
@@ -34,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B80FAC8217EB78CE0091CADD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B80FAC8417EB81DC0091CADD /* MyMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMapAnnotation.h; sourceTree = "<group>"; };
+		B80FAC8517EB81DC0091CADD /* MyMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMapAnnotation.m; sourceTree = "<group>"; };
 		B813048E17E94B9D008896FE /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		B813048F17E94B9D008896FE /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		B813FA3917EA0F410029E1CA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B80FAC8317EB78CE0091CADD /* MapKit.framework in Frameworks */,
 				B813FA3A17EA0F410029E1CA /* CoreLocation.framework in Frameworks */,
 				B854BD3917E50D76003962ED /* UIKit.framework in Frameworks */,
 				B854BD3B17E50D76003962ED /* Foundation.framework in Frameworks */,
@@ -103,6 +109,7 @@
 		B854BD3717E50D76003962ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B80FAC8217EB78CE0091CADD /* MapKit.framework */,
 				B813FA3917EA0F410029E1CA /* CoreLocation.framework */,
 				B854BD3817E50D76003962ED /* UIKit.framework */,
 				B854BD3A17E50D76003962ED /* Foundation.framework */,
@@ -135,6 +142,8 @@
 				B854BD3F17E50D76003962ED /* Supporting Files */,
 				B813048E17E94B9D008896FE /* LocationManager.h */,
 				B813048F17E94B9D008896FE /* LocationManager.m */,
+				B80FAC8417EB81DC0091CADD /* MyMapAnnotation.h */,
+				B80FAC8517EB81DC0091CADD /* MyMapAnnotation.m */,
 			);
 			path = MDF1Project3;
 			sourceTree = "<group>";
@@ -234,6 +243,7 @@
 				B854BD5917E50D76003962ED /* SecondViewController.m in Sources */,
 				B856E82117E7FA520082C3F3 /* DetailViewController.m in Sources */,
 				B813049017E94B9E008896FE /* LocationManager.m in Sources */,
+				B80FAC8617EB81DC0091CADD /* MyMapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
