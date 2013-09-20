@@ -15,12 +15,8 @@
 
 @implementation LocationManager
 
-//Synthesize arrays for getter/setter methods
-//@synthesize namesArray, cityArray, latLongArray;
-
 //Synthesize my locations array for getter/setter
 @synthesize locationsArray;
-
 
 //Set static method for singleton instance
 static LocationManager *_instance = nil;

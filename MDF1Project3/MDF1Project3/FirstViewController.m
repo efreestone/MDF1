@@ -126,19 +126,19 @@
     double locLat = [locLatLong[0] doubleValue];
     double locLang = [locLatLong[1] doubleValue];
     
-    //Create a default span and zoom level (from project 3 videos)
+    //Create a default span and zoom level
     MKCoordinateSpan span;
     span.latitudeDelta = 0.045f;
     span.latitudeDelta = 0.045f;
-    
+    //Set lat and long with my doubles from above
     CLLocationCoordinate2D location;
     location.latitude = locLat;
     location.longitude = locLang;
-    
+    //Set region and center with location
     MKCoordinateRegion region;
     region.center = location;
     region.span = span;
-    //These are passed in within the device check for cell selected. Keeping them out here causes span and region to not be set for some reason
+    //These are passed in within the device check for cell selected. Keeping them out here causes span and region to not be set when my mapView is created
     //detailViewController_iPhone.mapView.region = region;
     //detailViewController_iPad.mapView.region = region;
     
