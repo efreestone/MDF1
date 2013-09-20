@@ -14,10 +14,28 @@
 #import <UIKit/UIKit.h>
 //Import map kit
 #import <MapKit/MapKit.h>
+//Import Location Manager singleton
+#import "LocationManager.h"
+
+#import "MyMapAnnotation.h"
 
 @interface SecondViewController : UIViewController
 {
+    //Declare map view
     IBOutlet MKMapView *mapView;
+    //Declare string to hold location name
+    NSString *locName;
+    //Declare array to hold lat/long
+    NSArray *locLatLong;
+    //Declare array for current locations
+    NSMutableArray *currentLocArray;
+    
+    //MyMapAnnotation *myMapAnnotation;
 }
+
+//Create singleton locations holder
+@property (nonatomic, strong) LocationManager *passedLocations;
+
+@property (nonatomic, strong) MyMapAnnotation *myMapAnnotation;
 
 @end

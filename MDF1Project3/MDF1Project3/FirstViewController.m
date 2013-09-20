@@ -147,6 +147,7 @@
     
     //Check device (Modified from AppDelegate check)
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        //Device is iPhone
         if (detailViewController_iPhone != nil) {
             //Push detail view on top of albums view
             [self.navigationController pushViewController:detailViewController_iPhone animated:true];
@@ -173,6 +174,7 @@
             detailViewController_iPhone.longLabel.text = [NSString stringWithFormat:@"Longitude: %f", locLang];
         }
     } else {
+        //Device is iPad
         if (detailViewController_iPad != nil) {
             //Push detail view on top of albums view
             [self.navigationController pushViewController:detailViewController_iPad animated:true];
