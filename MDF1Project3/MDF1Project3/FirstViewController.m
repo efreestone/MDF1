@@ -126,6 +126,7 @@
     double locLat = [locLatLong[0] doubleValue];
     double locLang = [locLatLong[1] doubleValue];
     
+    //Create and set map view annotation parameters
     //Create a default span and zoom level
     MKCoordinateSpan span;
     span.latitudeDelta = 0.045f;
