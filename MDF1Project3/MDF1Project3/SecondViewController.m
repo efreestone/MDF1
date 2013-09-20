@@ -151,7 +151,7 @@
     //_passedLocations = [LocationManager GetInstance];
     
     currentLocArray = [[NSMutableArray alloc] init];
-    //NSLog(@"Current Loc = %@", currentLocArray);
+    NSLog(@"Current Loc before for loop = %@", currentLocArray);
     
     //currentLocArray = nil;
     //[mapView removeAnnotations:currentLocArray];
@@ -204,7 +204,7 @@
         MyMapAnnotation *myMapAnnotation = [[MyMapAnnotation alloc] initWithTitle:locName coord:location];
         [currentLocArray addObject:myMapAnnotation];
         
-        if (_myMapAnnotation != nil) {
+        if (myMapAnnotation != nil) {
             
             //Remove all annotations to check for changes
             //[mapView removeAnnotations:currentLocArray];
@@ -213,15 +213,14 @@
             
             //Add annotation pin to map view
             //[mapView addAnnotation:myMapAnnotation];
+            [mapView removeAnnotations:currentLocArray];
+            NSLog(@"Annotations removed");
             
             [mapView addAnnotations:currentLocArray];
-            
-            //[mapView removeAnnotations:currentLocArray];
         }
         
     }
         //[mapView removeAnnotations:currentLocArray];
-        
         
         [mapView addAnnotations:currentLocArray];
         NSLog(@"Current Loc = %lu", (unsigned long)currentLocArray.count);
