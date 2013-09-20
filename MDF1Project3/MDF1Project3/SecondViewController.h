@@ -29,8 +29,6 @@
     NSArray *locLatLong;
     //Declare array for current locations
     NSMutableArray *currentLocArray;
-    
-    //MyMapAnnotation *myMapAnnotation;
 }
 
 //Create singleton locations holder
