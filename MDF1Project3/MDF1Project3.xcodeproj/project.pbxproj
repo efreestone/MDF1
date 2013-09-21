@@ -104,15 +104,15 @@
 		B854BD2C17E50D76003962ED = {
 			isa = PBXGroup;
 			children = (
+				B854BD3E17E50D76003962ED /* MDF1Project3 */,
+				B854BD3717E50D76003962ED /* Frameworks */,
+				B854BD3617E50D76003962ED /* Products */,
 				B8FAB18117ED31C000E6E7E6 /* Default-Portrait@2x~ipad.png */,
 				B8FAB17F17ED31A700E6E7E6 /* Default-Portrait~ipad.png */,
 				B8FAB17717ED2FA600E6E7E6 /* Icon-72@2x.png */,
 				B8FAB17517ED2F4900E6E7E6 /* Icon@2x.png */,
 				B8FAB17317ED2F0300E6E7E6 /* Icon-72.png */,
 				B8FAB17117ED2EC700E6E7E6 /* Icon.png */,
-				B854BD3E17E50D76003962ED /* MDF1Project3 */,
-				B854BD3717E50D76003962ED /* Frameworks */,
-				B854BD3617E50D76003962ED /* Products */,
 			);
 			sourceTree = "<group>";
 		};
