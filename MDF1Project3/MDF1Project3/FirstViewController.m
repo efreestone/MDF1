@@ -39,7 +39,7 @@
 							
 - (void)viewDidLoad
 {
-    //Save array to instance version of my singleton
+    //Get instance of singleton
     self.passedLocations = [LocationManager GetInstance];
     
     [super viewDidLoad];
