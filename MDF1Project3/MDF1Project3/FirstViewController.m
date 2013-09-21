@@ -101,9 +101,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    //Apply the location name to the table view cells
-    cell.textLabel.text = (NSString *)[[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
-    
+    //Check device and add city/state as well as location name to cells of iPad. iPhone doesn't have enough room unfortunately
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        //Apply the location name to the table view cells
+        cell.textLabel.text = (NSString *)[[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+    } else {
+        //Apply the location name and city/state to table view cells
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", [[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"], [[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"]];
+    }
     return cell;
 }
 
