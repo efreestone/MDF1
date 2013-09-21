@@ -40,6 +40,9 @@
         
         viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil];
     }
+    //Set nav bar tint color
+    navController1.navigationBar.tintColor = [UIColor blackColor];
+    
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = @[navController1, viewController2];
     self.window.rootViewController = self.tabBarController;

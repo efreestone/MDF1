@@ -197,8 +197,10 @@
             detailViewController_iPad.cityLabel.text = (NSString *) [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
             //Fill in lat label
             detailViewController_iPad.latLabel.text = [NSString stringWithFormat:@"Latitude: %@",[[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Lat"]];
+            //Fill in lat label
+            detailViewController_iPad.latLabel.text = [NSString stringWithFormat:@"Latitude: %f", locLat];
             //Fill in long label
-            detailViewController_iPad.longLabel.text = [NSString stringWithFormat:@"Longitude: %@",[[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Long"]];
+            detailViewController_iPad.longLabel.text = [NSString stringWithFormat:@"Longitude: %f", locLang];
         }
     }
 }
