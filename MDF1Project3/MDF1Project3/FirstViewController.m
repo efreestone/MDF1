@@ -14,10 +14,11 @@
 #import "FirstViewController.h"
 //Import detail view
 #import "DetailViewController.h"
-//Improt Location info
-//#import "LocationsInfo.h"
 //Import Location Manager Singleton
 #import "LocationManager.h"
+//Import My Map Annotation
+#import "MyMapAnnotation.h"
+
 
 
 @interface FirstViewController ()
@@ -38,44 +39,14 @@
 							
 - (void)viewDidLoad
 {
-    //LocationsInfo *locationInfo1 = [[LocationsInfo alloc] initWithName:@"Freestone Music" loc:CLLocationCoordinate2DMake(40.397761, -105.074980)];
-    
-    //Save array to instance version of my singleton
-    _passedLocations = [LocationManager GetInstance];
-    //LocationManager *locationManager = [LocationManager GetInstance];
-    
-    //NSLog(@"Count = %@", _passedLocations.locationsArray);
-    
-    /*LocationManager *locationManager = [LocationManager GetInstance];
-    if (locationManager != nil) {
-        NSMutableArray *locationsArray = locationManager.locationsArray;
-        if (locationsArray != nil) {
-            [locationsArray addObject:locationInfo1];
-            NSLog(@"locationInfo1 = %@", locationsArray);
-        }
-    }*/
+    //Get instance of singleton
+    self.passedLocations = [LocationManager GetInstance];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    //Allocate Core Location
-    /*coreLocationManager = [[CLLocationManager alloc] init];
-    if (coreLocationManager != nil) {
-        coreLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        coreLocationManager.delegate = self;
-        
-        //Tell core location to start gathering location info
-        [coreLocationManager startUpdatingLocation];
-    }*/
-    
     //Test array for table view
     testArray = [[NSMutableArray alloc] initWithObjects:@"Location 1", @"Location 2", @"Location 3", @"Location 4", @"Location 5", @"Location 6", @"Location 7", @"Location 8", @"Location 9", @"Location 10", nil];
-    
-    
-    //[locationManager getLocations];
-    
-    /*self.passedLocations = [LocationManager GetInstance];
-    [self.passedLocations getLocations];*/
     
     //Add factory edit button to nav bar
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -87,20 +58,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-//Built in function of Core Location to access loc data
-/*- (void)locationManager:(CLLocationManager *)manager
-	didUpdateToLocation:(CLLocation *)newLocation
-		   fromLocation:(CLLocation *)oldLocation {
-    CLLocationCoordinate2D coord = newLocation.coordinate;
-    
-    latLabel.text = [NSString stringWithFormat:@"Latitude: %g", coord.latitude];
-    longLabel.text = [NSString stringWithFormat:@"Longitude: %g", coord.longitude];
-}*/
-
 //From Project 1 videos
 //Built in function to set number of rows in table view section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_passedLocations.locationsArray count];
+    return [self.passedLocations.locationsArray count];
 }
 
 //From Project 1 videos
@@ -123,7 +84,7 @@
         NSLog(@"We want to delete row = %d", indexPath.row);
         
         //Remove the deleted object from locationsArray
-        [_passedLocations.locationsArray removeObjectAtIndex:indexPath.row];
+        [self.passedLocations.locationsArray removeObjectAtIndex:indexPath.row];
         
         //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something here but isn't this an Accessor method?
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
@@ -141,7 +102,7 @@
     }
     
     //Apply the location name to the table view cells
-    cell.textLabel.text = (NSString *)[[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+    cell.textLabel.text = (NSString *)[[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
     
     return cell;
 }
@@ -149,43 +110,99 @@
 //From Project 1 videos
 //Built in function to grab row selected in table view
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Row = %d Name = %@", indexPath.row, [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"]);
+    NSLog(@"Row = %d Name = %@", indexPath.row, [[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"]);
     
     //Allocate iPhone Detail View nib
     DetailViewController *detailViewController_iPhone = [[DetailViewController alloc] initWithNibName:@"DetailView_iPhone" bundle:nil];
     //Alocate iPad Detail View nib
     DetailViewController *detailViewController_iPad = [[DetailViewController alloc] initWithNibName:@"DetailView_iPad" bundle:nil];
+    
+    //Cast location name into NSString to be injected into mapView for the annotation title
+    NSString *locName = [[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+    //Cast lat and long values into NSArray to be changed to double. This is to avoid an incompatible error
+    NSArray *locLatLong = [[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Loc"];
+    
+    //Cast lat and long into floats to be applied to map view and lat/long labels in detail view
+    double locLat = [locLatLong[0] doubleValue];
+    double locLang = [locLatLong[1] doubleValue];
+    
+    //Create and set map view annotation parameters
+    //Create a default span and zoom level
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.045f;
+    span.latitudeDelta = 0.045f;
+    //Set lat and long with my doubles from above
+    CLLocationCoordinate2D location;
+    location.latitude = locLat;
+    location.longitude = locLang;
+    //Set region and center with location
+    MKCoordinateRegion region;
+    region.center = location;
+    region.span = span;
+    //These are passed in within the device check for cell selected. Keeping them out here causes span and region to not be set when my mapView is created
+    //detailViewController_iPhone.mapView.region = region;
+    //detailViewController_iPad.mapView.region = region;
+    
+    MyMapAnnotation *myMapAnnotation = [[MyMapAnnotation alloc] initWithTitle:locName coord:location];
+    
     //Check device (Modified from AppDelegate check)
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        //Device is iPhone
         if (detailViewController_iPhone != nil) {
-            //Push detail view on top of albums view (not from project 1)
+            //Push detail view on top of albums view
             [self.navigationController pushViewController:detailViewController_iPhone animated:true];
             
             //Change nav bar title
-            detailViewController_iPhone.title = (NSString *) [[_passedLocations.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Name"];
+            detailViewController_iPhone.title = (NSString *) [[self.passedLocations.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Name"];
+            
+            //Set map view annotation
+            if (myMapAnnotation != nil) {
+                //Pass in span and region and span info from above
+                detailViewController_iPhone.mapView.region = region;
+                //Add annotation pin to map view
+                [detailViewController_iPhone.mapView addAnnotation:myMapAnnotation];
+                //NSLog(@"Form inside myMapAnnotation iPhone if statement");
+            }
+            
             //Fill in location name label
-            detailViewController_iPhone.nameLabel.text = (NSString *) [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+            detailViewController_iPhone.nameLabel.text = (NSString *) [[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
             //Fill in city/state label
-            detailViewController_iPhone.cityLabel.text = (NSString *) [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
-            //Fill in lat/long label
-            //detailViewController_iPhone.latLongLabel.text = [NSString stringWithFormat:@"Lat/Long:%@",[[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Loc"]];
+            detailViewController_iPhone.cityLabel.text = (NSString *) [[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
+            //Fill in lat label
+            detailViewController_iPhone.latLabel.text = [NSString stringWithFormat:@"Latitude: %f", locLat];
+            //Fill in long label
+            detailViewController_iPhone.longLabel.text = [NSString stringWithFormat:@"Longitude: %f", locLang];
         }
     } else {
+        //Device is iPad
         if (detailViewController_iPad != nil) {
-            //Push detail view on top of albums view (not from project 1)
+            //Push detail view on top of albums view
             [self.navigationController pushViewController:detailViewController_iPad animated:true];
             
             //Change nav bar title
-            detailViewController_iPad.title = (NSString *) [[_passedLocations.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Name"];
+            detailViewController_iPad.title = (NSString *) [[self.passedLocations.locationsArray objectAtIndex: indexPath.row] objectForKey:@"Name"];
+            
+            //Set map view annotation
+            if (myMapAnnotation != nil) {
+                //Pass in span and region and span info from above
+                detailViewController_iPad.mapView.region = region;
+                //Add annotation pin to map view
+                [detailViewController_iPad.mapView addAnnotation:myMapAnnotation];
+                //NSLog(@"Form inside myMapAnnotation iPad if statement.");
+            }
+            
             //Fill in location name label
-            detailViewController_iPad.nameLabel.text = (NSString *) [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
+            detailViewController_iPad.nameLabel.text = (NSString *) [[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Name"];
             //Fill in city/state label
-            detailViewController_iPad.cityLabel.text = (NSString *) [[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
-            //Fill in lat/long label
-            detailViewController_iPad.latLongLabel.text = [NSString stringWithFormat:@"Lat/Long:%@",[[_passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Loc"]];
+            detailViewController_iPad.cityLabel.text = (NSString *) [[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"City"];
+            //Fill in lat label
+            detailViewController_iPad.latLabel.text = [NSString stringWithFormat:@"Latitude: %@",[[self.passedLocations.locationsArray objectAtIndex:indexPath.row] objectForKey:@"Lat"]];
+            //Fill in lat label
+            detailViewController_iPad.latLabel.text = [NSString stringWithFormat:@"Latitude: %f", locLat];
+            //Fill in long label
+            detailViewController_iPad.longLabel.text = [NSString stringWithFormat:@"Longitude: %f", locLang];
         }
     }
-    
 }
 
 //Override built in function to allow toggle of table view edit mode from button in nav bar. This didn't work in Project 2 for some reason and I'm not sure why.

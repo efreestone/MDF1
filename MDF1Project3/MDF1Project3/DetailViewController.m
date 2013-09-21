@@ -19,7 +19,7 @@
 
 @implementation DetailViewController
 
-@synthesize nameLabel, cityLabel, latLongLabel;
+@synthesize mapView, nameLabel, cityLabel, latLabel, longLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +31,7 @@
 }
 
 - (void)viewDidLoad
-{
+{    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
