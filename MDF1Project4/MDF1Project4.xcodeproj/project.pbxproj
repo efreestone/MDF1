@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81C436B17F0F38C001E02BB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81C436917F0F38C001E02BB /* DetailViewController.m */; };
+		B81C436C17F0F38C001E02BB /* DetailView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B81C436A17F0F38C001E02BB /* DetailView_iPhone.xib */; };
+		B81C436E17F0F3CD001E02BB /* DetailView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B81C436D17F0F3CD001E02BB /* DetailView_iPad.xib */; };
 		B87DA85617EE83DB0021883B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87DA85517EE83DB0021883B /* UIKit.framework */; };
 		B87DA85817EE83DB0021883B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87DA85717EE83DB0021883B /* Foundation.framework */; };
 		B87DA85A17EE83DB0021883B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87DA85917EE83DB0021883B /* CoreGraphics.framework */; };
@@ -29,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B81C436817F0F38C001E02BB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B81C436917F0F38C001E02BB /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B81C436A17F0F38C001E02BB /* DetailView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView_iPhone.xib; sourceTree = "<group>"; };
+		B81C436D17F0F3CD001E02BB /* DetailView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView_iPad.xib; sourceTree = "<group>"; };
 		B87DA85217EE83DB0021883B /* MDF1Project4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1Project4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87DA85517EE83DB0021883B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B87DA85717EE83DB0021883B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +122,10 @@
 				B87DA88117EE83DB0021883B /* SecondViewController_iPhone.xib */,
 				B87DA88417EE83DB0021883B /* SecondViewController_iPad.xib */,
 				B87DA85C17EE83DB0021883B /* Supporting Files */,
+				B81C436817F0F38C001E02BB /* DetailViewController.h */,
+				B81C436917F0F38C001E02BB /* DetailViewController.m */,
+				B81C436A17F0F38C001E02BB /* DetailView_iPhone.xib */,
+				B81C436D17F0F3CD001E02BB /* DetailView_iPad.xib */,
 			);
 			path = MDF1Project4;
 			sourceTree = "<group>";
@@ -196,6 +207,8 @@
 				B87DA88017EE83DB0021883B /* FirstViewController_iPad.xib in Resources */,
 				B87DA88317EE83DB0021883B /* SecondViewController_iPhone.xib in Resources */,
 				B87DA88617EE83DB0021883B /* SecondViewController_iPad.xib in Resources */,
+				B81C436C17F0F38C001E02BB /* DetailView_iPhone.xib in Resources */,
+				B81C436E17F0F3CD001E02BB /* DetailView_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +223,7 @@
 				B87DA86617EE83DB0021883B /* AppDelegate.m in Sources */,
 				B87DA86F17EE83DB0021883B /* FirstViewController.m in Sources */,
 				B87DA87617EE83DB0021883B /* SecondViewController.m in Sources */,
+				B81C436B17F0F38C001E02BB /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +372,7 @@
 				B87DA88B17EE83DB0021883B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

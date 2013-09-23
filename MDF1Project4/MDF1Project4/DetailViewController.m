@@ -14,6 +14,8 @@
 
 @implementation DetailViewController
 
+@synthesize testLabel;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

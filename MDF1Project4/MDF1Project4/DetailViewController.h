@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
+{
+    //Declare test label
+    IBOutlet UILabel *testLabel;
+}
+
+@property (strong) IBOutlet UILabel *testLabel;
 
 @end

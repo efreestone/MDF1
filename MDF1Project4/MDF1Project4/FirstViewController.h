@@ -14,5 +14,14 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
+{
+    //Declare table view
+    IBOutlet UITableView *tableView;
+    
+    //Declare test array
+    NSMutableArray *testArray;
+}
+
+//@property (strong) NSMutableArray *testArray;
 
 @end
