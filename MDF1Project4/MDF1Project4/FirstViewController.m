@@ -27,8 +27,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.title = NSLocalizedString(@"Chords", @"Chords");
+        self.tabBarItem.image = [UIImage imageNamed:@"chord"];
     }
     return self;
 }
@@ -123,7 +123,9 @@
         if (detailViewController_iPhone != nil) {
             //Push detail view on top of table view
             [self.navigationController pushViewController:detailViewController_iPhone animated:true];
-        
+            //Set the nav bar title to the test array item
+            detailViewController_iPhone.title = (NSString *) [testArray objectAtIndex:indexPath.row];
+            //Set the test label to the test array item
             detailViewController_iPhone.testLabel.text = (NSString *) [testArray objectAtIndex:indexPath.row];
         }
     } else {
@@ -131,7 +133,9 @@
         if (detailViewController_iPad != nil) {
             //Push detail view on top of table view
             [self.navigationController pushViewController:detailViewController_iPad animated:true];
-            
+            //Set the nav bar title to the test array item
+            detailViewController_iPad.title = (NSString *) [testArray objectAtIndex:indexPath.row];
+            //Set the test label to the test array item
             detailViewController_iPad.testLabel.text = (NSString *) [testArray objectAtIndex:indexPath.row];
         }
     }

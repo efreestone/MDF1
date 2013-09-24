@@ -10,6 +10,10 @@
 		B81C436B17F0F38C001E02BB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B81C436917F0F38C001E02BB /* DetailViewController.m */; };
 		B81C436C17F0F38C001E02BB /* DetailView_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B81C436A17F0F38C001E02BB /* DetailView_iPhone.xib */; };
 		B81C436E17F0F3CD001E02BB /* DetailView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B81C436D17F0F3CD001E02BB /* DetailView_iPad.xib */; };
+		B8703B8C17F24B7600019444 /* raw.png in Resources */ = {isa = PBXBuildFile; fileRef = B8703B8A17F24B7600019444 /* raw.png */; };
+		B8703B8D17F24B7600019444 /* raw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8703B8B17F24B7600019444 /* raw@2x.png */; };
+		B8703B9017F24B9C00019444 /* chord.png in Resources */ = {isa = PBXBuildFile; fileRef = B8703B8E17F24B9C00019444 /* chord.png */; };
+		B8703B9117F24B9C00019444 /* chord@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8703B8F17F24B9C00019444 /* chord@2x.png */; };
 		B87DA85617EE83DB0021883B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87DA85517EE83DB0021883B /* UIKit.framework */; };
 		B87DA85817EE83DB0021883B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87DA85717EE83DB0021883B /* Foundation.framework */; };
 		B87DA85A17EE83DB0021883B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87DA85917EE83DB0021883B /* CoreGraphics.framework */; };
@@ -20,11 +24,7 @@
 		B87DA86A17EE83DB0021883B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87DA86917EE83DB0021883B /* Default@2x.png */; };
 		B87DA86C17EE83DB0021883B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87DA86B17EE83DB0021883B /* Default-568h@2x.png */; };
 		B87DA86F17EE83DB0021883B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87DA86E17EE83DB0021883B /* FirstViewController.m */; };
-		B87DA87117EE83DB0021883B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = B87DA87017EE83DB0021883B /* first.png */; };
-		B87DA87317EE83DB0021883B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87DA87217EE83DB0021883B /* first@2x.png */; };
 		B87DA87617EE83DB0021883B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B87DA87517EE83DB0021883B /* SecondViewController.m */; };
-		B87DA87817EE83DB0021883B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = B87DA87717EE83DB0021883B /* second.png */; };
-		B87DA87A17EE83DB0021883B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B87DA87917EE83DB0021883B /* second@2x.png */; };
 		B87DA87D17EE83DB0021883B /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87DA87B17EE83DB0021883B /* FirstViewController_iPhone.xib */; };
 		B87DA88017EE83DB0021883B /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87DA87E17EE83DB0021883B /* FirstViewController_iPad.xib */; };
 		B87DA88317EE83DB0021883B /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87DA88117EE83DB0021883B /* SecondViewController_iPhone.xib */; };
@@ -36,6 +36,10 @@
 		B81C436917F0F38C001E02BB /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		B81C436A17F0F38C001E02BB /* DetailView_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView_iPhone.xib; sourceTree = "<group>"; };
 		B81C436D17F0F3CD001E02BB /* DetailView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView_iPad.xib; sourceTree = "<group>"; };
+		B8703B8A17F24B7600019444 /* raw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raw.png; sourceTree = "<group>"; };
+		B8703B8B17F24B7600019444 /* raw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "raw@2x.png"; sourceTree = "<group>"; };
+		B8703B8E17F24B9C00019444 /* chord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chord.png; sourceTree = "<group>"; };
+		B8703B8F17F24B9C00019444 /* chord@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chord@2x.png"; sourceTree = "<group>"; };
 		B87DA85217EE83DB0021883B /* MDF1Project4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDF1Project4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87DA85517EE83DB0021883B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B87DA85717EE83DB0021883B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,12 +55,8 @@
 		B87DA86B17EE83DB0021883B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B87DA86D17EE83DB0021883B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		B87DA86E17EE83DB0021883B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		B87DA87017EE83DB0021883B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		B87DA87217EE83DB0021883B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		B87DA87417EE83DB0021883B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		B87DA87517EE83DB0021883B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		B87DA87717EE83DB0021883B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		B87DA87917EE83DB0021883B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		B87DA87C17EE83DB0021883B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
 		B87DA87F17EE83DB0021883B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
 		B87DA88217EE83DB0021883B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -111,14 +111,14 @@
 				B87DA86517EE83DB0021883B /* AppDelegate.m */,
 				B87DA86D17EE83DB0021883B /* FirstViewController.h */,
 				B87DA86E17EE83DB0021883B /* FirstViewController.m */,
-				B87DA87017EE83DB0021883B /* first.png */,
-				B87DA87217EE83DB0021883B /* first@2x.png */,
 				B87DA87417EE83DB0021883B /* SecondViewController.h */,
 				B87DA87517EE83DB0021883B /* SecondViewController.m */,
-				B87DA87717EE83DB0021883B /* second.png */,
-				B87DA87917EE83DB0021883B /* second@2x.png */,
+				B8703B8E17F24B9C00019444 /* chord.png */,
+				B8703B8F17F24B9C00019444 /* chord@2x.png */,
 				B87DA87B17EE83DB0021883B /* FirstViewController_iPhone.xib */,
 				B87DA87E17EE83DB0021883B /* FirstViewController_iPad.xib */,
+				B8703B8A17F24B7600019444 /* raw.png */,
+				B8703B8B17F24B7600019444 /* raw@2x.png */,
 				B87DA88117EE83DB0021883B /* SecondViewController_iPhone.xib */,
 				B87DA88417EE83DB0021883B /* SecondViewController_iPad.xib */,
 				B87DA85C17EE83DB0021883B /* Supporting Files */,
@@ -199,16 +199,16 @@
 				B87DA86817EE83DB0021883B /* Default.png in Resources */,
 				B87DA86A17EE83DB0021883B /* Default@2x.png in Resources */,
 				B87DA86C17EE83DB0021883B /* Default-568h@2x.png in Resources */,
-				B87DA87117EE83DB0021883B /* first.png in Resources */,
-				B87DA87317EE83DB0021883B /* first@2x.png in Resources */,
-				B87DA87817EE83DB0021883B /* second.png in Resources */,
-				B87DA87A17EE83DB0021883B /* second@2x.png in Resources */,
 				B87DA87D17EE83DB0021883B /* FirstViewController_iPhone.xib in Resources */,
 				B87DA88017EE83DB0021883B /* FirstViewController_iPad.xib in Resources */,
 				B87DA88317EE83DB0021883B /* SecondViewController_iPhone.xib in Resources */,
 				B87DA88617EE83DB0021883B /* SecondViewController_iPad.xib in Resources */,
 				B81C436C17F0F38C001E02BB /* DetailView_iPhone.xib in Resources */,
 				B81C436E17F0F3CD001E02BB /* DetailView_iPad.xib in Resources */,
+				B8703B8C17F24B7600019444 /* raw.png in Resources */,
+				B8703B8D17F24B7600019444 /* raw@2x.png in Resources */,
+				B8703B9017F24B9C00019444 /* chord.png in Resources */,
+				B8703B9117F24B9C00019444 /* chord@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

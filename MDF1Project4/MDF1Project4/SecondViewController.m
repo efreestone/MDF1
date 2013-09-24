@@ -23,14 +23,16 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        self.title = NSLocalizedString(@"Raw Data", @"Raw Data");
+        self.tabBarItem.image = [UIImage imageNamed:@"raw"];
     }
     return self;
 }
 							
 - (void)viewDidLoad
 {
+    //navBar.
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

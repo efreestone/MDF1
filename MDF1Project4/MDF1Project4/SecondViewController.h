@@ -15,7 +15,11 @@
 
 @interface SecondViewController : UIViewController
 {
+    //Declare text view
     IBOutlet UITextView *textView;
+    
+    //Declare nav bar. Only used to keep design consistant. Will not have any buttons for navigation
+    IBOutlet UINavigationBar *navBar;
 }
 
 @end
