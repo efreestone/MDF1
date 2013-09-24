@@ -38,6 +38,19 @@
     //Create test array
     testArray = [[NSMutableArray alloc] initWithObjects:@"Test 1", @"Test 2", @"Test 3", @"Test 4", @"Test 5", @"Test 6", @"Test 7", @"Test 8", @"Test 9", @"Test 10", nil];
     
+    //Create url. Using fullsail.com for testing
+    url = [[NSURL alloc] initWithString:@"http://www.fullsail.com"];
+    
+    //Create url request
+    request = [[NSURLRequest alloc] initWithURL:url];
+    if (request != nil) {
+        //Create connection
+        connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        
+        //Create mutable data object for storing info from url
+        requestData = [NSMutableData data];
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -46,6 +59,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//Built in function for passed in data from url
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    //Continuosly add data to mutabel data object
+    //Check that there is valid data
+    if (data != nil) {
+        //Add new data to the existing mutable data object
+        [requestData appendData:data];
+    }
+}
+
+//Built in function to check if all data from the request has loaded
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    //Convert text data from request to NSString
+    NSString *requestString = [[NSString alloc] initWithData:requestData encoding:NSASCIIStringEncoding];
+    if (requestString != nil) {
+        NSLog(@"%@", requestString);
+    }
 }
 
 //From Project 1 videos
@@ -59,27 +91,6 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
-
-/*//From Project 1 videos
-//Built in function to add delete to cells in table view
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellEditingStyleDelete;
-}
-
-//From Project 1 videos
-//Built in function to check editing style (-=delete, +=add)
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    //Check if in delete mode
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSLog(@"We want to delete row = %d", indexPath.row);
-        
-        //Remove the deleted object from locationsArray
-        [testArray removeObjectAtIndex:indexPath.row];
-        
-        //Remove object from table view with animation. Receiving warning "local declaration of "tableView" hides instance variable". I may be missing something here but isn't this an Accessor method?
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:true];
-    }
-}*/
 
 
 //From Project 1 videos

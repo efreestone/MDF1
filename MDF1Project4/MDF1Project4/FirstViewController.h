@@ -13,13 +13,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <NSURLConnectionDataDelegate>
 {
     //Declare table view
     IBOutlet UITableView *tableView;
     
     //Declare test array
     NSMutableArray *testArray;
+    
+    //Declare request
+    NSURLRequest *request;
+    //Declare url
+    NSURL *url;
+    //Declare connection
+    NSURLConnection *connection;
+    //Declare mutable data for storing info from url
+    NSMutableData *requestData;
 }
 
 //@property (strong) NSMutableArray *testArray;
