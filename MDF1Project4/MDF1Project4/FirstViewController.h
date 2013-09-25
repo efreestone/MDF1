@@ -13,7 +13,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController <NSURLConnectionDataDelegate>
+@interface FirstViewController : UIViewController <NSURLConnectionDataDelegate, NSXMLParserDelegate>
 {
     //Declare table view
     IBOutlet UITableView *tableView;

@@ -27,8 +27,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Guitar Chords", @"Guitar Chords");
-        self.tabBarItem.image = [UIImage imageNamed:@"chord"];
+        self.title = NSLocalizedString(@"Music", @"Music");
+        self.tabBarItem.image = [UIImage imageNamed:@"music"];
     }
     return self;
 }
@@ -37,6 +37,13 @@
 {
     //Load in xml data from app directory
     NSData *xmlData = [self GetFileDataFromFile:@"rock-charts-feed.xml"];
+    
+    //Create xml parser
+    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:xmlData];
+    if (parser != nil) {
+        [parser setDelegate:self];
+        [parser parse];
+    }
     
     //Create test array
     testArray = [[NSMutableArray alloc] initWithObjects:@"Test 1", @"Test 2", @"Test 3", @"Test 4", @"Test 5", @"Test 6", @"Test 7", @"Test 8", @"Test 9", @"Test 10", nil];
@@ -93,6 +100,12 @@
         
         NSLog(@"%@", requestString);
     }
+}
+
+//Built in method
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
+    //Left off at 6:27 in xmlParsing video
 }
 
 //Method to grab .xml file of requested data and convert to NSData object for parsing (from xmlParsing video)
