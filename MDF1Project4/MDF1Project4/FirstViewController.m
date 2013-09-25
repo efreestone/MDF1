@@ -27,7 +27,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Chords", @"Chords");
+        self.title = NSLocalizedString(@"Guitar Chords", @"Guitar Chords");
         self.tabBarItem.image = [UIImage imageNamed:@"chord"];
     }
     return self;
@@ -35,11 +35,14 @@
 							
 - (void)viewDidLoad
 {
+    //Load in xml data from app directory
+    NSData *xmlData = [self GetFileDataFromFile:@"rock-charts-feed.xml"];
+    
     //Create test array
     testArray = [[NSMutableArray alloc] initWithObjects:@"Test 1", @"Test 2", @"Test 3", @"Test 4", @"Test 5", @"Test 6", @"Test 7", @"Test 8", @"Test 9", @"Test 10", nil];
     
     //Create url. Using fullsail.com for testing
-    url = [[NSURL alloc] initWithString:@"http://www.fullsail.com"];
+    url = [[NSURL alloc] initWithString:@"http://www.unsignedbandweb.com/rock-charts-feed.xml"];
     
     //Create url request
     request = [[NSURLRequest alloc] initWithURL:url];
@@ -71,13 +74,47 @@
     }
 }
 
-//Built in function to check if all data from the request has loaded
+//Built in function to check if all data from the request has loaded and save to .xml in app directory
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     //Convert text data from request to NSString
     NSString *requestString = [[NSString alloc] initWithData:requestData encoding:NSASCIIStringEncoding];
     if (requestString != nil) {
+        //Get path to app documents directory
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        if (documentsDirectory != nil) {
+            //Create string with full path to directory
+            NSString *fullPath = [[NSString alloc] initWithFormat:@"%@/%@", documentsDirectory, @"rock-charts-feed.xml"];
+            if (fullPath != nil) {
+                [requestData writeToFile:fullPath atomically:true];
+            }
+        }
+        
         NSLog(@"%@", requestString);
     }
+}
+
+//Method to grab .xml file of requested data and convert to NSData object for parsing (from xmlParsing video)
+-(NSData *)GetFileDataFromFile:(NSString *)fileName {
+    //Nil out filePath
+    NSString *filePath = nil;
+    
+    //Create file manager
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    //Get path to the app directory
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    //Create full path to data file
+    filePath = [documentsDirectory stringByAppendingPathComponent:fileName];
+    
+    //Make sure the path and file exists
+    if ([fileManager fileExistsAtPath:filePath]) {
+        //Return to NSData for the file
+        return [NSData dataWithContentsOfFile:filePath];
+    }
+    return nil;
 }
 
 //From Project 1 videos
