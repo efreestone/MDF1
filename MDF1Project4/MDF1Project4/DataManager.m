@@ -1,3 +1,8 @@
+// Elijah Freestone
+// MDF1 1309
+// Project 4
+// September 21st, 2013
+
 //
 //  DataManager.m
 //  MDF1Project4
@@ -9,5 +14,20 @@
 #import "DataManager.h"
 
 @implementation DataManager
+//Synthesize strings
+@synthesize currentBandName, currentBandLocation, currentSongName, currentAlbumName, currentReleaseDate;
+
+//Initialize DataManager, instantiating and set properties to default values
+-(id)init {
+    self = [super init];
+    if (self != nil) {
+        [self setCurrentBandName:nil];
+        [self setCurrentBandLocation:nil];
+        [self setCurrentSongName:nil];
+        [self setCurrentAlbumName:nil];
+        [self setCurrentReleaseDate:nil];
+    }
+    return self;
+};
 
 @end

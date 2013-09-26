@@ -12,6 +12,8 @@
 //
 
 #import <UIKit/UIKit.h>
+//Imort Data Manager
+#import "DataManager.h"
 
 @interface FirstViewController : UIViewController <NSURLConnectionDataDelegate, NSXMLParserDelegate>
 {
@@ -29,8 +31,15 @@
     NSURLConnection *connection;
     //Declare mutable data for storing info from url
     NSMutableData *requestData;
+    
+    //Declare tag string for use in foundCharacter
+    NSMutableString *currentTag;
+    //Declare string to hold individual items. Mutable to allow appending string during parse
+    NSMutableString *currentItem;
+    //Declare array to hold all items from xml inside "channel" tag (first relevent tag)
+    NSMutableArray *channelArray;
+    //Declare instance of data manager
+    DataManager *dataManager;
 }
-
-//@property (strong) NSMutableArray *testArray;
 
 @end
