@@ -19,7 +19,8 @@
 
 @implementation DetailViewController
 
-@synthesize testLabel;
+//Using synthesize for getter/setter
+@synthesize bandNameLabel, locationLabel, songNameLabel, albumNameLabel, addedDateLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

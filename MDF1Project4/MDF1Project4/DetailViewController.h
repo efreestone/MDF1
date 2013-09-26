@@ -15,10 +15,25 @@
 
 @interface DetailViewController : UIViewController
 {
-    //Declare test label
-    IBOutlet UILabel *testLabel;
+    //Declare band name label
+    IBOutlet UILabel *bandNameLabel;
+    //Declare band location label
+    IBOutlet UILabel *locationLabel;
+    //Declare song name label
+    IBOutlet UILabel *songNameLabel;
+    //Declare slbum name label
+    IBOutlet UILabel *albumNameLabel;
+    //Declare added date label
+    IBOutlet UILabel *addedDateLabel;
+    
 }
 
-@property (strong) IBOutlet UILabel *testLabel;
+//Use properties for synthesize to get getters/setters
+@property (strong) IBOutlet UILabel *bandNameLabel;
+@property (strong) IBOutlet UILabel *locationLabel;
+@property (strong) IBOutlet UILabel *songNameLabel;
+@property (strong) IBOutlet UILabel *albumNameLabel;
+@property (strong) IBOutlet UILabel *addedDateLabel;
+
 
 @end

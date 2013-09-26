@@ -34,10 +34,25 @@
     
     //Declare tag string for use in foundCharacter
     NSMutableString *currentTag;
-    //Declare string to hold individual items. Mutable to allow appending string during parse
-    NSMutableString *currentItem;
-    //Declare array to hold all items from xml inside "channel" tag (first relevent tag)
-    NSMutableArray *channelArray;
+    
+    //Declare local string to save band names
+    NSMutableString *currentName;
+    //Declare string to store band locations
+    NSMutableString *currentLocation;
+    //Declare local string to save song names
+    NSMutableString *currentSong;
+    //Declare local string to save album names
+    NSMutableString *currentAlbum;
+    //Declare local string to save song added dates
+    NSMutableString *currentAdded;
+    
+    //Declare arrays to store all info after split from individual strings, split using \n that is inserted during parsing process. Not sure where \n is being added
+    NSArray *bandNamesSplit;
+    NSArray *bandLocationSplit;
+    NSArray *songNameSplit;
+    NSArray *albumNameSplit;
+    NSArray *addedDateSplit;
+    
     //Declare instance of data manager
     DataManager *dataManager;
 }

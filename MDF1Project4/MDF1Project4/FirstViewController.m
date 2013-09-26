@@ -130,14 +130,9 @@
     //NSLog(@"%@", attributeDict);
     
     currentTag = [[NSMutableString alloc] initWithFormat:@"%@", elementName];
-    //NSLog(@"currentItem = %@", currentTag);
-    //Parse band name tag
-    if ([elementName isEqualToString:@"channel"]){
-        //NSLog(@"Found channel tag");
-        //Save all results from xml file in an array
-        channelArray = [[NSMutableArray alloc] init];
-        return;
-    } else if ([elementName isEqualToString:@"item"]) {
+    //NSLog(@"current tag = %@", currentTag);
+    //Allocate dataManager once item tag is found
+    if ([elementName isEqualToString:@"item"]) {
         //NSLog(@"Found item tag");
         //Create instance of data manager
         dataManager = [[DataManager alloc] init];
@@ -147,48 +142,75 @@
 //Built in method. Parse values for each item to be further processed. Refactored from Stack Overflow
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     //Check if curentItem has been allocated
-    if (currentItem == nil) {
+    if (currentName == nil) {
         //Alloc mutable string
-        currentItem = [[NSMutableString alloc] initWithCapacity:50];
-        NSLog(@"currentItem created");
-        //[currentItem appendString:string];
-    }
+        currentName = [[NSMutableString alloc] initWithCapacity:50];
+        NSLog(@"currentName created");
+    } else if (currentLocation == nil) {
+        currentLocation = [[NSMutableString alloc] initWithCapacity:50];
+    } else if (currentSong == nil) {
+        currentSong = [[NSMutableString alloc] initWithCapacity:50];
+    } else if (currentAlbum == nil) {
+        currentAlbum = [[NSMutableString alloc] initWithCapacity:50];
+    } else if (currentAdded == nil)
     
-    //If bandname tag
-    if ([currentTag isEqualToString:@"item"]) {
-        [currentItem appendString:string];
-        //NEED TO DO INDIVIDUAL ITEMS!! IE currentName, currentLocation etc instead of currentItem
+    //Append item details to mutable string. The parse process adds "\n" between items that is used to seperate them into an array later. This was originally an if/else if, however the compiler didn't like it due to "dangling else statement".
+    if ([currentTag isEqualToString:@"bandname"]) {
+        //Append band names
+        [currentName appendString:string];
+    }
+    if ([currentTag isEqualToString:@"bandlocation"]) {
+        //Append band location
+        [currentLocation appendString:string];
+    }
+    if ([currentTag isEqualToString:@"songname"]) {
+        //Append song names
+        [currentSong appendString:string];
+    }
+    if ([currentTag isEqualToString:@"songalbum"]) {
+        //Append album name
+        [currentAlbum appendString:string];
+    }
+    if ([currentTag isEqualToString:@"songaddeddate"]) {
+        //Append added date
+        [currentAdded appendString:string];
     }
 }
 
 //Built in method. Sent when an end tag is found.
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
+    //Send item info strings to data manager. Not currently being used to display in table view or detail
     if ([elementName isEqualToString:@"bandname"]) {
-        //NSLog(@"Band name before data manager = %@", currentItem);
-        //[currentItem appendString:];
-        dataManager.currentBandName = currentItem;
-        NSLog(@"Band name = %@", currentItem);
-        currentItem = nil;
-        //NSLog(@"Band name after nil = %@", currentItem);
-        return;
+        dataManager.currentBandName = currentName;
+        //NSLog(@"Band name = %@", currentName);
+    } else if ([elementName isEqualToString:@"bandlocation"]) {
+        dataManager.currentBandLocation = currentLocation;
+        //NSLog(@"Location = %@", currentLocation);
+    } else if ([elementName isEqualToString:@"songname"]) {
+        dataManager.currentSongName = currentSong;
+        //NSLog(@"Current song = %@", currentSong);
+    } else if ([elementName isEqualToString:@"songalbum"]) {
+        dataManager.currentAlbumName = currentAlbum;
+        //NSLog(@"Album = %@", currentAlbum);
+    } else if ([elementName isEqualToString:@"songaddeddate"]) {
+        dataManager.currentAddedDate = currentAdded;
+        //NSLog(@"Song added = %@", currentAdded);
     }
-    
-    /*if ([elementName isEqualToString:@"item"]) {
-        // addresses and currentPerson are instance variables
-        [channelArray addObject:currentItem];
-        currentItem = nil;
-        NSLog(@" Array = %@", channelArray);
-        return;
-    }*/
-    
-    
+
+    //Split item strings using \n. Creates local arrays that are used to fill table view cells and detail view
+    bandNamesSplit = [currentName componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+    //NSLog(@"names split - %@", bandNamesSplit);
+    bandLocationSplit = [currentLocation componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+    songNameSplit = [currentSong componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+    albumNameSplit = [currentAlbum componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+    addedDateSplit = [currentAdded componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
 }
 
 //From Project 1 videos
 //Built in function to set number of rows in table view section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [testArray count];
+    return [bandNamesSplit count];
 }
 
 //From Project 1 videos
@@ -209,7 +231,7 @@
     }
 
     //Apply the location name to the table view cells
-    cell.textLabel.text = (NSString *)[testArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = (NSString *)[bandNamesSplit objectAtIndex:indexPath.row];
 
     return cell;
 }
@@ -228,10 +250,14 @@
         if (detailViewController_iPhone != nil) {
             //Push detail view on top of table view
             [self.navigationController pushViewController:detailViewController_iPhone animated:true];
-            //Set the nav bar title to the test array item
-            detailViewController_iPhone.title = (NSString *) [testArray objectAtIndex:indexPath.row];
-            //Set the test label to the test array item
-            detailViewController_iPhone.testLabel.text = (NSString *) [testArray objectAtIndex:indexPath.row];
+            //Set the nav bar title to the band name array item
+            detailViewController_iPhone.title = (NSString *) [bandNamesSplit objectAtIndex:indexPath.row];
+            //Set the band name label to the band name array item
+            detailViewController_iPhone.bandNameLabel.text = (NSString *) [bandNamesSplit objectAtIndex:indexPath.row];
+            //Set band location label to the location array item
+            detailViewController_iPhone.locationLabel.text = (NSString *) [bandLocationSplit objectAtIndex:indexPath.row];
+            //Set song name label to song name array item
+            detailViewController_iPhone.songNameLabel.text = (NSString *) [songNameSplit objectAtIndex:indexPath.row];
         }
     } else {
         //Device is iPad
@@ -241,7 +267,7 @@
             //Set the nav bar title to the test array item
             detailViewController_iPad.title = (NSString *) [testArray objectAtIndex:indexPath.row];
             //Set the test label to the test array item
-            detailViewController_iPad.testLabel.text = (NSString *) [testArray objectAtIndex:indexPath.row];
+            detailViewController_iPad.bandNameLabel.text = (NSString *) [testArray objectAtIndex:indexPath.row];
         }
     }
 }

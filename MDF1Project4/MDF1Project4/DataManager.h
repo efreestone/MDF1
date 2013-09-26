@@ -24,7 +24,7 @@
     //Declare album name string
     NSString *currentAlbumName;
     //Declare date string
-    NSString *currentReleaseDate;
+    NSString *currentAddedDate;
 }
 
 //Useing properties for getter/setter
@@ -32,6 +32,6 @@
 @property (nonatomic, strong) NSString *currentBandLocation;
 @property (nonatomic, strong) NSString *currentSongName;
 @property (nonatomic, strong) NSString *currentAlbumName;
-@property (nonatomic, strong) NSString *currentReleaseDate;
+@property (nonatomic, strong) NSString *currentAddedDate;
 
 @end
