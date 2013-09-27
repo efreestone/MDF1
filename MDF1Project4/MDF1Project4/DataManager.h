@@ -25,6 +25,8 @@
     NSString *currentAlbumName;
     //Declare date string
     NSString *currentAddedDate;
+    //Declare string to hold raw xml data
+    NSString *rawDataString;
 }
 
 //Useing properties for getter/setter
@@ -33,5 +35,6 @@
 @property (nonatomic, strong) NSString *currentSongName;
 @property (nonatomic, strong) NSString *currentAlbumName;
 @property (nonatomic, strong) NSString *currentAddedDate;
+@property (nonatomic, strong) NSString *rawDataString;
 
 @end

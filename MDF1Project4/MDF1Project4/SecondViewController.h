@@ -12,6 +12,8 @@
 //
 
 #import <UIKit/UIKit.h>
+//Import Data Manager
+#import "DataManager.h"
 
 @interface SecondViewController : UIViewController
 {
@@ -20,6 +22,9 @@
     
     //Declare nav bar. Only used to keep design consistant. Will not have any buttons for navigation
     IBOutlet UINavigationBar *navBar;
+    
+    //Declare instance of data manager
+    DataManager *dataManager;
 }
 
 @end

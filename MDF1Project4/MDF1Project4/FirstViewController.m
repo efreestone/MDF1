@@ -45,10 +45,7 @@
         [parser parse];
     }
     
-    //Create test array
-    testArray = [[NSMutableArray alloc] initWithObjects:@"Test 1", @"Test 2", @"Test 3", @"Test 4", @"Test 5", @"Test 6", @"Test 7", @"Test 8", @"Test 9", @"Test 10", nil];
-    
-    //Create url. Using fullsail.com for testing
+    //Create url
     url = [[NSURL alloc] initWithString:@"http://www.unsignedbandweb.com/rock-new-feed.xml"];
     
     //Create url request
@@ -98,7 +95,9 @@
             }
         }
         
-        //NSLog(@"%@", requestString);
+        dataManager.rawDataString = [NSString stringWithFormat:@"%@", requestString];
+        
+        NSLog(@"%@", requestString);
     }
 }
 
@@ -143,35 +142,37 @@
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     //Check if curentItem has been allocated
     if (currentName == nil) {
-        //Alloc mutable string
-        currentName = [[NSMutableString alloc] initWithCapacity:50];
+        //Alloc mutable string for band names
+        currentName = [[NSMutableString alloc] init];
         NSLog(@"currentName created");
     } else if (currentLocation == nil) {
-        currentLocation = [[NSMutableString alloc] initWithCapacity:50];
+        //Alloc mutable string for locations
+        currentLocation = [[NSMutableString alloc] init];
     } else if (currentSong == nil) {
-        currentSong = [[NSMutableString alloc] initWithCapacity:50];
+        //Alloc mutable string for song names
+        currentSong = [[NSMutableString alloc] init];
     } else if (currentAlbum == nil) {
-        currentAlbum = [[NSMutableString alloc] initWithCapacity:50];
-    } else if (currentAdded == nil)
+        //Alloc mutable string for album names
+        currentAlbum = [[NSMutableString alloc] init];
+    } else if (currentAdded == nil) {
+        //Alloc mutable string for dates added
+        currentAdded = [[NSMutableString alloc] init];
+    }
     
-    //Append item details to mutable string. The parse process adds "\n" between items that is used to seperate them into an array later. This was originally an if/else if, however the compiler didn't like it due to "dangling else statement".
+    //Append item details to mutable string. The parse process (or possibly appendString?) adds "\n" between items that is used to seperate them into an array later. 
     if ([currentTag isEqualToString:@"bandname"]) {
         //Append band names
         [currentName appendString:string];
-    }
-    if ([currentTag isEqualToString:@"bandlocation"]) {
+    } else if ([currentTag isEqualToString:@"bandlocation"]) {
         //Append band location
         [currentLocation appendString:string];
-    }
-    if ([currentTag isEqualToString:@"songname"]) {
+    } else if ([currentTag isEqualToString:@"songname"]) {
         //Append song names
         [currentSong appendString:string];
-    }
-    if ([currentTag isEqualToString:@"songalbum"]) {
+    } else if ([currentTag isEqualToString:@"songalbum"]) {
         //Append album name
         [currentAlbum appendString:string];
-    }
-    if ([currentTag isEqualToString:@"songaddeddate"]) {
+    } else if ([currentTag isEqualToString:@"songaddeddate"]) {
         //Append added date
         [currentAdded appendString:string];
     }
@@ -181,7 +182,7 @@
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
     //Send item info strings to data manager. Not currently being used to display in table view or detail
-    if ([elementName isEqualToString:@"bandname"]) {
+    /*if ([elementName isEqualToString:@"bandname"]) {
         dataManager.currentBandName = currentName;
         //NSLog(@"Band name = %@", currentName);
     } else if ([elementName isEqualToString:@"bandlocation"]) {
@@ -196,9 +197,10 @@
     } else if ([elementName isEqualToString:@"songaddeddate"]) {
         dataManager.currentAddedDate = currentAdded;
         //NSLog(@"Song added = %@", currentAdded);
-    }
+    }*/
 
-    //Split item strings using \n. Creates local arrays that are used to fill table view cells and detail view
+    //NSLog(@"currentName = %@", currentName);
+    //Split item strings using \n. Creates local arrays that are used to fill table view cells and detail view. This process seems to add an empty string in the array that I haven't figured out how to get ride of yet
     bandNamesSplit = [currentName componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
     //NSLog(@"names split - %@", bandNamesSplit);
     bandLocationSplit = [currentLocation componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
@@ -230,8 +232,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 
-    //Apply the location name to the table view cells
-    cell.textLabel.text = (NSString *)[bandNamesSplit objectAtIndex:indexPath.row];
+    //Check device. Ipad has more room in the table view so I am adding the song name to the text
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        //Apply the band name to the table view cells
+        cell.textLabel.text = (NSString *)[bandNamesSplit objectAtIndex:indexPath.row];
+    } else {
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", [bandNamesSplit objectAtIndex:indexPath.row], [songNameSplit objectAtIndex:indexPath.row]];
+    }
 
     return cell;
 }
@@ -253,21 +260,33 @@
             //Set the nav bar title to the band name array item
             detailViewController_iPhone.title = (NSString *) [bandNamesSplit objectAtIndex:indexPath.row];
             //Set the band name label to the band name array item
-            detailViewController_iPhone.bandNameLabel.text = (NSString *) [bandNamesSplit objectAtIndex:indexPath.row];
+            detailViewController_iPhone.bandNameLabel.text = [NSString stringWithFormat:@"Band Name: %@", [bandNamesSplit objectAtIndex:indexPath.row]];
             //Set band location label to the location array item
-            detailViewController_iPhone.locationLabel.text = (NSString *) [bandLocationSplit objectAtIndex:indexPath.row];
+            detailViewController_iPhone.locationLabel.text = [NSString stringWithFormat:@"Location: %@", [bandLocationSplit objectAtIndex:indexPath.row]];
             //Set song name label to song name array item
-            detailViewController_iPhone.songNameLabel.text = (NSString *) [songNameSplit objectAtIndex:indexPath.row];
+            detailViewController_iPhone.songNameLabel.text = [NSString stringWithFormat:@"Song Name: %@", [songNameSplit objectAtIndex:indexPath.row]];
+            //Set album name label to album name array item
+            detailViewController_iPhone.albumNameLabel.text = [NSString stringWithFormat:@"Album Name: %@", [albumNameSplit objectAtIndex:indexPath.row]];
+            //Set date added label to date added array item
+            detailViewController_iPhone.addedDateLabel.text = [NSString stringWithFormat:@"Date Added: %@", [addedDateSplit objectAtIndex:indexPath.row]];
         }
     } else {
         //Device is iPad
         if (detailViewController_iPad != nil) {
             //Push detail view on top of table view
             [self.navigationController pushViewController:detailViewController_iPad animated:true];
-            //Set the nav bar title to the test array item
-            detailViewController_iPad.title = (NSString *) [testArray objectAtIndex:indexPath.row];
-            //Set the test label to the test array item
-            detailViewController_iPad.bandNameLabel.text = (NSString *) [testArray objectAtIndex:indexPath.row];
+            //Set the nav bar title to the band name array item
+            detailViewController_iPad.title = (NSString *) [bandNamesSplit objectAtIndex:indexPath.row];
+            //Set the band name label to the band name array item
+            detailViewController_iPad.bandNameLabel.text = [NSString stringWithFormat:@"Band Name: %@", [bandNamesSplit objectAtIndex:indexPath.row]];
+            //Set band location label to the location array item
+            detailViewController_iPad.locationLabel.text = [NSString stringWithFormat:@"Location: %@", [bandLocationSplit objectAtIndex:indexPath.row]];
+            //Set song name label to song name array item
+            detailViewController_iPad.songNameLabel.text = [NSString stringWithFormat:@"Song Name: %@", [songNameSplit objectAtIndex:indexPath.row]];
+            //Set album name label to album name array item
+            detailViewController_iPad.albumNameLabel.text = [NSString stringWithFormat:@"Album Name: %@", [albumNameSplit objectAtIndex:indexPath.row]];
+            //Set date added label to date added array item
+            detailViewController_iPad.addedDateLabel.text = [NSString stringWithFormat:@"Date Added: %@", [addedDateSplit objectAtIndex:indexPath.row]];
         }
     }
 }

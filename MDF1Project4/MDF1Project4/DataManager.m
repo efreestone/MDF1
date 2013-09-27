@@ -15,7 +15,7 @@
 
 @implementation DataManager
 //Synthesize strings
-@synthesize currentBandName, currentBandLocation, currentSongName, currentAlbumName, currentAddedDate;
+@synthesize currentBandName, currentBandLocation, currentSongName, currentAlbumName, currentAddedDate, rawDataString;
 
 //Initialize DataManager, instantiating and set properties to default values
 -(id)init {
@@ -26,6 +26,7 @@
         [self setCurrentSongName:nil];
         [self setCurrentAlbumName:nil];
         [self setCurrentAddedDate:nil];
+        [self setRawDataString:nil];
     }
     return self;
 };

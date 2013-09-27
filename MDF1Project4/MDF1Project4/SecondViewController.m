@@ -31,6 +31,12 @@
 							
 - (void)viewDidLoad
 {
+    //Create instance of data manager
+    dataManager = [[DataManager alloc] init];
+    
+    //Apply raw xml data to text view
+    textView.text = dataManager.rawDataString;
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
