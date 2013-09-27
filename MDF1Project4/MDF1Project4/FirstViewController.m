@@ -14,16 +14,12 @@
 #import "FirstViewController.h"
 //Import Detail View
 #import "DetailViewController.h"
-//Import Data Manager
-#import "DataManager.h"
 
 @interface FirstViewController ()
 
 @end
 
 @implementation FirstViewController
-
-@synthesize passedRawData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,13 +32,7 @@
 }
 
 - (void)viewDidLoad
-{
-    dataManager = [[DataManager alloc] init];
-    
-    passedRawData = [[NSMutableString alloc] initWithData:requestData encoding:NSASCIIStringEncoding];
-    
-    dataManager.rawDataString = passedRawData;
-    
+{    
     //Load in xml data from app directory
     NSData *xmlData = [self GetFileDataFromFile:@"rock-new-feed.xml"];
     
@@ -102,17 +92,6 @@
                 [requestData writeToFile:fullPath atomically:true];
             }
         }
-        
-       /*if (dataManager != nil) {
-            passedRawData = [[NSMutableString alloc] initWithData:requestData encoding:NSASCIIStringEncoding];
-            NSLog(@"Raw data filled");
-            dataManager.rawDataString = passedRawData;
-        }*/
-        
-        //[SecondViewController textView].text = requestString;
-        //dataManager.rawDataString = [NSString stringWithFormat:@"%@", requestString];
-        
-        //NSLog(@"%@", dataManager.rawDataString);
     }
 }
 
@@ -145,12 +124,6 @@
     
     currentTag = [[NSMutableString alloc] initWithFormat:@"%@", elementName];
     //NSLog(@"current tag = %@", currentTag);
-    //Allocate dataManager once item tag is found
-    if ([elementName isEqualToString:@"item"]) {
-        //NSLog(@"Found item tag");
-        //Create instance of data manager
-        dataManager = [[DataManager alloc] init];
-    } 
 }
 
 //Built in method. Parse values for each item to be further processed. Refactored from Stack Overflow
@@ -196,24 +169,6 @@
 //Built in method. Sent when an end tag is found.
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
 {
-    //Send item info strings to data manager. Not currently being used to display in table view or detail
-    /*if ([elementName isEqualToString:@"bandname"]) {
-        dataManager.currentBandName = currentName;
-        //NSLog(@"Band name = %@", currentName);
-    } else if ([elementName isEqualToString:@"bandlocation"]) {
-        dataManager.currentBandLocation = currentLocation;
-        //NSLog(@"Location = %@", currentLocation);
-    } else if ([elementName isEqualToString:@"songname"]) {
-        dataManager.currentSongName = currentSong;
-        //NSLog(@"Current song = %@", currentSong);
-    } else if ([elementName isEqualToString:@"songalbum"]) {
-        dataManager.currentAlbumName = currentAlbum;
-        //NSLog(@"Album = %@", currentAlbum);
-    } else if ([elementName isEqualToString:@"songaddeddate"]) {
-        dataManager.currentAddedDate = currentAdded;
-        //NSLog(@"Song added = %@", currentAdded);
-    }*/
-
     //NSLog(@"currentName = %@", currentName);
     //Split item strings using \n. Creates local arrays that are used to fill table view cells and detail view. This process seems to add an empty string in the array that I haven't figured out how to get ride of yet
     bandNamesSplit = [currentName componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];

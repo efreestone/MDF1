@@ -12,16 +12,11 @@
 //
 
 #import <UIKit/UIKit.h>
-//Imort Data Manager
-#import "DataManager.h"
 
 @interface FirstViewController : UIViewController <NSURLConnectionDataDelegate, NSXMLParserDelegate>
 {
     //Declare table view
     IBOutlet UITableView *tableView;
-    
-    //Declare test array
-    NSMutableArray *testArray;
     
     //Declare request
     NSURLRequest *request;
@@ -52,11 +47,6 @@
     NSArray *songNameSplit;
     NSArray *albumNameSplit;
     NSArray *addedDateSplit;
-    
-    //Declare instance of data manager
-    DataManager *dataManager;
 }
-
-@property (nonatomic, strong) NSMutableString *passedRawData;
 
 @end

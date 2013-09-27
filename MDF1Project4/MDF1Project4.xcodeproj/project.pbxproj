@@ -27,7 +27,6 @@
 		B87DA88017EE83DB0021883B /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87DA87E17EE83DB0021883B /* FirstViewController_iPad.xib */; };
 		B87DA88317EE83DB0021883B /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87DA88117EE83DB0021883B /* SecondViewController_iPhone.xib */; };
 		B87DA88617EE83DB0021883B /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87DA88417EE83DB0021883B /* SecondViewController_iPad.xib */; };
-		B8A6482617F3D40C00F30DEF /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A6482517F3D40C00F30DEF /* DataManager.m */; };
 		B8E76CB717F5213700EBF989 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E76CB617F5213700EBF989 /* Icon.png */; };
 		B8E76CB917F5214000EBF989 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E76CB817F5214000EBF989 /* Icon@2x.png */; };
 		B8E76CBB17F5214800EBF989 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B8E76CBA17F5214800EBF989 /* Icon-72.png */; };
@@ -66,8 +65,6 @@
 		B87DA87F17EE83DB0021883B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
 		B87DA88217EE83DB0021883B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
 		B87DA88517EE83DB0021883B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
-		B8A6482417F3D40C00F30DEF /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
-		B8A6482517F3D40C00F30DEF /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		B8E76CB617F5213700EBF989 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		B8E76CB817F5214000EBF989 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		B8E76CBA17F5214800EBF989 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
@@ -147,8 +144,6 @@
 				B87DA88117EE83DB0021883B /* SecondViewController_iPhone.xib */,
 				B87DA88417EE83DB0021883B /* SecondViewController_iPad.xib */,
 				B87DA85C17EE83DB0021883B /* Supporting Files */,
-				B8A6482417F3D40C00F30DEF /* DataManager.h */,
-				B8A6482517F3D40C00F30DEF /* DataManager.m */,
 			);
 			path = MDF1Project4;
 			sourceTree = "<group>";
@@ -253,7 +248,6 @@
 				B87DA86F17EE83DB0021883B /* FirstViewController.m in Sources */,
 				B87DA87617EE83DB0021883B /* SecondViewController.m in Sources */,
 				B81C436B17F0F38C001E02BB /* DetailViewController.m in Sources */,
-				B8A6482617F3D40C00F30DEF /* DataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

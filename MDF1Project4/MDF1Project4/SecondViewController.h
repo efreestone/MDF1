@@ -12,19 +12,14 @@
 //
 
 #import <UIKit/UIKit.h>
-//Import Data Manager
-#import "DataManager.h"
 
 @interface SecondViewController : UIViewController
 {
     //Declare text view
     IBOutlet UITextView *textView;
-    IBOutlet UIScrollView *scrollView;
     
+    //Declare string that will hold raw data from xml
     NSString *passedRawData;
-    
-    //Declare instance of data manager
-    DataManager *dataManager;
 }
 
 @property (nonatomic, strong) IBOutlet UITextView *textView;

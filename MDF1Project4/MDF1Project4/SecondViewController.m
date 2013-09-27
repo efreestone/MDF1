@@ -47,28 +47,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-/*-(void)viewWillAppear:(BOOL)animated {
-    
-    //Create instance of data manager
-    dataManager = [[DataManager alloc] init];
-    
-    //Apply raw xml data to text view
-    if (dataManager.rawDataString != nil) {
-        NSLog(@"11%@", dataManager.rawDataString);
-        textView.text = [NSString stringWithFormat:@"%@", [dataManager rawDataString]];
-    }
-    
-    //NSString *passedRawData = [[NSString alloc] initWithFormat:@"%@", dataManager.rawDataString];
-    
-    NSLog(@"passed %@", dataManager.rawDataString);
-    
-    //Apply raw xml data to text view
-    //if (dataManager.rawDataString != nil) {
-    textView.text = [textView.text stringByAppendingString:passedRawData];
-    //}
-
-}*/
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
