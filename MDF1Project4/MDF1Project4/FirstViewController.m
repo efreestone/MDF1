@@ -23,6 +23,8 @@
 
 @implementation FirstViewController
 
+@synthesize passedRawData;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,6 +37,12 @@
 
 - (void)viewDidLoad
 {
+    dataManager = [[DataManager alloc] init];
+    
+    passedRawData = [[NSMutableString alloc] initWithData:requestData encoding:NSASCIIStringEncoding];
+    
+    dataManager.rawDataString = passedRawData;
+    
     //Load in xml data from app directory
     NSData *xmlData = [self GetFileDataFromFile:@"rock-new-feed.xml"];
     
@@ -95,9 +103,16 @@
             }
         }
         
-        dataManager.rawDataString = [NSString stringWithFormat:@"%@", requestString];
+       /*if (dataManager != nil) {
+            passedRawData = [[NSMutableString alloc] initWithData:requestData encoding:NSASCIIStringEncoding];
+            NSLog(@"Raw data filled");
+            dataManager.rawDataString = passedRawData;
+        }*/
         
-        NSLog(@"%@", requestString);
+        //[SecondViewController textView].text = requestString;
+        //dataManager.rawDataString = [NSString stringWithFormat:@"%@", requestString];
+        
+        //NSLog(@"%@", dataManager.rawDataString);
     }
 }
 

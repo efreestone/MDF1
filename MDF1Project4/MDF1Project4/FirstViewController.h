@@ -57,4 +57,6 @@
     DataManager *dataManager;
 }
 
+@property (nonatomic, strong) NSMutableString *passedRawData;
+
 @end

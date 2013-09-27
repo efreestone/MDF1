@@ -19,12 +19,14 @@
 {
     //Declare text view
     IBOutlet UITextView *textView;
+    IBOutlet UIScrollView *scrollView;
     
-    //Declare nav bar. Only used to keep design consistant. Will not have any buttons for navigation
-    IBOutlet UINavigationBar *navBar;
+    NSString *passedRawData;
     
     //Declare instance of data manager
     DataManager *dataManager;
 }
+
+@property (nonatomic, strong) IBOutlet UITextView *textView;
 
 @end
