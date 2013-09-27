@@ -13,6 +13,40 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <NSURLConnectionDataDelegate, NSXMLParserDelegate>
+{
+    //Declare table view
+    IBOutlet UITableView *tableView;
+    
+    //Declare request
+    NSURLRequest *request;
+    //Declare url
+    NSURL *url;
+    //Declare connection
+    NSURLConnection *connection;
+    //Declare mutable data for storing info from url
+    NSMutableData *requestData;
+    
+    //Declare tag string for use in foundCharacter
+    NSMutableString *currentTag;
+    
+    //Declare local string to save band names
+    NSMutableString *currentName;
+    //Declare string to store band locations
+    NSMutableString *currentLocation;
+    //Declare local string to save song names
+    NSMutableString *currentSong;
+    //Declare local string to save album names
+    NSMutableString *currentAlbum;
+    //Declare local string to save song added dates
+    NSMutableString *currentAdded;
+    
+    //Declare arrays to store all info after split from individual strings, split using \n that is inserted during parsing process. Not sure where \n is being added
+    NSArray *bandNamesSplit;
+    NSArray *bandLocationSplit;
+    NSArray *songNameSplit;
+    NSArray *albumNameSplit;
+    NSArray *addedDateSplit;
+}
 
 @end

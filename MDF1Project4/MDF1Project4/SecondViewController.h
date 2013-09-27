@@ -14,5 +14,14 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
+{
+    //Declare text view
+    IBOutlet UITextView *textView;
+    
+    //Declare string that will hold raw data from xml
+    NSString *passedRawData;
+}
+
+@property (nonatomic, strong) IBOutlet UITextView *textView;
 
 @end
